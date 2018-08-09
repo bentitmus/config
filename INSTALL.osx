@@ -1,0 +1,7 @@
+#!/bin/sh
+
+brew update
+brew upgrade
+brew install fish thefuck
+brew install kakoune tmux
+
