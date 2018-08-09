@@ -1,0 +1,2 @@
+set -add global ui_options ncurses_assistant=cat
+set -add global autoinfo normal

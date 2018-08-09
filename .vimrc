@@ -57,9 +57,9 @@ endfunction
 
 " Key mappings
 " Strip trailing whitespace
-nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
+nnoremap _$ :call Preserve("%s/\\s\\+$//e")<CR>
 " Normalise indentation in file
-nmap _= :call Preserve("normal! gg=G")<CR>
+nnoremap _= :call Preserve("normal! gg=G")<CR>
 " Allow dots over a visual range
 xnoremap . :normal! .<CR>
 " Allow macros over a visual range
