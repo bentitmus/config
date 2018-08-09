@@ -1,0 +1,6 @@
+[submodule "externals/qmk_firmware"]
+	path = externals/qmk_firmware
+	url = git@github.com:bentitmus/qmk_firmware
+[submodule "externals/dwm"]
+	path = externals/dwm
+	url = git@github.com:bentitmus/dwm
