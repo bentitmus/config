@@ -1,2 +1,99 @@
 #!/bin/sh
 
+. /arm/tools/setup/init/sh
+module load swdev util
+module load git/git/2.18.0
+module load gnu/gcc/7.2.0
+module load methods/asciidoc/8.6.9
+module load python/python/3.6.1
+module load python/pip_py3.6.1/9.0.3
+
+mkdir -p build
+
+echo "~~~~~~~~~~~~~~~~~"
+echo "~~ Submodules  ~~"
+echo "~~~~~~~~~~~~~~~~~"
+echo "Updating submodules..."
+git submodule update --init --recursive
+echo "Done"
+
+echo ""
+echo "~~~~~~~~~~~~~~~~~"
+echo "~~~~~~ dwm ~~~~~~"
+echo "~~~~~~~~~~~~~~~~~"
+echo "Building dwm..."
+cd externals/dwm
+make clean install PREFIX=$HOME/.local
+cd ../..
+echo "Done"
+
+echo ""
+echo "~~~~~~~~~~~~~~~~~"
+echo "~~~~~ dmenu ~~~~~"
+echo "~~~~~~~~~~~~~~~~~"
+echo "Building dmenu..."
+cd build
+if [ ! -d dmenu ]; then
+  git clone git://git.suckless.org/dmenu dmenu
+fi
+cd dmenu
+git pull
+make clean install PREFIX=$HOME/.local
+cd ../..
+echo "Done"
+
+# TODO: convert this to an external so I can update the config
+echo ""
+echo "~~~~~~~~~~~~~~~~~"
+echo "~~~~~~ st  ~~~~~~"
+echo "~~~~~~~~~~~~~~~~~"
+echo "Building st..."
+cd build
+if [ ! -d st ]; then
+  git clone git://git.suckless.org/st st
+fi
+cd st
+git pull
+make clean install PREFIX=$HOME/.local
+cd ../..
+echo "Done"
+
+echo ""
+echo "~~~~~~~~~~~~~~~~~"
+echo "~~~~~ fish  ~~~~~"
+echo "~~~~~~~~~~~~~~~~~"
+echo "Building fish..."
+cd build
+if [ ! -d fish-2.7.1 ]; then
+  wget https://github.com/fish-shell/fish-shell/releases/download/2.7.1/fish-2.7.1.tar.gz
+  gunzip fish-2.7.1.tar.gz
+  tar xf fish-2.7.1.tar
+  rm fish-2.7.1.tar
+fi
+cd fish-2.7.1
+./configure --prefix=$HOME/.local
+make clean install
+echo "Done"
+
+echo ""
+echo "~~~~~~~~~~~~~~~~~"
+echo "~~~~ thefuck ~~~~"
+echo "~~~~~~~~~~~~~~~~~"
+echo "Installing thefuck..."
+pip install --prefix=$HOME/.local thefuck
+echo "Done"
+
+echo ""
+echo "~~~~~~~~~~~~~~~~~"
+echo "~~~~ kakoune ~~~~"
+echo "~~~~~~~~~~~~~~~~~"
+cd build
+if [ ! -d kakoune ]; then
+  git clone https://github.com/mawww/kakoune.git kakoune
+fi
+cd kakoune
+git pull
+cd src
+make clean install PREFIX=$HOME/.local
+cd ../../..
+

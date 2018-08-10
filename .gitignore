@@ -1,2 +1,7 @@
 build/**
+**/__pycache__
 fish/fish_history
+user-dirs.dirs
+user-dirs.locale
+Trolltech.conf
+fish/fishd.*
