@@ -1,85 +1,134 @@
-" .vimrc configuration file for Vim
+" Expects Vim 8
 
-set runtimepath+=/Users/ben/.vim/mpc
+set runtimepath+=$XDG_CONFIG_HOME/vim
+set packpath=$XDG_CONFIG_HOME/vim
 
-" Set-up plugins
-call plug#begin('~/.vim/plugged')
-  Plug 'altercation/vim-colors-solarized'
-"  Plug 'vim-airline/vim-airline'
-"  Plug 'vim-airline/vim-airline-themes'
-  Plug 'vhda/verilog_systemverilog.vim'
-call plug#end()
+packadd minpac
+source $XDG_CONFIG_HOME/vim/packages.vim
 
+" Basic configuration
 filetype plugin indent on
-
-" Solarized setup
 syntax enable
-set background=dark
-colorscheme solarized
-" Use 256 colour emulation, rather than the 16-bit colours (the preferred
-" method)
-let g:solarized_termcolors=256
-set t_Co=256 " Tell Vim that the terminal supports 256 colours
-
-" Airline options
-set encoding=utf-8 " For Unicode glyphs
-let g:airline_theme='solarized'
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-let g:airline_left_sep = '⮀'
-let g:airline_left_alt_sep = '⮁'
-let g:airline_right_sep = '⮂'
-let g:airline_right_alt_sep = '⮃'
-let g:airline_symbols.branch = '⭠'
-let g:airline_symbols.readonly = '⭤'
-let g:airline_symbols.linenr = '⭡'
-
-" Functions
-" Preserve cursor position and search history while performing a command
-function! Preserve(command)
-  " Preparation: save last search, and cursor position.
-  let _s=@/
-  let l = line(".")
-  let c = col(".")
-  " Do the business:
-  execute a:command
-  " Clean up: restore previous search history, and cursor position
-  let @/=_s
-  call cursor(l, c)
-endfunction
-
-" Execute a macro over a visual range
-function! ExecuteMacroOverVisualRange()
-  echo "@".getcmdline()
-  execute ":'<,'>normal! @".nr2char(getchar())
-endfunction
-
-" Key mappings
-" Strip trailing whitespace
-nnoremap _$ :call Preserve("%s/\\s\\+$//e")<CR>
-" Normalise indentation in file
-nnoremap _= :call Preserve("normal! gg=G")<CR>
-" Allow dots over a visual range
-xnoremap . :normal! .<CR>
-" Allow macros over a visual range
-xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
 " Global options
 set tabstop=2       " Treat a tab as 2 spaces
 set shiftwidth=2    " Indent uses 2 spaces
 set softtabstop=2   " Operations treat tab as 2 spaces
 set expandtab       " Replace tabs with spaces
+set history=700     " Can use a large history
+set wildmenu        " Better autocomplete
 set noerrorbells    " Do not ring the bell
 set hidden          " Allow buffers to be hidden when they have pending changes
+set backspace=indent,eol,start " Backspace can go past the beginning of the line
+set whichwrap+=<,>,h,l " Allow movement to go past beginning of the line
+set hlsearch        " Highlight search results
 set number          " Show line numbers
 set list            " Show hidden characters
 set listchars=tab:▸\ ,eol:¬ " Set the symbols for hidden characters
 
-" Filetype specific options
+" Set-up filetypes
+au FileType make setlocal ts=2 sts=2 sw=2 noexpandtab
 augroup vimrc
   autocmd!
   autocmd FileType make setlocal noexpandtab
   autocmd BufNewFile,BufRead *.svh set filetype=verilog_systemverilog
 augroup END
+
+" Colours
+set t_Co=256
+let s:stw=166
+let s:cc=239
+exe "highlight ColorColumn ctermbg=" .s:cc
+call matchadd('ColorColumn', '\%81v', 100)
+exe "highlight ShowTrailingWhitespace ctermbg=" .s:stw
+
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+else
+  colorscheme base16-solarized-dark
+endif
+
+"set shell=/bin/csh
+"
+"" Airline configuration
+""set encoding=utf-8  " Necessary for Unicode glyphs
+"let g:airline_theme='base16_solarized'
+"
+"" For ctrlspace
+"let g:airline_exclude_preview=1
+"let g:CtrlSpaceUseUnicode=0
+"set laststatus=2    " Always show the status line
+"set showtabline=0   " Never show the tab line
+"
+"" ctrlp
+"let g:ctrlp_map = '<c-p>'
+"
+"" Set options
+"set smarttab        " Treat indents like tabs
+"set autoindent      " Use current line indent
+""set smartindent     " General C-like line indents
+"set nolbr           " Do not break lines at a 'convenient' point
+"set wrap            " Automatically wrap lines, do not break them
+"set textwidth=80    " Maximum line length
+"set magic           " Change how escaping works on patterns (. matches any character)
+"set showmatch       " Highlight matching brackets
+"set nobackup        " Do not make a backup when overwriting a file
+"set nowritebackup   " Do not make a backup when overwriting a file
+"set noswapfile      " Do not make swap files (make sure file sizes are not too big)
+"
+"" SystemVerilog
+"set foldmethod=syntax " Use syntax folding - should be in an au for verilog
+"let g:verilog_syntax_fold="function,task"
+"
+"" matchit
+"runtime macros/matchit.vim
+"let g:hl_matchit_enable_on_vim_startup=1
+"
+"nnoremap <F5> :GundoToggle<CR>
+""nmap <F8> :TagbarToggle<CR>
+"
+""" Airline options
+"set encoding=utf-8 " For Unicode glyphs
+"let g:airline_theme='solarized'
+"if !exists('g:airline_symbols')
+"  let g:airline_symbols = {}
+"endif
+"let g:airline_left_sep = '⮀'
+"let g:airline_left_alt_sep = '⮁'
+"let g:airline_right_sep = '⮂'
+"let g:airline_right_alt_sep = '⮃'
+"let g:airline_symbols.branch = '⭠'
+"let g:airline_symbols.readonly = '⭤'
+"let g:airline_symbols.linenr = '⭡'
+"
+"" Functions
+"" Preserve cursor position and search history while performing a command
+"function! Preserve(command)
+"  " Preparation: save last search, and cursor position.
+"  let _s=@/
+"  let l = line(".")
+"  let c = col(".")
+"  " Do the business:
+"  execute a:command
+"  " Clean up: restore previous search history, and cursor position
+"  let @/=_s
+"  call cursor(l, c)
+"endfunction
+"
+"" Execute a macro over a visual range
+"function! ExecuteMacroOverVisualRange()
+"  echo "@".getcmdline()
+"  execute ":'<,'>normal! @".nr2char(getchar())
+"endfunction
+"
+"" Key mappings
+"" Strip trailing whitespace
+"nnoremap _$ :call Preserve("%s/\\s\\+$//e")<CR>
+"" Normalise indentation in file
+"nnoremap _= :call Preserve("normal! gg=G")<CR>
+"" Allow dots over a visual range
+"xnoremap . :normal! .<CR>
+"" Allow macros over a visual range
+"xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 

@@ -4,3 +4,6 @@
 [submodule "externals/dwm"]
 	path = externals/dwm
 	url = git@github.com:bentitmus/dwm
+[submodule "vim/pack/minpac/opt/minpac"]
+	path = vim/pack/minpac/opt/minpac
+	url = https://github.com/k-takata/minpac.git
