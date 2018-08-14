@@ -97,3 +97,16 @@ cd src
 make clean install PREFIX=$HOME/.local
 cd ../../..
 
+echo ""
+echo "~~~~~~~~~~~~~~~~~"
+echo " Powerline fonts"
+echo "~~~~~~~~~~~~~~~~~"
+mkdir -p ~/.local/share/fonts
+wget "https://github.com/powerline/fonts/blob/master/LiberationMono/Literation%20Mono%20Powerline%20Bold%20Italic.ttf?raw=true" -O ~/.fonts/Literation\ Mono\ Powerline\ Bold\ Italic.ttf
+wget "https://github.com/powerline/fonts/blob/master/LiberationMono/Literation%20Mono%20Powerline%20Bold.ttf?raw=true" -O ~/.fonts/Literation\ Mono\ Powerline\ Bold.ttf
+wget "https://github.com/powerline/fonts/blob/master/LiberationMono/Literation%20Mono%20Powerline%20Italic.ttf?raw=true" -O ~/.fonts/Literation\ Mono\ Powerline\ Italic.ttf
+wget "https://github.com/powerline/fonts/blob/master/LiberationMono/Literation%20Mono%20Powerline.ttf?raw=true" -O ~/.fonts/Literation\ Mono\ Powerline.ttf
+wget "https://github.com/powerline/fonts/blob/master/LiberationMono/fonts.dir?raw=true" -O ~/.fonts/fonts.dir
+wget "https://github.com/powerline/fonts/blob/master/LiberationMono/fonts.scale?raw=true" -O ~/.fonts/fonts.scale
+fc-cache -v
+

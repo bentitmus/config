@@ -25,6 +25,9 @@ set hlsearch        " Highlight search results
 set number          " Show line numbers
 set list            " Show hidden characters
 set listchars=tab:▸\ ,eol:¬ " Set the symbols for hidden characters
+set nobackup        " Do not make a backup when overwriting a file
+set nowritebackup   " Do not make a backup when overwriting a file
+set noswapfile      " Do not make swap files (make sure file sizes are not too big)
 
 " Set-up filetypes
 au FileType make setlocal ts=2 sts=2 sw=2 noexpandtab
@@ -48,6 +51,10 @@ if filereadable(expand("~/.vimrc_background"))
 else
   colorscheme base16-solarized-dark
 endif
+
+" Airline options
+let g:airline_theme='base16'
+let g:airline_powerline_fonts=1
 
 "set shell=/bin/csh
 "
@@ -73,9 +80,6 @@ endif
 "set textwidth=80    " Maximum line length
 "set magic           " Change how escaping works on patterns (. matches any character)
 "set showmatch       " Highlight matching brackets
-"set nobackup        " Do not make a backup when overwriting a file
-"set nowritebackup   " Do not make a backup when overwriting a file
-"set noswapfile      " Do not make swap files (make sure file sizes are not too big)
 "
 "" SystemVerilog
 "set foldmethod=syntax " Use syntax folding - should be in an au for verilog
