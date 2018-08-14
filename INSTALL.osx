@@ -1,7 +1,50 @@
 #!/bin/sh
 
+mkdir -p build
+
+echo "~~~~~~~~~~~~~~~~~"
+echo "~~ Submodules  ~~"
+echo "~~~~~~~~~~~~~~~~~"
+echo "Updating submodules..."
+git submodule update --init --recursive
+echo "Done"
+
+echo ""
+echo "~~~~~~~~~~~~~~~~~"
+echo "~ brew modules  ~"
+echo "~~~~~~~~~~~~~~~~~"
+echo "Updating brew and modules..."
+if test ! $(which brew); then
+  echo "Installing homebrew..."
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 brew update
 brew upgrade
 brew install fish thefuck
 brew install kakoune tmux
+echo "Done"
+
+echo ""
+echo "~~~~~~~~~~~~~~~~~"
+echo " Terminal base16 "
+echo "~~~~~~~~~~~~~~~~~"
+echo "Installing terminal colours..."
+cd build
+if [ ! -d base16-terminal-app ]; then
+  git clone https://github.com/korzhyk/base16-terminal-app.git base16-terminal-app
+fi
+cd base16-terminal-app
+git pull
+open base16-solarized.dark.terminal
+cd ../..
+echo "Done"
+
+echo ""
+echo "~~~~~~~~~~~~~~~~~"
+echo " Powerline fonts"
+echo "~~~~~~~~~~~~~~~~~"
+echo "Installing fonts..."
+git clone https://github.com/abertsch/Menlo-for-Powerline.git build/menlo
+open build/menlo
+echo "Done"
 
