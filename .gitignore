@@ -5,3 +5,4 @@ user-dirs.dirs
 user-dirs.locale
 Trolltech.conf
 fish/fishd.*
+vim/pack/minpac/start/**
