@@ -6,5 +6,7 @@ user-dirs.locale
 Trolltech.conf
 fish/fishd.*
 jasper/**
+MusicBrainz/**
+.isolated-storage/**
 vim/pack/minpac/start/**
 vim/.netrwhist
