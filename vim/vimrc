@@ -1,8 +1,9 @@
 " Expects Vim 8
 
-set runtimepath+=$XDG_CONFIG_HOME/vim
-set packpath=$XDG_CONFIG_HOME/vim
+source ~/.config/vim/xdg.vim
 
+" Packages set-up
+set packpath=$XDG_CONFIG_HOME/vim
 packadd minpac
 source $XDG_CONFIG_HOME/vim/packages.vim
 
@@ -38,29 +39,39 @@ augroup vimrc
 augroup END
 
 " Colours
-set t_Co=256
+set termguicolors
+" set Vim-specific sequences for RGB colors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 let s:stw=166
 let s:cc=239
 exe "highlight ColorColumn ctermbg=" .s:cc
 call matchadd('ColorColumn', '\%81v', 100)
 exe "highlight ShowTrailingWhitespace ctermbg=" .s:stw
+call matchadd('ShowTrailingWhitespace', '\t')
 
 if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
+  " Improve this mechanism of setting the background
+  source ~/.vimrc_background
+  if g:colors_name =~# 'dark'
+    set background=dark
+  else
+    set background=light
+  endif
   source ~/.vimrc_background
 else
   colorscheme base16-solarized-dark
 endif
 
-" Airline options
-let g:airline_theme='base16'
-let g:airline_powerline_fonts=1
+" Lightline options
+set laststatus=2    " Always show the status line
+set noshowmode      " Don't show the mode because it is shown by Lightline
+let g:lightline = {
+  \ 'colorscheme' : 'solarized'
+  \ }
 
-"set shell=/bin/csh
-"
 "" Airline configuration
 ""set encoding=utf-8  " Necessary for Unicode glyphs
-"let g:airline_theme='base16_solarized'
 "
 "" For ctrlspace
 "let g:airline_exclude_preview=1
@@ -81,30 +92,12 @@ let g:airline_powerline_fonts=1
 "set magic           " Change how escaping works on patterns (. matches any character)
 "set showmatch       " Highlight matching brackets
 "
-"" SystemVerilog
-"set foldmethod=syntax " Use syntax folding - should be in an au for verilog
-"let g:verilog_syntax_fold="function,task"
-"
 "" matchit
 "runtime macros/matchit.vim
 "let g:hl_matchit_enable_on_vim_startup=1
 "
 "nnoremap <F5> :GundoToggle<CR>
 ""nmap <F8> :TagbarToggle<CR>
-"
-""" Airline options
-"set encoding=utf-8 " For Unicode glyphs
-"let g:airline_theme='solarized'
-"if !exists('g:airline_symbols')
-"  let g:airline_symbols = {}
-"endif
-"let g:airline_left_sep = '⮀'
-"let g:airline_left_alt_sep = '⮁'
-"let g:airline_right_sep = '⮂'
-"let g:airline_right_alt_sep = '⮃'
-"let g:airline_symbols.branch = '⭠'
-"let g:airline_symbols.readonly = '⭤'
-"let g:airline_symbols.linenr = '⭡'
 "
 "" Functions
 "" Preserve cursor position and search history while performing a command
