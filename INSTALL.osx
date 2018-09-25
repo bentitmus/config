@@ -41,10 +41,7 @@ echo "Done"
 
 echo ""
 echo "~~~~~~~~~~~~~~~~~"
-echo " Powerline fonts"
+echo "~ Install fonts ~"
 echo "~~~~~~~~~~~~~~~~~"
-echo "Installing fonts..."
-git clone https://github.com/abertsch/Menlo-for-Powerline.git build/menlo
-open build/menlo
-echo "Done"
+echo "Please install Triplicate T4c"
 
