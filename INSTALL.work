@@ -54,23 +54,6 @@ echo "Done"
 
 echo ""
 echo "~~~~~~~~~~~~~~~~~"
-echo "~~~~~ fish  ~~~~~"
-echo "~~~~~~~~~~~~~~~~~"
-echo "Building fish..."
-cd build
-if [ ! -d fish-2.7.1 ]; then
-  wget https://github.com/fish-shell/fish-shell/releases/download/2.7.1/fish-2.7.1.tar.gz
-  gunzip fish-2.7.1.tar.gz
-  tar xf fish-2.7.1.tar
-  rm fish-2.7.1.tar
-fi
-cd fish-2.7.1
-./configure --prefix=$HOME/.local
-make clean install
-echo "Done"
-
-echo ""
-echo "~~~~~~~~~~~~~~~~~"
 echo "~~~~ thefuck ~~~~"
 echo "~~~~~~~~~~~~~~~~~"
 echo "Installing thefuck..."
