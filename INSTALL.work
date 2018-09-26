@@ -76,6 +76,59 @@ cd ../../..
 
 echo ""
 echo "~~~~~~~~~~~~~~~~~"
+echo "~~ util-linux  ~~"
+echo "~~~~~~~~~~~~~~~~~"
+echo "(Dependency for Task Warrior)"
+cd build
+if [ ! -d util-linux-2.33-rc1 ]; then
+  wget https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.33/util-linux-2.33-rc1.tar.gz
+  gunzip util-linux-2.33-rc1.tar.gz
+  tar xf util-linux-2.33-rc1.tar
+  rm util-linux-2.33-rc1.tar
+fi
+cd util-linux-2.33-rc1
+./configure --prefix=$HOME/.local --disable-all-programs --enable-libuuid
+make clean install
+cd ..
+
+echo ""
+echo "~~~~~~~~~~~~~~~~~"
+echo "~ Task Warrior  ~"
+echo "~~~~~~~~~~~~~~~~~"
+cd build
+if [ ! -d task-2.5.1 ]; then
+  wget https://taskwarrior.org/download/task-2.5.1.tar.gz
+  gunzip task-2.5.1.tar.gz
+  tar xf task-2.5.1.tar
+  rm task-2.5.1.tar
+fi
+cd task-2.5.1
+export CC=`which gcc`
+export CXX=`which g++`
+cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_PREFIX_PATH="$HOME/.local" -DCMAKE_INSTALL_PREFIX="$HOME/.local" .
+make clean install
+cd ..
+
+echo ""
+echo "~~~~~~~~~~~~~~~~~"
+echo "~ Time Warrior  ~"
+echo "~~~~~~~~~~~~~~~~~"
+cd build
+if [ ! -d timew-1.1.1 ]; then
+  wget https://taskwarrior.org/download/timew-1.1.1.tar.gz
+  gunzip timew-1.1.1.tar.gz
+  tar xf timew-1.1.1.tar
+  rm timew-1.1.1.tar
+fi
+cd timew-1.1.1
+export CC=`which gcc`
+export CXX=`which g++`
+cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_PREFIX_PATH="$HOME/.local" -DCMAKE_INSTALL_PREFIX="$HOME/.local" .
+make clean install
+cd ..
+
+echo ""
+echo "~~~~~~~~~~~~~~~~~"
 echo "~ Install fonts ~"
 echo "~~~~~~~~~~~~~~~~~"
 echo "Please install Triplicate T4c in ~/.fonts"

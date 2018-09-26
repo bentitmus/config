@@ -1,0 +1,21 @@
+define theme:
+  description = "solarized-light.theme: Based on solarized-light."
+  colors:
+    # General UI color.
+    exclusion = "color19 on color18"
+    today     = "green"
+    holiday   = "blue"
+    label     = "white"
+    ids       = "magenta"
+    debug     = "red"
+
+  # Rotating Color Palette for tags. The leading zeroes allow the order to be
+  # preserved.
+  palette:
+    color01 = "color18 on color1"
+    color02 = "color18 on color2"
+    color03 = "color18 on color3"
+    color04 = "color18 on color4"
+    color05 = "color18 on color5"
+    color06 = "color18 on color6"
+
