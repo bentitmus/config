@@ -10,3 +10,4 @@ MusicBrainz/**
 .isolated-storage/**
 vim/pack/minpac/start/**
 vim/.netrwhist
+gtk-2.0/**

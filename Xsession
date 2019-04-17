@@ -1,0 +1,8 @@
+#!/bin/sh
+
+. ~/.config/profile
+
+echo $DISPLAY > ~/etc/display
+xsetroot -solid "#fdf6e3"
+dwm
+
