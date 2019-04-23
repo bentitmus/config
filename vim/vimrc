@@ -50,18 +50,8 @@ call matchadd('ColorColumn', '\%81v', 100)
 exe "highlight ShowTrailingWhitespace ctermbg=" .s:stw
 call matchadd('ShowTrailingWhitespace', '\t')
 
-if filereadable(expand("~/.vimrc_background"))
-  " Improve this mechanism of setting the background
-  source ~/.vimrc_background
-  if g:colors_name =~# 'dark'
-    set background=dark
-  else
-    set background=light
-  endif
-  source ~/.vimrc_background
-else
-  colorscheme base16-solarized-dark
-endif
+set background=light
+colorscheme base16-solarized-light
 
 " Lightline options
 set laststatus=2    " Always show the status line
