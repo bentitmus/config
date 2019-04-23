@@ -63,9 +63,11 @@ cd ../..
 
 echo ""
 echo "~~~~~~~~~~~~~~~~~"
-echo "~ base16-shell  ~"
+echo "~     Links     ~"
 echo "~~~~~~~~~~~~~~~~~"
 cp ~/.config/externals/base16-shell/scripts/base16-solarized-light.sh ~/.base16-theme
+ln -s ~/.config/tmux/tmux.conf ~/.tmux.conf
+ln -s ~/.config/Xsession ~/.xsession
 
 echo ""
 echo "~~~~~~~~~~~~~~~~~"
