@@ -4,5 +4,6 @@
 
 echo $DISPLAY > ~/etc/display
 xsetroot -solid "#fdf6e3"
+~/.config-internal/Xsession
 dwm
 

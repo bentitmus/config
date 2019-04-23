@@ -14,118 +14,51 @@ echo "~~~~~~~~~~~~~~~~~"
 echo "~~ Submodules  ~~"
 echo "~~~~~~~~~~~~~~~~~"
 echo "Updating submodules..."
-git submodule update --init --recursive
+# Needed to update the terminfo
+git submodule update --init --recursive externals/st
 echo "Done"
 
-echo ""
 echo "~~~~~~~~~~~~~~~~~"
-echo "~~~~~~ dwm ~~~~~~"
+echo "~~  homebrew   ~~"
 echo "~~~~~~~~~~~~~~~~~"
-echo "Building dwm..."
-cd externals/dwm
-make clean install PREFIX=$HOME/.local
+echo "Installing homebrew..."
+export HOMEBREW_CACHE=/arm/scratch/bentit01/homebrew/cache
+export HOMEBREW_TEMP=/arm/scratch/bentit01/homebrew/tmp
+export HOMEBREW_PREFIX=/arm/scratch/bentit01/homebrew/install
+if [ ! -d $HOMEBREW_PREFIX ]; then
+  mkdir -p $HOMEBREW_PREFIX
+  cd $HOMEBREW_PREFIX
+  wget https://github.com/Linuxbrew/brew/tarball/master
+  mv master homebrew.tar.gz
+  gunzip homebrew.tar.gz
+  tar xf homebrew.tar
+  rm homebrew.tar
+  mv * Homebrew
+  mkdir bin
+  ln -s ../Homebrew/bin/brew bin/brew
+fi
+echo "Bootstrap homebrew"
+# This just doesn't work unless this bootstrapping is done
+HOMEBREW_NO_AUTO_UPDATE=1 HOMEBREW_BUILD_FROM_SOURCE=1 $HOMEBREW_PREFIX/bin/brew install gcc --without-glibc
+HOMEBREW_NO_AUTO_UPDATE=1 $HOMEBREW_PREFIX/bin/brew install glibc
+HOMEBREW_NO_AUTO_UPDATE=1 $HOMEBREW_PREFIX/bin/brew remove gcc
+HOMEBREW_NO_AUTO_UPDATE=1 $HOMEBREW_PREFIX/bin/brew install gcc
+$HOMEBREW_PREFIX/bin/brew install git
+echo "Done"
+
+echo "Installing all homebrew packages"
+$HOMEBREW_PREFIX/bin/brew install kakoune sc-im task timewarrior
+$HOMEBREW_PREFIX/bin/brew tap bentitmus/homebrew
+$HOMEBREW_PREFIX/bin/brew install bentitmus/homebrew/dmenu bentitmus/homebrew/dwm bentitmus/homebrew/st
+cd ~/.config/externals/st
+tic -sx st.info
 cd ../..
-echo "Done"
-
-echo ""
-echo "~~~~~~~~~~~~~~~~~"
-echo "~~~~~ dmenu ~~~~~"
-echo "~~~~~~~~~~~~~~~~~"
-echo "Building dmenu..."
-cd build
-if [ ! -d dmenu ]; then
-  git clone git://git.suckless.org/dmenu dmenu
-fi
-cd dmenu
-git pull
-make clean install PREFIX=$HOME/.local
-cd ../..
-echo "Done"
-
-echo ""
-echo "~~~~~~~~~~~~~~~~~"
-echo "~~~~~~ st  ~~~~~~"
-echo "~~~~~~~~~~~~~~~~~"
-echo "Building st..."
-cd externals/st
-make clean install PREFIX=$HOME/.local
-cd ../..
-echo "Done"
-
-echo ""
-echo "~~~~~~~~~~~~~~~~~"
-echo "~~~~ thefuck ~~~~"
-echo "~~~~~~~~~~~~~~~~~"
-echo "Installing thefuck..."
-pip install --prefix=$HOME/.local thefuck
-echo "Done"
-
-echo ""
-echo "~~~~~~~~~~~~~~~~~"
-echo "~~~~ kakoune ~~~~"
-echo "~~~~~~~~~~~~~~~~~"
-cd build
-if [ ! -d kakoune ]; then
-  git clone https://github.com/mawww/kakoune.git kakoune
-fi
-cd kakoune
-git pull
-cd src
-make clean install PREFIX=$HOME/.local
-cd ../../..
-
-echo ""
-echo "~~~~~~~~~~~~~~~~~"
-echo "~~ util-linux  ~~"
-echo "~~~~~~~~~~~~~~~~~"
-echo "(Dependency for Task Warrior)"
-cd build
-if [ ! -d util-linux-2.33-rc1 ]; then
-  wget https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.33/util-linux-2.33-rc1.tar.gz
-  gunzip util-linux-2.33-rc1.tar.gz
-  tar xf util-linux-2.33-rc1.tar
-  rm util-linux-2.33-rc1.tar
-fi
-cd util-linux-2.33-rc1
-./configure --prefix=$HOME/.local --disable-all-programs --enable-libuuid
-make clean install
-cd ..
-
-echo ""
-echo "~~~~~~~~~~~~~~~~~"
-echo "~ Task Warrior  ~"
-echo "~~~~~~~~~~~~~~~~~"
-cd build
-if [ ! -d task-2.5.1 ]; then
-  wget https://taskwarrior.org/download/task-2.5.1.tar.gz
-  gunzip task-2.5.1.tar.gz
-  tar xf task-2.5.1.tar
-  rm task-2.5.1.tar
-fi
-cd task-2.5.1
-export CC=`which gcc`
-export CXX=`which g++`
-cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_PREFIX_PATH="$HOME/.local" -DCMAKE_INSTALL_PREFIX="$HOME/.local" .
-make clean install
-cd ..
-
-echo ""
-echo "~~~~~~~~~~~~~~~~~"
-echo "~ Time Warrior  ~"
-echo "~~~~~~~~~~~~~~~~~"
-cd build
-if [ ! -d timew-1.1.1 ]; then
-  wget https://taskwarrior.org/download/timew-1.1.1.tar.gz
-  gunzip timew-1.1.1.tar.gz
-  tar xf timew-1.1.1.tar
-  rm timew-1.1.1.tar
-fi
-cd timew-1.1.1
-export CC=`which gcc`
-export CXX=`which g++`
-cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_PREFIX_PATH="$HOME/.local" -DCMAKE_INSTALL_PREFIX="$HOME/.local" .
-make clean install
-cd ..
+#$HOMEBREW_PREFIX/bin/brew install linuxbrew/xorg/libxinerama linuxbrew/xorg/libxft
+#$HOMEBREW_PREFIX/bin/brew tap zegervdv/zathura
+# make html fails in python@2 - ignore
+#echo "Ignore the failure in make html"
+#$HOMEBREW_PREFIX/bin/brew install --debug --verbose python@2
+#$HOMEBREW_PREFIX/bin/brew install zathura
 
 echo ""
 echo "~~~~~~~~~~~~~~~~~"
