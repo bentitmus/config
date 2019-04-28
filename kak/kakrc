@@ -1,2 +1,3 @@
 set -add global autoinfo normal
 set -add global ui_options ncurses_assistant=cat
+colorscheme solarized-light

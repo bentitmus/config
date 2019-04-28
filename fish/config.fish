@@ -24,13 +24,14 @@ module load vim/vim/8.1
 module load arm/datasync/2.0
 module load git/git/2.18.0
 module load python/python/3.2
+module load xclip/xclip/0.12
 
 set -xg EDITOR vim
 set -xg VIMINIT "source $XDG_CONFIG_HOME/vim/vimrc"
 set -xg TASKRC $XDG_CONFIG_HOME/task/taskrc
 set -xg TIMEWARRIORDB $XDG_CONFIG_HOME/timew
-set -xg LANG en_GB.utf8
-set -xg LC_ALL en_GB.utf8
+set -xg LANG en_US.utf8
+set -xg LC_ALL en_US.utf8
 set -xg LD_LIBRARY_PATH $GCC_PATH:$LD_LIBRARY_PATH
 
 # Homebrew set-up

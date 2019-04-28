@@ -49,6 +49,10 @@ echo "Done"
 
 echo "Installing all homebrew packages"
 $HOMEBREW_PREFIX/bin/brew install kakoune sc-im task timewarrior
+# Get terminfo needed for Kakoune
+cd ~/.config/build
+wget https://github.com/mawww/kakoune/raw/master/contrib/tmux-256color.terminfo
+tic -sx tmux-256color.terminfo
 $HOMEBREW_PREFIX/bin/brew tap bentitmus/homebrew
 $HOMEBREW_PREFIX/bin/brew install bentitmus/homebrew/dmenu bentitmus/homebrew/dwm bentitmus/homebrew/st
 cd ~/.config/externals/st
