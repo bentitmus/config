@@ -7,8 +7,8 @@ function read_display --on-event fish_preexec
 end
 
 # Base16 Shell
+set BASE16_SHELL "$HOME/.config/build/base16-shell/"
 if status --is-interactive
-  set BASE16_SHELL "$HOME/.config/build/base16-shell/"
   source "$BASE16_SHELL/profile_helper.fish"
 end
 
