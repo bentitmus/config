@@ -1,0 +1,9 @@
+#!/bin/sh
+
+echo $DISPLAY > /etc/display
+. /arm/tools/setup/init/sh
+. ~/.config/profile
+module load swdev fish/fish-shell/2.7.0
+
+dwm &
+fish
