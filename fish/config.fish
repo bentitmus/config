@@ -33,6 +33,8 @@ set -xg TIMEWARRIORDB $XDG_CONFIG_HOME/timew
 set -xg LANG en_US.utf8
 set -xg LC_ALL en_US.utf8
 set -xg LD_LIBRARY_PATH $GCC_PATH:$LD_LIBRARY_PATH
+set -xg TMUXP_CONFIGDIR ~/.config-internal/tmuxp
+set -xg FZF_DEFAULT_OPTS "--color=light"
 
 # Homebrew set-up
 set -xg HOMEBREW_CACHE $HOMEBREW_BASE/cache

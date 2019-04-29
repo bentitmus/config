@@ -1,3 +1,13 @@
 set -add global autoinfo normal
 set -add global ui_options ncurses_assistant=cat
 colorscheme solarized-light
+source "%val{config}/plugins/plug.kak/rc/plug.kak"
+plug "andreyorst/powerline.kak" %{
+  hook -once global WinCreate .* %{
+    powerline-theme solarized-light
+    powerline-separator none
+    powerline-format git bufname filetype mode_info position line_column
+  }
+}
+plug "andreyorst/fzf.kak"
+map global normal <c-p> ': fzf-mode<ret>'

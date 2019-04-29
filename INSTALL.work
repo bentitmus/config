@@ -15,7 +15,7 @@ echo "~~ Submodules  ~~"
 echo "~~~~~~~~~~~~~~~~~"
 echo "Updating submodules..."
 # Needed to update the terminfo
-git submodule update --init --recursive externals/st externals/base16-shell
+git submodule update --init --recursive externals/st externals/base16-shell vim/pack/minpac/opt/minpac kak/plugins/plug.kak
 echo "Done"
 
 echo ""
@@ -48,7 +48,7 @@ $HOMEBREW_PREFIX/bin/brew install git
 echo "Done"
 
 echo "Installing all homebrew packages"
-$HOMEBREW_PREFIX/bin/brew install kakoune sc-im task timewarrior
+$HOMEBREW_PREFIX/bin/brew install kakoune sc-im task timewarrior fzf
 # Get terminfo needed for Kakoune
 cd ~/.config/build
 wget https://github.com/mawww/kakoune/raw/master/contrib/tmux-256color.terminfo
@@ -58,12 +58,17 @@ $HOMEBREW_PREFIX/bin/brew install bentitmus/homebrew/dmenu bentitmus/homebrew/dw
 cd ~/.config/externals/st
 tic -sx st.info
 cd ../..
+# This tap doesn't work on Linux
+#$HOMEBREW_PREFIX/bin/brew tap rosie-community/rosie https://gitlab.com/rosie-community/packages/homebrew-rosie.git
+$HOMBREW_PREFIX/bin/brew install bentitmus/homebrew/rosie
 #$HOMEBREW_PREFIX/bin/brew install linuxbrew/xorg/libxinerama linuxbrew/xorg/libxft
 #$HOMEBREW_PREFIX/bin/brew tap zegervdv/zathura
 # make html fails in python@2 - ignore
 #echo "Ignore the failure in make html"
 #$HOMEBREW_PREFIX/bin/brew install --debug --verbose python@2
 #$HOMEBREW_PREFIX/bin/brew install zathura
+
+pip3 install tmuxp
 
 echo ""
 echo "~~~~~~~~~~~~~~~~~"
