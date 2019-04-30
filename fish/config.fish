@@ -39,6 +39,18 @@ function vim
   vim $argv
 end
 
+function kak
+  if set -q KAK_SESSION
+    set -l private_kak_test (command kak -l | grep $KAK_SESSION)
+    if test "$private_kak_test" = ""
+      command kak -d -s $KAK_SESSION
+    end
+    command kak -c $KAK_SESSION $argv
+  else
+    command kak $argv
+  end
+end
+
 # Loading the module system might mess up the variables, so reset them if we load modules
 function set_vars
   set -xg EDITOR vim

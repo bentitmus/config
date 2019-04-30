@@ -5,7 +5,7 @@ plug "andreyorst/powerline.kak" %{
   }
   hook global WinCreate .* %{
     powerline-separator none
-    powerline-format bufname filetype mode_info position line_column
+    powerline-format bufname filetype mode_info position line_column session
   }
 }
 plug "andreyorst/fzf.kak"

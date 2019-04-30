@@ -32,10 +32,10 @@ define-command -hidden powerline-theme-solarized-light-modified %{ evaluate-comm
         declare-option -hidden str powerline_color01 ${base0}  # bg: position
         declare-option -hidden str powerline_color06 ${base3}  # fg: line-column
         declare-option -hidden str powerline_color09 ${base00} # bg: line-column
+        declare-option -hidden str powerline_color14 ${green}   # bg: session
+        declare-option -hidden str powerline_color15 ${base3}  # fg: session
         declare-option -hidden str powerline_color13 ${base02} # fg: client
         declare-option -hidden str powerline_color12 ${base0}  # bg: client
-        declare-option -hidden str powerline_color14 ${base02} # fg: session
-        declare-option -hidden str powerline_color15 ${base00} # bg: session
         declare-option -hidden str powerline_color02 ${cyan}   # fg: git
         declare-option -hidden str powerline_color04 ${base2}  # bg: git
         declare-option -hidden str powerline_color16 ${base02} # unused
