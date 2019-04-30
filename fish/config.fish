@@ -15,29 +15,38 @@ end
 set -xg XDG_CONFIG_HOME ~/.config
 
 function load_modules
-  source ~/.config-internal/module.fish
+  if not set -q modules_loaded
+    source ~/.config-internal/module.fish
 
-  module load core util swdev
-  module load arm/cluster
-  module load vim/vim/8.1
-  module load arm/datasync/2.0
-  module load python/python/3.2
-  module load xclip/xclip/0.12
+    module load core util swdev
+    module load arm/cluster
+    module load python/python/3.2
 
-  set_vars
+    set_vars
+    set -xg modules_loaded 1
+  end
 end
 
 function module
   load_modules
-
   module $argv
 end
 
-function vim
-  load_modules
-  functions --erase vim
-  vim $argv
+# Lazy load the module system and the given module when it is requested
+# This speeds up shell startups
+function lazy_module
+  set -l proxy_command $argv[1]
+  set -l proxy_mod $argv[2]
+  function $argv[1] --inherit-variable proxy_command --inherit-variable proxy_mod
+    module load $proxy_mod
+    functions --erase $proxy_command
+    command $proxy_command $argv
+  end
 end
+
+lazy_module vim      vim/vim/8.1
+lazy_module datasync arm/datasync/2.0
+lazy_module xclip    xclip/xclip/0.12
 
 function kak
   if set -q KAK_SESSION
