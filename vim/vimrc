@@ -54,6 +54,9 @@ call matchadd('ShowTrailingWhitespace', '\t')
 
 set background=light
 colorscheme base16-solarized-light
+" Clear guibg and ctermbg to allow tmux window styles to work
+hi Normal guibg=NONE ctermbg=none
+hi NonText guibg=NONE ctermbg=none
 
 " Lightline options
 set laststatus=2    " Always show the status line

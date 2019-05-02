@@ -45,7 +45,7 @@ evaluate-commands %sh{
         face global list               ${green}
 
         # builtin
-        face global Default            ${base00},${base3}
+        #face global Default            ${base00},${base3}
         face global PrimarySelection   ${base3},${blue}+fg
         face global SecondarySelection ${base1},${base01}+fg
         face global PrimaryCursor      ${base3},${base00}+fg
@@ -67,7 +67,8 @@ evaluate-commands %sh{
         face global StatusCursor       ${base0},${base03}
         face global Prompt             ${yellow}+b
         face global MatchingChar       ${red},${base2}+b
-        face global BufferPadding      ${base1},${base3}
+        #face global BufferPadding      ${base1},${base3}
+        face global BufferPadding      ${base1}
         face global Whitespace         ${base1}+f
     "
 }
