@@ -9,4 +9,7 @@ plug "andreyorst/powerline.kak" %{
   }
 }
 plug "andreyorst/fzf.kak"
+plug "alexherbo2/space-indent.kak" %{
+  hook global WinSetOption .* space-indent-enable
+}
 
