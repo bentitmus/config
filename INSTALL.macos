@@ -22,6 +22,47 @@ brew update
 brew upgrade
 brew install fish
 brew install kakoune tmux
+brew tap bbatsche/fisher
+brew install fisherman
+brew tap rosie-community/rosie https://gitlab.com/rosie-community/packages/homebrew-rosie.git
+brew install rosie
+brew install python
+pip3 install tmuxp
+echo "Done"
+
+echo ""
+echo "~~~~~~~~~~~~~~~~~~"
+echo "~ sdkman modules ~"
+echo "~~~~~~~~~~~~~~~~~~"
+echo "Updating sdkman and modules..."
+if test ! $(which sdk); then
+  echo "Installing sdkman..."
+  curl -s http://get.sdkman.io | bash
+fi
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+# need: fisher add reitzig/sdkman-for-fish
+sdk install java
+sdk install maven
+sdk install groovy
+sdk install gradle
+sdk install grails
+sdk install scala
+sdk install sbt
+sdk install leiningen
+sdk install kotlin
+echo "Done"
+
+echo ""
+echo "~~~~~~~~~~~~~~~~~"
+echo "~ stack modules ~"
+echo "~~~~~~~~~~~~~~~~~"
+echo "Updating stack and modules..."
+if test ! $(which stack); then
+  echo "Installing stack..."
+  curl -sSL https://get.haskellstack.org/ | sh
+fi
+stack install ghci
+stack install idris --resolver lts-12.26
 echo "Done"
 
 echo ""
