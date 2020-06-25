@@ -10,6 +10,7 @@ add-highlighter global/ number-lines -separator " "
 add-highlighter global/ show-whitespaces -spc ' '
 set-option global tabstop 2
 set-option global indentwidth 2
+set-option global ui_options ncurses_status_on_top=yes
 
 # Key mappings
 map global normal <c-p> ': fzf-mode<ret>'

@@ -4,6 +4,7 @@
 
 echo $DISPLAY > ~/etc/display
 xsetroot -solid "#fdf6e3"
+xrdb -merge ~/.config/Xresources
 ~/.config-internal/Xsession
 dwm
 
