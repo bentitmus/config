@@ -1,0 +1,8 @@
+set recolor
+set recolor-keephue
+set recolor-lightcolor \#FDF6E3
+set recolor-darkcolor \#000000
+set default-bg \#FDF6E3
+set statusbar-bg \#EEE8D5
+set statusbar-fg \#657B83
+set font "Triplicate T4c normal 12"

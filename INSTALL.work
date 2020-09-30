@@ -48,7 +48,7 @@ $HOMEBREW_PREFIX/bin/brew install git
 echo "Done"
 
 echo "Installing all homebrew packages"
-$HOMEBREW_PREFIX/bin/brew install kakoune sc-im task timewarrior fzf tmux
+$HOMEBREW_PREFIX/bin/brew install sc-im task timewarrior fzf
 # Get terminfo needed for Kakoune
 cd ~/.config/build
 wget https://github.com/mawww/kakoune/raw/master/contrib/tmux-256color.terminfo
@@ -63,14 +63,7 @@ cd ~/.config/externals/st
 tic -sx st.info
 cd ../..
 # This tap doesn't work on Linux
-#$HOMEBREW_PREFIX/bin/brew tap rosie-community/rosie https://gitlab.com/rosie-community/packages/homebrew-rosie.git
 $HOMBREW_PREFIX/bin/brew install bentitmus/homebrew/rosie
-#$HOMEBREW_PREFIX/bin/brew install linuxbrew/xorg/libxinerama linuxbrew/xorg/libxft
-#$HOMEBREW_PREFIX/bin/brew tap zegervdv/zathura
-# make html fails in python@2 - ignore
-#echo "Ignore the failure in make html"
-#$HOMEBREW_PREFIX/bin/brew install --debug --verbose python@2
-#$HOMEBREW_PREFIX/bin/brew install zathura
 
 pip3 install tmuxp
 
@@ -78,8 +71,6 @@ echo ""
 echo "~~~~~~~~~~~~~~~~~"
 echo "~     Links     ~"
 echo "~~~~~~~~~~~~~~~~~"
-cp ~/.config/externals/base16-shell/scripts/base16-solarized-light.sh ~/.base16-theme
-ln -s ~/.config/tmux/tmux.conf ~/.tmux.conf
 ln -s ~/.config/Xsession ~/.xsession
 ln -s ~/.config/failsafe ~/failsafe
 
@@ -90,3 +81,6 @@ echo "~~~~~~~~~~~~~~~~~"
 echo "Please install Triplicate T4c in ~/.fonts"
 echo "Then run fc-cache -v"
 
+xdg-desktop-menu install ~/.config/pwmt-zathura.desktop
+xdg-mime default pwmt-zathura.desktop application/pdf
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
