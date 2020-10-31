@@ -2,21 +2,19 @@ command! PackUpdate packadd minpac | source $XDG_CONFIG_HOME/vim/vimrc | redraw 
 command! PackClean  packadd minpac | source $XDG_CONFIG_HOME/vim/vimrc | call minpac#clean()
 command! PackStatus packadd minpac | source $XDG_CONFIG_HOME/vim/vimrc | call minpac#status()
 
-if !exists('*minpac#init')
-  finish
-endif
+"if !exists('*minpac#init')
+"  finish
+"endif
 
 call minpac#init()
 
 call minpac#add('k-takata/minpac', {'type': 'opt'})
-call minpac#add('chriskempson/base16-vim')
-"call minpac#add('altercation/vim-colors-solarized')
 call minpac#add('vhda/verilog_systemverilog.vim')
 call minpac#add('itchyny/lightline.vim')
 call minpac#add('vim-scripts/ShowTrailingWhitespace')
-call minpac#add('https://gitlab.com/rosie-pattern-language/rosie.git')
 call minpac#add('blueyed/vim-diminactive')
-"call minpac#add('altercation/vim-colors-solarized')
+call minpac#add('ianchanning/vim-selenized')
+call minpac#add('elihunter173/vim-rpl')
 "call minpac#add('tpope/vim-surround')
 "call minpac#add('tpope/vim-fugitive')
 "call minpac#add('drmingdrmer/xptemplate')

@@ -1,0 +1,32 @@
+set line-graphics      = utf-8
+set ignore-case        = yes
+set editor-line-number = yes
+set mouse              = yes
+# Show changes is very slow, so don't
+set show-changes       = no
+
+# View settings
+set main-view = date:custom,local:yes author:full id commit-title:yes,graph:v2,refs:yes,overflow:no
+set main-view-date-format = "%Y-%m-%d %H:%M"
+
+# Key bindings
+bind status a !git commit --amend
+
+# Colour theme
+color default       17 16
+color cursor        16  1
+color status        17  0
+color title-focus   16  2
+color title-blur    17  0
+color search-result 17  8
+#color delimiter     3  3
+#color header        13 13
+#color line-number   12 12
+color id            19 16
+color date           3 16
+color author         2 16
+color mode           6 16
+#color overflow      11 11
+color directory      4 16
+color file          17 16
+color file-size     18 16

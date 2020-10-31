@@ -31,6 +31,7 @@ set listchars=tab:▸\ ,eol:¬ " Set the symbols for hidden characters
 set nobackup        " Do not make a backup when overwriting a file
 set nowritebackup   " Do not make a backup when overwriting a file
 set noswapfile      " Do not make swap files (make sure file sizes are not too big)
+set mouse=a         " Enable mouse support
 
 " Set-up filetypes
 au FileType make setlocal ts=2 sts=2 sw=2 noexpandtab
@@ -53,7 +54,7 @@ exe "highlight ShowTrailingWhitespace ctermbg=" .s:stw
 call matchadd('ShowTrailingWhitespace', '\t')
 
 set background=light
-colorscheme base16-solarized-light
+colorscheme selenized
 " Clear guibg and ctermbg to allow tmux window styles to work
 hi Normal guibg=NONE ctermbg=none
 hi NonText guibg=NONE ctermbg=none

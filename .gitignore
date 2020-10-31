@@ -1,8 +1,5 @@
-build/**
 **/__pycache__
 fish/fish_history
-user-dirs.dirs
-user-dirs.locale
 Trolltech.conf
 fish/fishd.*
 jasper/**
@@ -10,4 +7,7 @@ MusicBrainz/**
 .isolated-storage/**
 vim/pack/minpac/start/**
 vim/.netrwhist
+tmux/plugins/**
 gtk-2.0/**
+*~
+emacs.d/elpa

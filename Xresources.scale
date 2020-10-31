@@ -5,3 +5,6 @@ Xft.hintstyle: hintfull
 Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
+Sxiv.font: Triplicate T4c:size=12:antialias=true:autohint=true
+Sxiv.background: #fbf3db
+Sxiv.foreground: #53676d

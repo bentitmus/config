@@ -19,3 +19,6 @@
 [submodule "fontpatcher"]
 	path = fontpatcher
 	url = https://github.com/powerline/fontpatcher
+[submodule "tmux/plugins/tpm"]
+	path = tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
