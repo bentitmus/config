@@ -1,16 +1,12 @@
 #!/bin/sh
 
 . ~/.config/profile
+. /arm/tools/setup/init/sh
+module load swdev herbstluftwm/herbstluftwm/0.8.3
 
 echo $DISPLAY > ~/etc/display
 xsetroot -solid "#fdf6e3"
 xrdb -merge ~/.config/Xresources.scale
 ~/.config-internal/Xsession
-while true; do
-  xsetroot -name "$( date +'%F %R' ) [$(hostname --domain | sed 's/\..*//')($(hostname --short | sed 's/login//'))]"
-  sleep 1m    # Update time every minute
-done &
-ID=$!
-dwm
-kill $ID
+herbstluftwm --locked
 
