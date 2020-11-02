@@ -1,7 +1,9 @@
 source ~/.config-internal/fish/config.fish
 
 set -xg PATH /bin /usr/bin $LOCAL_PATH ~/bin
-set -xg XDG_CONFIG_HOME ~/.config
+set -xg XDG_DATA_HOME $HOME/.local/share
+set -xg XDG_CONFIG_HOME $HOME/.config
+set -xg XDG_CACHE_HOME $HOME/.cache
 
 function kak
   if set -q KAK_SESSION
@@ -15,6 +17,8 @@ function kak
   end
 end
 
+alias R "R --no-save"
+
 # Some local set-up might mess with these variables, so make them easily 're-loadable'
 function set_vars
   set -xg EDITOR vim
@@ -26,6 +30,10 @@ function set_vars
   set -xg LD_LIBRARY_PATH $GCC_PATH:$LD_LIBRARY_PATH
   set -xg TMUXP_CONFIGDIR ~/.config-internal/tmuxp
   set -xg FZF_DEFAULT_OPTS "--color=light"
+
+  # R set-up
+  set -xg R_ENVIRON_USER $XDG_CONFIG_HOME/R/Renviron
+  set -xg R_PROFILE_USER $XDG_CONFIG_HOME/R/Rprofile
 
   # Homebrew set-up
   set -xg HOMEBREW_CACHE $HOMEBREW_BASE/cache

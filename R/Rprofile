@@ -1,0 +1,10 @@
+wq <- function()
+  q(save="yes")
+
+local({r <- getOption("repos")
+  r["CRAN"] <- "https://www.stats.bris.ac.uk/R/"
+  options(repos=r)
+})
+
+.Last <- function()
+  if(interactive()) try(savehistory("~/.local/share/R/Rhistory"))
