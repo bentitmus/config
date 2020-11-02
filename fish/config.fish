@@ -17,7 +17,8 @@ function kak
   end
 end
 
-alias R "R --no-save"
+alias R "R --no-save -q"
+alias hc herbstclient
 
 # Some local set-up might mess with these variables, so make them easily 're-loadable'
 function set_vars
