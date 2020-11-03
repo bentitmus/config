@@ -3,7 +3,9 @@ fish/fish_history
 Trolltech.conf
 fish/fishd.*
 fish/fish_variables
+fish/fisher/**
 jasper/**
+less/keys
 MusicBrainz/**
 .isolated-storage/**
 vim/pack/minpac/start/**

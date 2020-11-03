@@ -5,6 +5,15 @@ set -xg XDG_DATA_HOME $HOME/.local/share
 set -xg XDG_CONFIG_HOME $HOME/.config
 set -xg XDG_CACHE_HOME $HOME/.cache
 
+set -g fisher_path $XDG_CONFIG_HOME/fish/fisher
+
+set -p fish_function_path fish_function_path[1] $fisher_path/functions
+set -p fish_complete_path fish_complete_path[1] $fisher_path/completions
+
+for file in $fisher_path/conf.d/*.fish
+  builtin source $file 2>/dev/null
+end
+
 function kak
   if set -q KAK_SESSION
     set -l private_kak_test (command kak -l | grep $KAK_SESSION)
