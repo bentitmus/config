@@ -84,3 +84,8 @@ echo "Then run fc-cache -v"
 xdg-desktop-menu install ~/.config/pwmt-zathura.desktop
 xdg-mime default pwmt-zathura.desktop application/pdf
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+
+cd less
+lesskey less
+cd ..
+

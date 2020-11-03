@@ -31,6 +31,7 @@ function set_vars
   set -xg LD_LIBRARY_PATH $GCC_PATH:$LD_LIBRARY_PATH
   set -xg TMUXP_CONFIGDIR ~/.config-internal/tmuxp
   set -xg FZF_DEFAULT_OPTS "--color=light"
+  set -xg LESSKEY $XDG_CONFIG_HOME/less/keys
 
   # R set-up
   set -xg R_ENVIRON_USER $XDG_CONFIG_HOME/R/Renviron
