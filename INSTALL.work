@@ -73,12 +73,14 @@ echo "~     Links     ~"
 echo "~~~~~~~~~~~~~~~~~"
 ln -s ~/.config/Xsession ~/.xsession
 ln -s ~/.config/failsafe ~/failsafe
+# This is fixed in master on sc-im
+ln -s ~/.config/scimrc ~/.scimrc
 
 echo ""
 echo "~~~~~~~~~~~~~~~~~"
 echo "~ Install fonts ~"
 echo "~~~~~~~~~~~~~~~~~"
-echo "Please install Triplicate T4c in ~/.fonts"
+echo "Please install Triplicate T4c and others in ~/.local/share/fonts"
 echo "Then run fc-cache -v"
 
 xdg-desktop-menu install ~/.config/pwmt-zathura.desktop
