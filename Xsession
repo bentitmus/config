@@ -8,5 +8,5 @@ echo $DISPLAY > ~/etc/display
 xsetroot -solid "#fdf6e3"
 xrdb -merge ~/.config/Xresources.scale
 ~/.config-internal/Xsession
-herbstluftwm --locked
+herbstluftwm --locked --no-tag-import
 
