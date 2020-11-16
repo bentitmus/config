@@ -1,0 +1,2 @@
+set object 1 rectangle from screen 0,0 to screen 1,1 fillcolor rgb"#fbf3db" behind
+set term qt font "Valkyrie T4,12"
