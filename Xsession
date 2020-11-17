@@ -1,12 +1,13 @@
 #!/bin/sh
 
-. ~/.config/profile
-. /arm/tools/setup/init/sh
-module load swdev herbstluftwm/herbstluftwm/0.8.3
-
 echo $DISPLAY > ~/etc/display
+. /arm/tools/setup/init/sh
+. ~/.config/profile
+
 xsetroot -solid "#fdf6e3"
 xrdb -merge ~/.config/Xresources.scale
+
+module load swdev herbstluftwm/herbstluftwm/0.8.3
 ~/.config-internal/Xsession
 herbstluftwm --locked --no-tag-import
 
