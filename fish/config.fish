@@ -31,7 +31,7 @@ alias hc herbstclient
 
 # Some local set-up might mess with these variables, so make them easily 're-loadable'
 function set_vars
-  set -xg EDITOR vim
+  set -xg EDITOR kak
   set -xg VIMINIT "source $XDG_CONFIG_HOME/vim/vimrc"
   set -xg TASKRC $XDG_CONFIG_HOME/task/taskrc
   set -xg TIMEWARRIORDB $XDG_CONFIG_HOME/timew
