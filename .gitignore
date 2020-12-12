@@ -15,4 +15,4 @@ kak/plugins/**
 kak/autoload/autoload
 gtk-2.0/**
 *~
-emacs.d/elpa
+emacs/elpa
