@@ -7,7 +7,8 @@ echo $DISPLAY > ~/etc/display
 xsetroot -solid "#fdf6e3"
 xrdb -merge ~/.config/Xresources.scale
 
-module load swdev herbstluftwm/herbstluftwm/0.8.3
+module load swdev herbstluftwm/herbstluftwm/0.8.3 stoeckmann/xwallpaper/0.6.5
 ~/.config-internal/Xsession
+xwallpaper --zoom ~/.local/share/wallpapers/wallpaper05.jpg
 herbstluftwm --locked --no-tag-import
 
