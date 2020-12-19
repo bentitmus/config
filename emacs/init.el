@@ -32,11 +32,14 @@
   (tool-bar-mode -1)
   (scroll-bar-mode -1)
   (tooltip-mode -1)
-  (column-number-mode t)
-  :config
-  (setq inhibit-splash-screen t))
+  (column-number-mode t))
+;;  :config
+;;  (setq inhibit-splash-screen t))
 
-(set-frame-font "Triplicate T4c 12" nil t)
+;;(set-frame-font "Triplicate T4c 12" nil t)
+(set-face-attribute 'default nil :font "Triplicate T4c-12")
+(set-face-attribute 'fixed-pitch nil :font "Triplicate T4c-12")
+(set-face-attribute 'variable-pitch nil :font "Valkyrie T4-12")
 
 ;; org-mode
 (use-package org
