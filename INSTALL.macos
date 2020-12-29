@@ -29,8 +29,8 @@ brew tap clementtsang/bottom
 brew update
 brew upgrade
 brew install fish gnupg pass bat procs fd lf tig fzf bottom
-brew install kakoune tmux sc-im gnuplot newsboat
-brew install isync mu mutt
+brew install kakoune tmux sc-im gnuplot newsboat mpv
+brew install isync mu mutt davmail
 brew install gforth swi-prolog acl2 idris2 rosie octave
 brew install --cask coqide isabelle
 echo "Done"
