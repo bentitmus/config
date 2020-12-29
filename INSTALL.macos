@@ -1,33 +1,38 @@
 #!/bin/sh
 
-mkdir -p build
-
-echo "~~~~~~~~~~~~~~~~~"
-echo "~~ Submodules  ~~"
-echo "~~~~~~~~~~~~~~~~~"
-echo "Updating submodules..."
-git submodule update --init --recursive
-echo "Done"
+# Manual tasks
+# Install XCode
+# Install homebrew
+# Install fonts
+# > brew install gnupg
+# Clone .config from git
 
 echo ""
-echo "~~~~~~~~~~~~~~~~~"
-echo "~ brew modules  ~"
-echo "~~~~~~~~~~~~~~~~~"
+echo "~~~~~~~~~"
+echo "~ Links ~"
+echo "~~~~~~~~~"
+ln -s ~/.config/emacs ~/.emacs.d
+# Fix submodules which are broken for some reason
+git submodule update --init --recursive tmux kak vim
+
+echo ""
+echo "~~~~~~~~~~~~~~~~"
+echo "~ brew modules ~"
+echo "~~~~~~~~~~~~~~~~"
 echo "Updating brew and modules..."
 if test ! $(which brew); then
   echo "Installing homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
+brew tap rosie-community/rosie https://gitlab.com/rosie-community/packages/homebrew-rosie.git
+brew tap clementtsang/bottom
 brew update
 brew upgrade
-brew install fish
-brew install kakoune tmux
-brew tap bbatsche/fisher
-brew install fisherman
-brew tap rosie-community/rosie https://gitlab.com/rosie-community/packages/homebrew-rosie.git
-brew install rosie
-brew install python
-pip3 install tmuxp
+brew install fish gnupg pass bat procs fd lf tig fzf bottom
+brew install kakoune tmux sc-im gnuplot newsboat
+brew install isync mu mutt
+brew install gforth swi-prolog acl2 idris2 rosie octave
+brew install --cask coqide isabelle
 echo "Done"
 
 echo ""
@@ -65,6 +70,8 @@ stack install ghci
 stack install idris --resolver lts-12.26
 echo "Done"
 
+# Untested below
+
 echo ""
 echo "~~~~~~~~~~~~~~~~~"
 echo " Terminal base16 "
@@ -79,10 +86,4 @@ git pull
 open base16-solarized.dark.terminal
 cd ../..
 echo "Done"
-
-echo ""
-echo "~~~~~~~~~~~~~~~~~"
-echo "~ Install fonts ~"
-echo "~~~~~~~~~~~~~~~~~"
-echo "Please install Triplicate T4c"
 

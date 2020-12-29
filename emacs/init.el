@@ -45,6 +45,22 @@
 (use-package org
   :ensure t)
 
+;; mu4e
+(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu/mu4e")
+(require 'mu4e)
+(setq mail-user-agent 'mu4e-user-agent)
+(setq mu4e-mu-binary "/usr/local/bin/mu")
+(setq
+  mu4e-view-show-images    t
+  mu4e-view-show-addresses t
+  mu4e-date-format         "%y-%m-%d"
+  mu4e-headers-date-format "%Y-%m-%d")
+(setq mu4e-get-mail-command "mbsync -a")
+
+(setq
+  user-mail-address "ben.titmus@gmail.com"
+  user-full-name    "Benjamin Titmus")
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

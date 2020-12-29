@@ -1,0 +1,15 @@
+set folder = "~/.local/share/mbsync/gmail"
+set spoolfile = +Inbox
+set record = +Sent
+set header_cache = ~/.cache/mutt
+macro index G "!mbsync -c ~/.config/isync/mbsyncrc -a^M" "Update through mbsync"
+
+set delete         # No confirm delete
+set move = no      # No move mail on read
+set help = no      # No help bar
+set sleep_time = 0 # No wait time for switching mbox
+set sort = threads # Top-down
+set sort_aux = reverse-last-date-received
+set date_format="%Y-%m-%d %H:%M"
+set index_format = "%4C %Z %D %-15.15L (%?l?%4l&%4c?) %s"
+

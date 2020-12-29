@@ -1,0 +1,106 @@
+# Gmail
+IMAPAccount     gmail
+Host            imap.gmail.com
+User            ben.titmus@gmail.com
+PassCmd         "pass show gmail-mbsync"
+AuthMechs       LOGIN
+SSLType         IMAPS
+SSLVersions     SSLv3
+
+IMAPStore gmail-remote
+Account   gmail
+
+MaildirStore gmail-local
+# Trailing "/" is important
+Path         ~/.local/share/mbsync/gmail/
+Inbox        ~/.local/share/mbsync/gmail/inbox
+SubFolders   Verbatim
+
+Channel gmail-inbox
+Master  :gmail-remote:INBOX
+Slave   :gmail-local:Inbox
+
+Channel gmail-starred
+Master  :gmail-remote:"[Gmail]/Starred"
+Slave   :gmail-local:Starred
+
+Channel gmail-sent
+Master  :gmail-remote:"[Gmail]/Sent Mail"
+Slave   :gmail-local:Sent
+
+Channel gmail-archive
+Master  :gmail-remote:"[Gmail]/All Mail"
+Slave   :gmail-local:All
+
+Channel gmail-bin
+Master  :gmail-remote:"[Gmail]/Bin"
+Slave   :gmail-local:Bin
+
+Channel gmail-spam
+Master  :gmail-remote:"[Gmail]/Spam"
+Slave   :gmail-local:Spam
+
+Channel gmail-default
+Master  :gmail-remote:
+Slave   :gmail-local:
+Patterns * ![Gmail]* !INBOX !Inbox !All !Sent* !Bin !Drafts !Spam !Starred
+
+Create    Slave
+Expunge   Both
+SyncState *
+
+Group   gmail
+Channel gmail-inbox
+Channel gmail-starred
+Channel gmail-sent
+Channel gmail-archive
+Channel gmail-bin
+Channel gmail-spam
+Channel gmail-default
+
+# Work
+IMAPAccount     arm
+Host            localhost
+Port            1143
+Timeout         60
+User            Benjamin.Titmus@arm.com
+PassCmd         "pass show arm-mbsync"
+AuthMechs       LOGIN
+SSLType         None
+
+IMAPStore arm-remote
+Account   arm
+
+MaildirStore arm-local
+# Trailing "/" is important
+Path         ~/.local/share/mbsync/arm/
+Inbox        ~/.local/share/mbsync/arm/inbox
+SubFolders   Verbatim
+
+Channel arm-inbox
+Master  :arm-remote:INBOX
+Slave   :arm-local:Inbox
+
+Channel arm-bin
+Master  :arm-remote:Trash
+Slave   :arm-local:Bin
+
+Channel arm-spam
+Master  :arm-remote:Junk
+Slave   :arm-local:Spam
+
+Channel arm-default
+Master  :arm-remote:
+Slave   :arm-local:
+Patterns * !INBOX !Conversation\ History !Junk !Trash !Social\ Activity\ Notifications !Sync\ Issues* !Unsent\ Messages !Bin !Spam
+
+Create    Slave
+Expunge   Both
+SyncState *
+
+Group   arm
+Channel arm-inbox
+Channel arm-bin
+Channel arm-spam
+Channel arm-default
+
