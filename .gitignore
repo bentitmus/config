@@ -1,18 +1,24 @@
+# Generic file types
+*~
 **/__pycache__
-fish/fish_history
+# Particular files
 Trolltech.conf
+.isolated-storage/**
+emacs/elpa
+emacs/url
+fish/fish_history
 fish/fishd.*
 fish/fish_variables
 fish/fisher/**
+fisher/**
+gtk-2.0/**
 jasper/**
-less/keys
-MusicBrainz/**
-.isolated-storage/**
-vim/pack/minpac/start/**
-vim/.netrwhist
-tmux/plugins/**
 kak/plugins/**
 kak/autoload/autoload
-gtk-2.0/**
-*~
-emacs/elpa
+less/keys
+MusicBrainz/**
+octave/**
+swi-prolog/dir-history
+tmux/plugins/**
+vim/pack/minpac/start/**
+vim/.netrwhist
