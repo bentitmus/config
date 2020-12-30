@@ -26,13 +26,18 @@ if test ! $(which brew); then
 fi
 brew tap rosie-community/rosie https://gitlab.com/rosie-community/packages/homebrew-rosie.git
 brew tap clementtsang/bottom
+brew tap koekeishiya/formulae
 brew update
 brew upgrade
 brew install fish gnupg pass bat procs fd lf tig fzf bottom
 brew install kakoune tmux sc-im gnuplot newsboat mpv
 brew install isync mu mutt davmail
+brew install skhd yabai
 brew install gforth swi-prolog acl2 idris2 rosie octave
 brew install --cask coqide isabelle
+brew services start skhd
+sudo yabai --install-sa
+brew services start yabai
 echo "Done"
 
 echo ""
