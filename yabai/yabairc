@@ -54,5 +54,6 @@ yabai -m rule --add label="Dictionary" app="^Dictionary$" manage=off
 yabai -m rule --add label="mpv" app="^mpv$" manage=off
 yabai -m rule --add label="Software Update" title="Software Update" manage=off
 yabai -m rule --add label="Glyphs 3" title="^Glyphs 3$" title="^(Window|Preferences)$" manage=off
+yabai -m rule --add label="Nitrokey" title="^Nitrokey App" manage=off
 
 echo "yabai configuration loaded.."
