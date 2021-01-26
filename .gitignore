@@ -18,6 +18,7 @@ kak/autoload/autoload
 less/keys
 MusicBrainz/**
 octave/**
+ssh/known_hosts
 swi-prolog/dir-history
 tmux/plugins/**
 vim/pack/minpac/start/**
