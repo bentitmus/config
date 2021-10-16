@@ -37,25 +37,70 @@
 ;;  (setq inhibit-splash-screen t))
 
 ;;(set-frame-font "Triplicate T4c 12" nil t)
-(set-face-attribute 'default nil :font "Triplicate T4c-12")
-(set-face-attribute 'fixed-pitch nil :font "Triplicate T4c-12")
-(set-face-attribute 'variable-pitch nil :font "Valkyrie T4-12")
+(set-face-attribute 'default nil :font "Triplicate T4c-14")
+(set-face-attribute 'fixed-pitch nil :font "Triplicate T4c-14")
+(set-face-attribute 'variable-pitch nil :font "Valkyrie T4-14")
 
 ;; org-mode
 (use-package org
   :ensure t)
+(use-package org-gtd
+  :after org
+  :demand t
+  :pin melpa
+  :custom
+  ;; where org-gtd will put its files. This value is also the default one.
+  (org-gtd-directory "~/gtd")
+  ;; package: https://github.com/Malabarba/org-agenda-property
+  ;; this is so you can see who an item was delegated to in the agenda
+  (org-agenda-property-list '("DELEGATED_TO"))
+  ;; I think this makes the agenda easier to read
+  (org-agenda-property-position 'next-line)
+  ;; package: https://www.nongnu.org/org-edna-el/
+  ;; org-edna is used to make sure that when a project task gets DONE,
+  ;; the next TODO is automatically changed to NEXT.
+  (org-edna-use-inheritance t)
+   :config
+   (org-edna-load)
+  :bind
+  (("C-c d c" . org-gtd-capture) ;; add item to inbox
+   ("C-c d a" . org-agenda-list) ;; see what's on your plate today
+   ("C-c d p" . org-gtd-process-inbox) ;; process entire inbox
+   ("C-c d n" . org-gtd-show-all-next) ;; see all NEXT items
+   ("C-c d s" . org-gtd-show-stuck-projects)) ;; see projects that don't have a NEXT item
+  :init
+  ;; the keybinding to hit when you're done editing an item in the processing phase
+  (bind-key "C-c c" 'org-gtd-clarify-finalize))
+(use-package org-agenda
+  :ensure nil
+  :after org-gtd)
+(use-package org-capture
+  :ensure nil
+  :after org-gtd)
+(setq org-agenda-files `(,org-gtd-directory))
+;; a useful view to see what can be accomplished today
+(setq org-agenda-custom-commands '(("g" "Scheduled today and all NEXT items" ((agenda "" ((org-agenda-span 1))) (todo "NEXT")))))
+(setq org-capture-templates
+      `(("i" "Inbox"
+         entry (file ,(org-gtd-inbox-path))
+         "* %?\n%U\n\n  %i"
+         :kill-buffer t)
+        ("l" "Todo with link"
+         entry (file ,(org-gtd-inbox-path))
+         "* %?\n%U\n\n  %i\n  %a"
+         :kill-buffer t)))
 
 ;; mu4e
-(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu/mu4e")
+(add-to-list 'load-path "/opt/homebrew/share/emacs/site-lisp/mu/mu4e")
 (require 'mu4e)
 (setq mail-user-agent 'mu4e-user-agent)
-(setq mu4e-mu-binary "/usr/local/bin/mu")
+(setq mu4e-mu-binary "/opt/homebrew/bin/mu")
 (setq
   mu4e-view-show-images    t
   mu4e-view-show-addresses t
   mu4e-date-format         "%y-%m-%d"
   mu4e-headers-date-format "%Y-%m-%d")
-(setq mu4e-get-mail-command "mbsync -a")
+(setq mu4e-get-mail-command "mbsync -c ~/.config/isync/mbsyncrc -a")
 
 (setq
   user-mail-address "ben.titmus@gmail.com"
@@ -66,11 +111,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (selenized-light)))
+ '(custom-enabled-themes '(selenized-light))
  '(custom-safe-themes
-   (quote
-    ("cf36206431f80f0435bb7461e8be8429d949ba641abaf790b7730423e2e88638" "9bb86bf42ce13b9fce1690024d52238133988555009ac59a2f63ae2df7790c55" "59263e76fcbf0b0f278c27a78e01ad40d1191edf9c55cfcbe1a47e89e25a1893" default)))
- '(package-selected-packages (quote (use-package))))
+   '("cf36206431f80f0435bb7461e8be8429d949ba641abaf790b7730423e2e88638" "9bb86bf42ce13b9fce1690024d52238133988555009ac59a2f63ae2df7790c55" "59263e76fcbf0b0f278c27a78e01ad40d1191edf9c55cfcbe1a47e89e25a1893" default))
+ '(package-selected-packages '(org-gtd use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
