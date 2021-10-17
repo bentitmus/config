@@ -4,6 +4,7 @@
 # Particular files
 Trolltech.conf
 .isolated-storage/**
+broot/launcher
 emacs/elpa
 emacs/url
 fish/fish_history

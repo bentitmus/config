@@ -1,6 +1,10 @@
-source ~/.config-internal/fish/config.fish
+if test -f ~/.config-internal/fish/config.fish
+  source ~/.config-internal/fish/config.fish
+else
+  set -xg LOCAL_PATH /usr/local/bin /usr/local/sbin
+end
 
-set -xg PATH /bin /usr/bin $LOCAL_PATH ~/bin
+set -xg PATH /bin $LOCAL_PATH /usr/bin ~/bin
 set -xg XDG_DATA_HOME $HOME/.local/share
 set -xg XDG_CONFIG_HOME $HOME/.config
 set -xg XDG_CACHE_HOME $HOME/.cache
@@ -47,6 +51,8 @@ function set_vars
   set -xg R_ENVIRON_USER $XDG_CONFIG_HOME/R/Renviron
   set -xg R_PROFILE_USER $XDG_CONFIG_HOME/R/Rprofile
 
+  set -xg SSH_AUTH_SOCK $HOME/.gnupg/S.gpg-agent.ssh
+
   # Homebrew set-up
   set -xg HOMEBREW_CACHE $HOMEBREW_BASE/cache
   set -xg HOMEBREW_TEMP $HOMEBREW_BASE/tmp
@@ -60,5 +66,9 @@ end
 
 set_vars
 
-eval (dircolors -c ~/.config/dircolors)
+if type -q gdircolors
+  eval (gdircolors -c ~/.config/dircolors)
+else
+  eval (dircolors -c ~/.config/dircolors)
+end
 

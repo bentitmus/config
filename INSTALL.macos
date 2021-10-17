@@ -29,7 +29,7 @@ brew tap rosie-community/rosie https://gitlab.com/rosie-community/packages/homeb
 brew tap koekeishiya/formulae
 brew update
 brew upgrade
-brew install fish bat procs fd lf tig fzf bottom jq yq basex wget
+brew install fish bat procs fd lf tig fzf bottom jq yq basex wget broot
 brew install fdupes exiftool media-info
 brew install gnupg paperkey dmtx-utils pass
 brew install kakoune tmux sc-im gnuplot newsboat mpv
