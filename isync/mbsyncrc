@@ -1,3 +1,7 @@
+Create    Near
+Expunge   Both
+SyncState *
+
 # Gmail
 IMAPAccount     gmail
 Host            imap.gmail.com
@@ -5,7 +9,7 @@ User            ben.titmus@gmail.com
 PassCmd         "pass show gmail-mbsync"
 AuthMechs       LOGIN
 SSLType         IMAPS
-SSLVersions     SSLv3
+SSLVersions     TLSv1.3
 
 IMAPStore gmail-remote
 Account   gmail
@@ -17,37 +21,33 @@ Inbox        ~/.local/share/mbsync/gmail/inbox
 SubFolders   Verbatim
 
 Channel gmail-inbox
-Master  :gmail-remote:INBOX
-Slave   :gmail-local:Inbox
+Far     :gmail-remote:INBOX
+Near    :gmail-local:Inbox
 
 Channel gmail-starred
-Master  :gmail-remote:"[Gmail]/Starred"
-Slave   :gmail-local:Starred
+Far     :gmail-remote:"[Gmail]/Starred"
+Near    :gmail-local:Starred
 
 Channel gmail-sent
-Master  :gmail-remote:"[Gmail]/Sent Mail"
-Slave   :gmail-local:Sent
+Far     :gmail-remote:"[Gmail]/Sent Mail"
+Near    :gmail-local:Sent
 
 Channel gmail-archive
-Master  :gmail-remote:"[Gmail]/All Mail"
-Slave   :gmail-local:All
+Far     :gmail-remote:"[Gmail]/All Mail"
+Near    :gmail-local:All
 
 Channel gmail-bin
-Master  :gmail-remote:"[Gmail]/Bin"
-Slave   :gmail-local:Bin
+Far     :gmail-remote:"[Gmail]/Bin"
+Near    :gmail-local:Bin
 
 Channel gmail-spam
-Master  :gmail-remote:"[Gmail]/Spam"
-Slave   :gmail-local:Spam
+Far     :gmail-remote:"[Gmail]/Spam"
+Near    :gmail-local:Spam
 
 Channel gmail-default
-Master  :gmail-remote:
-Slave   :gmail-local:
+Far     :gmail-remote:
+Near    :gmail-local:
 Patterns * ![Gmail]* !INBOX !Inbox !All !Sent* !Bin !Drafts !Spam !Starred
-
-Create    Slave
-Expunge   Both
-SyncState *
 
 Group   gmail
 Channel gmail-inbox
@@ -78,25 +78,21 @@ Inbox        ~/.local/share/mbsync/arm/inbox
 SubFolders   Verbatim
 
 Channel arm-inbox
-Master  :arm-remote:INBOX
-Slave   :arm-local:Inbox
+Far     :arm-remote:INBOX
+Near    :arm-local:Inbox
 
 Channel arm-bin
-Master  :arm-remote:Trash
-Slave   :arm-local:Bin
+Far     :arm-remote:Trash
+Near    :arm-local:Bin
 
 Channel arm-spam
-Master  :arm-remote:Junk
-Slave   :arm-local:Spam
+Far     :arm-remote:Junk
+Near    :arm-local:Spam
 
 Channel arm-default
-Master  :arm-remote:
-Slave   :arm-local:
+Far     :arm-remote:
+Near    :arm-local:
 Patterns * !INBOX !Conversation\ History !Junk !Trash !Social\ Activity\ Notifications !Sync\ Issues* !Unsent\ Messages !Bin !Spam
-
-Create    Slave
-Expunge   Both
-SyncState *
 
 Group   arm
 Channel arm-inbox

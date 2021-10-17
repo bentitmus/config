@@ -1,26 +1,26 @@
-Colour     RGB
----------- -------
-bg_0       #fbf3db
-bg_1       #ece3cc
-bg_2       #d5cdb6
-dim_0      #909995
-fg_0       #53676d
-fg_1       #3a4d53
+Colour     RGB hex RGB decimal
+---------- ------- ------------------
+bg_0       #fbf3db rgb(251, 243, 219)
+bg_1       #ece3cc rgb(236, 227, 204)
+bg_2       #d5cdb6 rgb(213, 205, 182)
+dim_0      #909995 rgb(144, 153, 149)
+fg_0       #53676d rgb(83, 103, 109)
+fg_1       #3a4d53 rgb(58, 77, 83)
 
-red        #d2212d
-green      #489100
-yellow     #ad8900
-blue       #0072d4
-magenta    #ca4898
-cyan       #009c8f
-orange     #c25d1e
-violet     #8762c6
+red        #d2212d rgb(210, 33, 45)
+green      #489100 rgb(72, 145, 0)
+yellow     #ad8900 rgb(173, 137, 0)
+blue       #0072d4 rgb(0, 114, 212)
+magenta    #ca4898 rgb(202, 72, 152)
+cyan       #009c8f rgb(0, 156, 143)
+orange     #c25d1e rgb(194, 93, 30)
+violet     #8762c6 rgb(135, 98, 198)
 
-br_red     #cc1729
-br_green   #428b00
-br_yellow  #a78300
-br_blue    #006dce
-br_magenta #c44392
-br_cyan    #00978a
-br_orange  #bc5819
-br_violet  #825dc0
+br_red     #cc1729 rgb(204, 23, 41)
+br_green   #428b00 rgb(66, 139, 0)
+br_yellow  #a78300 rgb(167, 131, 0)
+br_blue    #006dce rgb(0, 109, 206)
+br_magenta #c44392 rgb(196, 67, 146)
+br_cyan    #00978a rgb(0, 151, 138)
+br_orange  #bc5819 rgb(188, 88, 25)
+br_violet  #825dc0 rgb(130, 93, 192)

@@ -13,3 +13,5 @@ set sort_aux = reverse-last-date-received
 set date_format="%Y-%m-%d %H:%M"
 set index_format = "%4C %Z %D %-15.15L (%?l?%4l&%4c?) %s"
 
+source "~/.config/mutt/selenized.muttrc"
+
