@@ -6,7 +6,7 @@ else
   else
     set -xg LOCAL_PATH /usr/local/sbin
   end
-  set -xg LOCAL_PATH $LOCAL_PATH /usr/local/bin
+  set -xg LOCAL_PATH $LOCAL_PATH /usr/local/bin /sbin
   if test -d /Applications/Racket\ v7.9.0.17/bin
     set -xg LOCAL_PATH $LOCAL_PATH /Applications/Racket\ v7.9.0.17/bin
   end
