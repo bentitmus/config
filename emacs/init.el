@@ -32,9 +32,9 @@
   (tool-bar-mode -1)
   (scroll-bar-mode -1)
   (tooltip-mode -1)
-  (column-number-mode t))
-;;  :config
-;;  (setq inhibit-splash-screen t))
+  (column-number-mode t)
+  :config
+  (setq inhibit-splash-screen t))
 
 ;;(set-frame-font "Triplicate T4c 12" nil t)
 (set-face-attribute 'default nil :font "Triplicate T4c-14")

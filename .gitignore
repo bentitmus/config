@@ -6,6 +6,7 @@ Trolltech.conf
 .isolated-storage/**
 broot/launcher
 emacs/elpa
+emacs/eshell
 emacs/url
 fish/fish_history
 fish/fishd.*

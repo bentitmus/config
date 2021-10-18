@@ -1,7 +1,18 @@
 if test -f ~/.config-internal/fish/config.fish
   source ~/.config-internal/fish/config.fish
 else
-  set -xg LOCAL_PATH /usr/local/bin /usr/local/sbin
+  if test -d /opt/homebrew
+    set -xg LOCAL_PATH /opt/homebrew/bin
+  else
+    set -xg LOCAL_PATH /usr/local/sbin
+  end
+  set -xg LOCAL_PATH $LOCAL_PATH /usr/local/bin
+  if test -d /Applications/Racket\ v7.9.0.17/bin
+    set -xg LOCAL_PATH $LOCAL_PATH /Applications/Racket\ v7.9.0.17/bin
+  end
+  if test -d ~/.local/bin
+    set -xg LOCAL_PATH $LOCAL_PATH ~/.local/bin
+  end
 end
 
 set -xg PATH /bin $LOCAL_PATH /usr/bin ~/bin
@@ -39,8 +50,13 @@ function set_vars
   set -xg VIMINIT "source $XDG_CONFIG_HOME/vim/vimrc"
   set -xg TASKRC $XDG_CONFIG_HOME/task/taskrc
   set -xg TIMEWARRIORDB $XDG_CONFIG_HOME/timew
-  set -xg LANG en_US.utf8
-  set -xg LC_ALL en_US.utf8
+  if [ (uname) = "Darwin" ]
+    set -xg LANG en_GB.UTF-8
+    set -xg LC_ALL en_GB.UTF-8
+  else
+    set -xg LANG en_US.UTF-8
+    set -xg LC_ALL en_US.UTF-8
+  end
   set -xg TZ Europe/London
   set -xg LD_LIBRARY_PATH $GCC_PATH:$LD_LIBRARY_PATH
   set -xg TMUXP_CONFIGDIR ~/.config-internal/tmuxp
@@ -52,16 +68,19 @@ function set_vars
   set -xg R_PROFILE_USER $XDG_CONFIG_HOME/R/Rprofile
 
   set -xg SSH_AUTH_SOCK $HOME/.gnupg/S.gpg-agent.ssh
+  set -xg PASSWORD_STORE_DIR $XDG_DATA_HOME/password-store
 
   # Homebrew set-up
-  set -xg HOMEBREW_CACHE $HOMEBREW_BASE/cache
-  set -xg HOMEBREW_TEMP $HOMEBREW_BASE/tmp
-  set -gx HOMEBREW_PREFIX "$HOMEBREW_BASE/install";
-  set -gx HOMEBREW_CELLAR "$HOMEBREW_BASE/install/Cellar";
-  set -gx HOMEBREW_REPOSITORY "$HOMEBREW_BASE/install/Homebrew";
-  set -g fish_user_paths "$HOMEBREW_BASE/install/bin" "$HOMEBREW_BASE/install/sbin" $fish_user_paths;
-  set -q MANPATH; or set MANPATH ''; set -gx MANPATH "$HOMEBREW_BASE/install/share/man" $MANPATH;
-  set -q INFOPATH; or set INFOPATH ''; set -gx INFOPATH "$HOMEBREW_BASE/install/share/info" $INFOPATH;
+  if [ (uname) = "Linux" ]
+    set -xg HOMEBREW_CACHE $HOMEBREW_BASE/cache
+    set -xg HOMEBREW_TEMP $HOMEBREW_BASE/tmp
+    set -gx HOMEBREW_PREFIX "$HOMEBREW_BASE/install";
+    set -gx HOMEBREW_CELLAR "$HOMEBREW_BASE/install/Cellar";
+    set -gx HOMEBREW_REPOSITORY "$HOMEBREW_BASE/install/Homebrew";
+    set -g fish_user_paths "$HOMEBREW_BASE/install/bin" "$HOMEBREW_BASE/install/sbin" $fish_user_paths;
+    set -q MANPATH; or set MANPATH ''; set -gx MANPATH "$HOMEBREW_BASE/install/share/man" $MANPATH;
+    set -q INFOPATH; or set INFOPATH ''; set -gx INFOPATH "$HOMEBREW_BASE/install/share/info" $INFOPATH;
+  end
 end
 
 set_vars
