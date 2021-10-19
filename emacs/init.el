@@ -42,15 +42,17 @@
 (set-face-attribute 'variable-pitch nil :font "Valkyrie T4-14")
 
 ;; org-mode
+(setq bt-org-base "~/Dropbox/OrgMode")
 (use-package org
   :ensure t)
 (use-package org-gtd
   :after org
   :demand t
+  :ensure t
   :pin melpa
   :custom
   ;; where org-gtd will put its files. This value is also the default one.
-  (org-gtd-directory "~/gtd")
+  (org-gtd-directory (expand-file-name "GTD" bt-org-base))
   ;; package: https://github.com/Malabarba/org-agenda-property
   ;; this is so you can see who an item was delegated to in the agenda
   (org-agenda-property-list '("DELEGATED_TO"))
@@ -60,8 +62,8 @@
   ;; org-edna is used to make sure that when a project task gets DONE,
   ;; the next TODO is automatically changed to NEXT.
   (org-edna-use-inheritance t)
-   :config
-   (org-edna-load)
+  :config
+  (org-edna-load)
   :bind
   (("C-c d c" . org-gtd-capture) ;; add item to inbox
    ("C-c d a" . org-agenda-list) ;; see what's on your plate today
@@ -73,14 +75,16 @@
   (bind-key "C-c c" 'org-gtd-clarify-finalize))
 (use-package org-agenda
   :ensure nil
-  :after org-gtd)
+  :after org-gtd
+  :config
+  (setq org-agenda-files `(,org-gtd-directory))
+  ;; a useful view to see what can be accomplished today
+  (setq org-agenda-custom-commands '(("g" "Scheduled today and all NEXT items" ((agenda "" ((org-agenda-span 1))) (todo "NEXT"))))))
 (use-package org-capture
   :ensure nil
-  :after org-gtd)
-(setq org-agenda-files `(,org-gtd-directory))
-;; a useful view to see what can be accomplished today
-(setq org-agenda-custom-commands '(("g" "Scheduled today and all NEXT items" ((agenda "" ((org-agenda-span 1))) (todo "NEXT")))))
-(setq org-capture-templates
+  :after org-gtd
+  :config
+  (setq org-capture-templates
       `(("i" "Inbox"
          entry (file ,(org-gtd-inbox-path))
          "* %?\n%U\n\n  %i"
@@ -88,7 +92,15 @@
         ("l" "Todo with link"
          entry (file ,(org-gtd-inbox-path))
          "* %?\n%U\n\n  %i\n  %a"
-         :kill-buffer t)))
+         :kill-buffer t))))
+(use-package org-roam
+  :ensure t
+  :after org
+  :init
+  (setq org-roam-directory (expand-file-name "OrgRoam" bt-org-base))
+  (setq org-roam-v2-ack t)
+  :config
+  (org-roam-db-autosync-mode))
 
 ;; mu4e
 (add-to-list 'load-path "/opt/homebrew/share/emacs/site-lisp/mu/mu4e")
@@ -114,7 +126,7 @@
  '(custom-enabled-themes '(selenized-light))
  '(custom-safe-themes
    '("cf36206431f80f0435bb7461e8be8429d949ba641abaf790b7730423e2e88638" "9bb86bf42ce13b9fce1690024d52238133988555009ac59a2f63ae2df7790c55" "59263e76fcbf0b0f278c27a78e01ad40d1191edf9c55cfcbe1a47e89e25a1893" default))
- '(package-selected-packages '(org-gtd use-package)))
+ '(package-selected-packages '(org-super-agenda org-gtd use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
