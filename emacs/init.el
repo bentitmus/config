@@ -103,20 +103,26 @@
   (org-roam-db-autosync-mode))
 
 ;; mu4e
-(add-to-list 'load-path "/opt/homebrew/share/emacs/site-lisp/mu/mu4e")
-(require 'mu4e)
-(setq mail-user-agent 'mu4e-user-agent)
-(setq mu4e-mu-binary "/opt/homebrew/bin/mu")
-(setq
-  mu4e-view-show-images    t
-  mu4e-view-show-addresses t
-  mu4e-date-format         "%y-%m-%d"
-  mu4e-headers-date-format "%Y-%m-%d")
-(setq mu4e-get-mail-command "mbsync -c ~/.config/isync/mbsyncrc -a")
+(if (file-directory-p "/opt/homebrew")
+    (setq bt-mu-base "/opt/homebrew")
+    (setq bt-mu-base "/usr/local"))
+(if (file-exists-p (expand-file-name "bin/mu" bt-mu-base))
+    (let ((default-directory bt-mu-base))
+      (progn
+	(add-to-list 'load-path (expand-file-name "share/emacs/site-lisp/mu/mu4e"))
+	(require 'mu4e)
+	(setq mail-user-agent 'mu4e-user-agent)
+	(setq mu4e-mu-binary (expand-file-name "bin/mu"))
+	(setq
+	  mu4e-view-show-images    t
+	  mu4e-view-show-addresses t
+	  mu4e-date-format         "%y-%m-%d"
+	  mu4e-headers-date-format "%Y-%m-%d")
+	(setq mu4e-get-mail-command "mbsync -c ~/.config/isync/mbsyncrc -a")
 
-(setq
-  user-mail-address "ben.titmus@gmail.com"
-  user-full-name    "Benjamin Titmus")
+	(setq
+	  user-mail-address "ben.titmus@gmail.com"
+	  user-full-name    "Benjamin Titmus"))))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -126,7 +132,7 @@
  '(custom-enabled-themes '(selenized-light))
  '(custom-safe-themes
    '("cf36206431f80f0435bb7461e8be8429d949ba641abaf790b7730423e2e88638" "9bb86bf42ce13b9fce1690024d52238133988555009ac59a2f63ae2df7790c55" "59263e76fcbf0b0f278c27a78e01ad40d1191edf9c55cfcbe1a47e89e25a1893" default))
- '(package-selected-packages '(org-super-agenda org-gtd use-package)))
+ '(package-selected-packages '(org-roam org-super-agenda org-gtd use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
