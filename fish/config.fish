@@ -68,6 +68,8 @@ function set_vars
   set -xg R_PROFILE_USER $XDG_CONFIG_HOME/R/Rprofile
 
   set -xg SSH_AUTH_SOCK $HOME/.gnupg/S.gpg-agent.ssh
+  # Alternatively...
+  #set -xg SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
   set -xg PASSWORD_STORE_DIR $XDG_DATA_HOME/password-store
 
   # Homebrew set-up

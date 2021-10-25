@@ -4,6 +4,7 @@ set editor-line-number = yes
 set mouse              = yes
 # Show changes is very slow, so don't
 set show-changes       = no
+set diff-options = --ignore-submodules
 
 # View settings
 set main-view = date:custom,local:yes author:full id commit-title:yes,graph:v2,refs:yes,overflow:no

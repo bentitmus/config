@@ -2,7 +2,7 @@ wq <- function()
   q(save="yes")
 
 local({r <- getOption("repos")
-  r["CRAN"] <- "https://www.stats.bris.ac.uk/R/"
+  r["CRAN"] <- "https://cran.ma.imperial.ac.uk/"
   options(repos=r)
 })
 

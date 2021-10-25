@@ -8,8 +8,6 @@ hc() {
 
 hc emit_hook reload
 
-xsetroot -solid '#fbf3db'
-
 # remove all existing keybindings
 hc keyunbind --all
 
@@ -164,10 +162,5 @@ hc unlock
 # or simply:
 # hc detect_monitors
 
-# find the panel
-#panel=~/.config/herbstluftwm/panel.sh
-#[ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
-#for monitor in $(hc list_monitors | cut -d: -f1) ; do
-#    # start it on each monitor
-#    "$panel" "$monitor" &
-#done
+~/.config/lemonbar/launchbar.sh
+

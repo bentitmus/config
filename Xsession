@@ -3,9 +3,14 @@
 echo $DISPLAY > ~/etc/display
 . /arm/tools/setup/init/sh
 . ~/.config/profile
+module load gnu/gnupg/2.2.21
+gpg-agent --daemon
 
 xsetroot -solid "#fdf6e3"
 xrdb -merge ~/.config/Xresources.scale
+
+xmodmap -e "remove control = Control_R"
+xmodmap -e "add mod4 = Control_R"
 
 module load swdev herbstluftwm/herbstluftwm/0.8.3 stoeckmann/xwallpaper/0.6.5
 ~/.config-internal/Xsession
