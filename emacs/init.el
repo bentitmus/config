@@ -36,8 +36,7 @@
   :config
   (setq inhibit-splash-screen t))
 
-;; Find a way of detecting work set-up
-(setq bt-work-p nil)
+(setq bt-work-p (file-directory-p "/arm"))
 
 (if bt-work-p
   (progn

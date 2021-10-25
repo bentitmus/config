@@ -14,6 +14,10 @@ xmodmap -e "add mod4 = Control_R"
 
 module load swdev herbstluftwm/herbstluftwm/0.8.3 stoeckmann/xwallpaper/0.6.5
 ~/.config-internal/Xsession
-xwallpaper --zoom ~/.local/share/wallpapers/wallpaper05.jpg
+wallpaper="~/.local/share/wallpapers/wallpaper05.jpg"
+if [[ $(hostname) == *"nahpc2"* ]]; then
+  wallpaper="~/.local/share/wallpapers/wallpaper07.jpg"
+fi
+xwallpaper --zoom $wallpaper
 herbstluftwm --locked --no-tag-import
 
