@@ -1,0 +1,8 @@
+[user]
+	name = Benjamin Titmus
+[push]
+	default = simple
+[diff]
+	ignoreSubmodules = all
+[status]
+	showUntrackedFiles = no
