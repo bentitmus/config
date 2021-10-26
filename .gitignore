@@ -5,6 +5,7 @@
 Trolltech.conf
 .isolated-storage/**
 broot/launcher
+emacs/.cache
 emacs/elpa
 emacs/eshell
 emacs/url
@@ -19,6 +20,7 @@ kak/plugins/**
 kak/autoload/autoload
 less/keys
 MusicBrainz/**
+node_modules/**
 octave/**
 ssh/known_hosts
 swi-prolog/dir-history
