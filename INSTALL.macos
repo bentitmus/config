@@ -36,7 +36,7 @@ brew install kakoune tmux sc-im gnuplot newsboat mpv
 brew install isync mu mutt davmail
 brew install skhd yabai
 brew install gforth swi-prolog acl2 idris2 rosie octave noweb php
-brew install ccache doxygen git-delta ninja
+brew install ccache doxygen git-delta ninja npm
 brew install angband
 brew install --cask nitrokey veracrypt kitty mkvtoolnix
 brew install --cask coqide isabelle ghidra
