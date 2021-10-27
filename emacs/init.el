@@ -41,6 +41,12 @@
   (which-key-mode))
 
 (setq bt-work-p (file-directory-p "/arm"))
+(if (file-directory-p "/opt/homebrew")
+    (progn
+      (setq bt-mu-base "/opt/homebrew")
+      (setq exec-path (append exec-path '("/opt/homebrew/bin")))
+      (setenv "PATH" (concat (getenv "PATH") ":/opt/homebrew/bin")))
+    (setq bt-mu-base "/usr/local"))
 
 ;; Use /bin/sh instead of fish for the shell because it will work better with most packages
 (setq shell-file-name "/bin/sh")
@@ -57,33 +63,21 @@
     (set-face-attribute 'variable-pitch nil :font "Valkyrie T4-14")
     (setq bt-org-base "~/Dropbox/OrgMode")))
 
-;; languages
-(use-package company
-  :ensure t
-  :defer t
-  :init (global-company-mode)
-  :config
-  (progn
-    ;; Use Company for completion
-    (bind-key [remap completion-at-point] #'company-complete company-mode-map)
-
-    (setq company-tooltip-align-annotations t
-          ;; Easy navigation to candidates with M-<n>
-          company-show-numbers t)
-    (setq company-dabbrev-downcase nil))
-  :diminish company-mode)
-(use-package yaml-mode)
-(use-package lsp-mode
-  :init
-  (setq lsp-keymap-prefix "C-c l")
-  :config
-  (setq lsp-enable-snippet nil)
-  (setq yaml-indent-offset 2)
-  :hook ((yaml-mode . lsp)
-         (lsp-mode . lsp-enable-which-key-integration))
-  :commands lsp)
-(use-package lsp-ui :commands lsp-ui-mode)
+(load-file "~/.config/emacs/lang.el")
 (setq-default indent-tabs-mode nil)
+(use-package magit)
+(use-package vertico
+  :defer t
+  :init
+  (vertico-mode))
+(use-package orderless
+  :init
+  ;; Configure a custom style dispatcher (see the Consult wiki)
+  ;; (setq orderless-style-dispatchers '(+orderless-dispatch)
+  ;;       orderless-component-separator #'orderless-escapable-split-on-space)
+  (setq completion-styles '(orderless)
+        completion-category-defaults nil
+        completion-category-overrides '((file (styles . (partial-completion))))))
 
 ;; org-mode
 (use-package org
@@ -146,12 +140,6 @@
 ;;  (org-roam-db-autosync-mode))
 
 ;; mu4e
-(if (file-directory-p "/opt/homebrew")
-    (progn
-      (setq bt-mu-base "/opt/homebrew")
-      (setq exec-path (append exec-path '("/opt/homebrew/bin")))
-      (setenv "PATH" (concat (getenv "PATH") ":/opt/homebrew/bin")))
-    (setq bt-mu-base "/usr/local"))
 (if (file-exists-p (expand-file-name "bin/mu" bt-mu-base))
     (let ((default-directory bt-mu-base))
       (progn
@@ -179,7 +167,7 @@
  '(custom-safe-themes
    '("cf36206431f80f0435bb7461e8be8429d949ba641abaf790b7730423e2e88638" "9bb86bf42ce13b9fce1690024d52238133988555009ac59a2f63ae2df7790c55" "59263e76fcbf0b0f278c27a78e01ad40d1191edf9c55cfcbe1a47e89e25a1893" default))
  '(package-selected-packages
-   '(yaml-mode company yasnippet which-key lsp-ui lsp-mode org-roam org-super-agenda org-gtd use-package)))
+   '(orderless corfu verilog-mode vertico magit yaml-mode which-key lsp-ui lsp-mode org-roam org-super-agenda org-gtd use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

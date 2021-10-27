@@ -12,7 +12,6 @@ set-option -add global ui_options terminal_assistant=none
 
 # Key mappings
 map -docstring 'fzf' global user p ':fzf-mode<ret>'
-map -docstring 'lf'  global user l ':lf<ret>'
 map -docstring 'Wrap to 100 columns' global user W '|fmt --width 100<ret>'
 
 declare-user-mode tig
