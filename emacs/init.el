@@ -42,6 +42,9 @@
 
 (setq bt-work-p (file-directory-p "/arm"))
 
+;; Use /bin/sh instead of fish for the shell because it will work better with most packages
+(setq shell-file-name "/bin/sh")
+
 (if bt-work-p
   (progn
     (set-face-attribute 'default nil :font "Triplicate T4c-12")
