@@ -10,6 +10,7 @@
   (setq inhibit-splash-screen t))
 
 (use-package minions
+  :ensure t
   :config
   (minions-mode 1))
 
@@ -100,7 +101,7 @@
    '("<escape>" . meow-last-buffer)))
 
 (use-package meow
-  :demand t
+  :ensure t
   :init
   (meow-global-mode 1)
   :config
@@ -127,6 +128,7 @@
                  (window-parameters (mode-line-format . none)))))
 
 (use-package which-key
+  :ensure t
   :config
   (which-key-mode))
 
@@ -148,10 +150,12 @@
   (dashboard-setup-startup-hook))
 
 (use-package vertico
+  :ensure t
   :defer t
   :init
   (vertico-mode))
 (use-package orderless
+  :ensure t
   :init
   ;; Configure a custom style dispatcher (see the Consult wiki)
   ;; (setq orderless-style-dispatchers '(+orderless-dispatch)

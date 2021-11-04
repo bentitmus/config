@@ -11,7 +11,8 @@ set main-view = date:custom,local:yes author:full id commit-title:yes,graph:v2,r
 set main-view-date-format = "%Y-%m-%d %H:%M"
 
 # Key bindings
-bind status a !git commit --amend
+bind status a !git commit -S --amend
+bind status C !git commit -S
 
 # Colour theme
 color default       17 16

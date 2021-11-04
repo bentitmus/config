@@ -23,7 +23,6 @@
   ;; Ensure that anything that should be fixed-pitch in Org files appears that way
   (set-face-attribute 'org-block nil :foreground nil :inherit 'fixed-pitch)
   (set-face-attribute 'org-code nil   :inherit '(shadow fixed-pitch))
-  (set-face-attribute 'org-table nil   :inherit '(shadow fixed-pitch))
   (set-face-attribute 'org-verbatim nil :inherit '(shadow fixed-pitch))
   (set-face-attribute 'org-special-keyword nil :inherit '(font-lock-comment-face fixed-pitch))
   (set-face-attribute 'org-meta-line nil :inherit '(font-lock-comment-face fixed-pitch))
@@ -37,10 +36,15 @@
   (bt/org-font-setup))
 (use-package org-bullets
   :after org
+  :ensure t
   :hook (org-mode . org-bullets-mode))
+(use-package valign
+  :ensure t
+  :custom
+  (valign-fancy-bar t)
+  :hook (org-mode . valign-mode))
 (use-package org-gtd
   :after org
-  :demand t
   :ensure t
   :pin melpa
   :custom
@@ -103,5 +107,6 @@
         visual-fill-column-center-text t)
   (visual-fill-column-mode 1))
 (use-package visual-fill-column
+  :ensure t
   :hook (org-mode . bt/org-mode-visual-fill))
 
