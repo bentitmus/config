@@ -27,17 +27,20 @@ fi
 brew tap homebrew/cask-drivers
 brew tap rosie-community/rosie https://gitlab.com/rosie-community/packages/homebrew-rosie.git
 brew tap koekeishiya/formulae
+brew tap gmerlino/plan9port
 brew update
 brew upgrade
-brew install fish bat procs fd lf tig fzf bottom jq yq basex wget broot
+brew install fish bat procs fd lf tig fzf bottom jq yq basex wget broot ripgrep
+brew install qutebrowser buku
 brew install fdupes exiftool media-info
 brew install gnupg paperkey dmtx-utils pass
 brew install kakoune tmux sc-im gnuplot newsboat mpv
 brew install isync mu mutt davmail
 brew install skhd yabai
-brew install gforth swi-prolog acl2 idris2 rosie octave noweb php
+brew install gforth swi-prolog acl2 idris2 rosie octave noweb php j
 brew install ccache doxygen git-delta ninja npm
 brew install angband
+brew install plan9port
 brew install --cask nitrokey veracrypt kitty mkvtoolnix
 brew install --cask coqide isabelle ghidra
 brew services start skhd

@@ -102,6 +102,19 @@
          ("C-c n i" . org-roam-node-insert))
   :config
   (org-roam-db-autosync-mode))
+(use-package org-roam-timestamps
+  :ensure t
+  :after org-roam
+  :config
+  (org-roam-timestamps-mode))
+(use-package org-roam-ui
+  :ensure t
+  :after org-roam
+  :config
+  (setq org-roam-ui-sync-theme t
+        org-roam-ui-follow t
+        org-roam-ui-update-on-save t
+        org-roam-open-on-start t))
 (defun bt/org-mode-visual-fill ()
   (setq visual-fill-column-width 100
         visual-fill-column-center-text t)
