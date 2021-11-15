@@ -70,6 +70,9 @@ function set_vars
   set -xg SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket 2>/dev/null)
   set -xg PASSWORD_STORE_DIR $XDG_DATA_HOME/password-store
 
+  # TeX set-up
+  set -xg TEXMFHOME $XDG_DATA_HOME/texmf
+
   # Homebrew set-up
   if [ (uname) = "Linux" ]
     set -xg HOMEBREW_CACHE $HOMEBREW_BASE/cache

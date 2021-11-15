@@ -83,3 +83,8 @@ cd less
 lesskey less
 cd ..
 
+# load the texlive module
+tlmgr init-usertree
+tlmgr --usermode option repository https://anorien.csc.warwick.ac.uk/mirrors/CTAN/
+tlmgr --usermode update --all
+
