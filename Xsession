@@ -3,11 +3,18 @@
 echo $DISPLAY > ~/etc/display
 . /arm/tools/setup/init/sh
 . ~/.config/profile
+module load util swdev
 module load gnu/gnupg/2.2.21
+module load stoeckmann/xwallpaper/0.6.5
 gpg-agent --daemon
 
 xsetroot -solid "#fdf6e3"
-xrdb -merge ~/.config/Xresources.scale
+
+if xrandr -q | grep -q "3840 x 2160"; then
+  xrdb -merge ~/.config/Xresources.scale
+else
+  xrdb -merge ~/.config/Xresources.noscale
+fi
 
 xmodmap -e "remove control = Control_R"
 xmodmap -e "add mod4 = Control_R"

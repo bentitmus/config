@@ -47,9 +47,6 @@ alias hc herbstclient
 # Some local set-up might mess with these variables, so make them easily 're-loadable'
 function set_vars
   set -xg EDITOR kak
-  set -xg VIMINIT "source $XDG_CONFIG_HOME/vim/vimrc"
-  set -xg TASKRC $XDG_CONFIG_HOME/task/taskrc
-  set -xg TIMEWARRIORDB $XDG_CONFIG_HOME/timew
   if [ (uname) = "Darwin" ]
     set -xg LANG en_GB.UTF-8
     set -xg LC_ALL en_GB.UTF-8
@@ -61,17 +58,21 @@ function set_vars
   set -xg LD_LIBRARY_PATH $GCC_PATH:$LD_LIBRARY_PATH
   set -xg TMUXP_CONFIGDIR ~/.config-internal/tmuxp
   set -xg FZF_DEFAULT_OPTS "--color=light"
-  set -xg LESSKEY $XDG_CONFIG_HOME/less/keys
-
-  # R set-up
-  set -xg R_ENVIRON_USER $XDG_CONFIG_HOME/R/Renviron
-  set -xg R_PROFILE_USER $XDG_CONFIG_HOME/R/Rprofile
 
   set -xg SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket 2>/dev/null)
-  set -xg PASSWORD_STORE_DIR $XDG_DATA_HOME/password-store
 
-  # TeX set-up
+  # XDG set-up
+  set -xg VIMINIT "source $XDG_CONFIG_HOME/vim/vimrc"
+  set -xg TASKRC $XDG_CONFIG_HOME/task/taskrc
+  set -xg TIMEWARRIORDB $XDG_CONFIG_HOME/timew
+  set -xg LESSKEY $XDG_CONFIG_HOME/less/keys
+  set -xg R_ENVIRON_USER $XDG_CONFIG_HOME/R/Renviron
+  set -xg R_PROFILE_USER $XDG_CONFIG_HOME/R/Rprofile
+  set -xg PASSWORD_STORE_DIR $XDG_DATA_HOME/password-store
   set -xg TEXMFHOME $XDG_DATA_HOME/texmf
+  set -xg TEXMFVAR $XDG_CACHE_HOME/texlive/texmf-var
+  set -xg TEXMFCONFIG $XDG_CONFIG_HOME/texlive/texmf-config
+  set -xg GOPATH $XDG_DATA_HOME/go
 
   # Homebrew set-up
   if [ (uname) = "Linux" ]
