@@ -1,0 +1,64 @@
+; Polybar configuration
+
+[colors]
+background = ${xrdb:background:#fbf3db}
+background-alt = ${xrdb:green:#489100}
+foreground = ${xrdb:foreground:#53676d}
+foreground-alt = ${xrdb:background:#fbf3db}
+
+[bar/default]
+width = 100%
+height = 40
+radius = 0.0
+fixed-center = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+padding-left = 0
+padding-right = 1
+
+module-margin-left = 1
+module-margin-right = 2
+
+dpi-x = ${xrdb:dpi:96}
+dpi-y = ${xrdb:dpi:96}
+
+font-0 = Valkyrie T4:size=14:antialias=true:autohint=true;3
+font-1 = Valkyrie T4:size=14:antialias=true:autohint=true:style=italic;3
+
+enable-ipc = true
+modules-left = herbstluftwm
+modules-center = 
+modules-right = date machine
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+bottom = true
+
+[module/herbstluftwm]
+type = custom/script
+exec-if = ps -C herbstluftwm >/dev/null 2>&1
+exec = MONITOR=HDMI-0 ~/.config/polybar/herbstluftwm.sh
+tail = true
+
+[module/date]
+type = internal/date
+interval = 5
+date = " %Y-%m-%d"
+time = %H:%M
+label = %date% %time%
+
+[module/machine]
+type = custom/ipc
+hook-0 = hostname -f | sed -e "s/login\([0-9]\+\)\.\([^\.]\+\)\..*/%{F-}\2%{F#909995}[%{T2}\1%{T1}]/"
+initial = 1
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+; vim:ft=dosini

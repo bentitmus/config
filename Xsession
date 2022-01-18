@@ -3,23 +3,21 @@
 echo $DISPLAY > ~/etc/display
 . /arm/tools/setup/init/sh
 . ~/.config/profile
-module load util swdev
-module load gnu/gnupg/2.2.21
-module load stoeckmann/xwallpaper/0.6.5
+module load util gnu/gnupg/2.2.21
+module load swdev herbstluftwm/herbstluftwm/0.9.3 stoeckmann/xwallpaper/0.6.5
 gpg-agent --daemon
 
 xsetroot -solid "#fdf6e3"
 
 if xrandr -q | grep -q "3840 x 2160"; then
-  xrdb -merge ~/.config/Xresources.scale
+  xrdb -cpp default ~/.config/Xresources.scale
 else
-  xrdb -merge ~/.config/Xresources.noscale
+  xrdb -cpp default ~/.config/Xresources.noscale
 fi
 
 xmodmap -e "remove control = Control_R"
 xmodmap -e "add mod4 = Control_R"
 
-module load swdev herbstluftwm/herbstluftwm/0.8.3 stoeckmann/xwallpaper/0.6.5
 ~/.config-internal/Xsession
 wallpaper="~/.local/share/wallpapers/wallpaper05.jpg"
 if [[ $(hostname) == *"nahpc2"* ]]; then

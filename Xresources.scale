@@ -1,2 +1,2 @@
-Xft.dpi: 144
+*.dpi: 144
 #include "~/.config/Xresources.common"

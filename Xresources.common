@@ -7,20 +7,7 @@ Xft.rgba: rgb
 Sxiv.font: Triplicate T4c:size=12:antialias=true:autohint=true
 Sxiv.background: #fbf3db
 Sxiv.foreground: #53676d
-! URxvt Appearance
-URxvt.font: xft:Triplicate T4c:size=12:antialias=true:autohint=true
-URxvt.letterSpace: -2
-URxvt.lineSpace: 0
-URxvt.geometry: 92x24
-URxvt.internalBorder: 2
-URxvt.cursorBlink: false
-URxvt.cursorUnderline: false
-URxvt.saveline: 2048
-URxvt.scrollBar: false
-URxvt.scrollBar_right: false
-URxvt.urgentOnBell: true
-URxvt.depth: 24
-URxvt.iso14755: false
+st.font: Triplicate T4c:size=12:antialias=true:autohint=true
 
 !! Colorscheme
 
@@ -29,9 +16,9 @@ URxvt.iso14755: false
 *.background: #fbf3db
 *.cursorColor: #53676d
 
-! black
-*.color0: #263640
-*.color8: #4a697d
+! black (bg_1, bg_2)
+*.color0: #ece3cc
+*.color8: #d5cdb6
 
 ! red
 *.color1: #d2212d
@@ -57,6 +44,19 @@ URxvt.iso14755: false
 *.color6: #009c8f
 *.color14: #00978a
 
-! white
-*.color7: #bfbaac
-*.color15: #fdf6e3
+! white (dim_0, fg_1)
+*.color7: #909995
+*.color15: #3a4d53
+
+! bg_0, fg_0
+*.color16: #fbf3db
+*.color17: #53676d
+
+! orange
+*.color18: #c25d1e
+*.color20: #bc5819
+
+!violet
+*.color19: #8762c6
+*.color21: #825dc0
+
