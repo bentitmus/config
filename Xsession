@@ -19,9 +19,9 @@ xmodmap -e "remove control = Control_R"
 xmodmap -e "add mod4 = Control_R"
 
 ~/.config-internal/Xsession
-wallpaper="~/.local/share/wallpapers/wallpaper05.jpg"
+wallpaper="/home/bentit01/.local/share/wallpapers/wallpaper05.jpg"
 if [[ $(hostname) == *"nahpc2"* ]]; then
-  wallpaper="~/.local/share/wallpapers/wallpaper07.jpg"
+  wallpaper="/home/bentit01/.local/share/wallpapers/wallpaper07.jpg"
 fi
 xwallpaper --zoom $wallpaper
 herbstluftwm --locked --no-tag-import

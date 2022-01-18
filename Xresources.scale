@@ -1,2 +1,2 @@
 *.dpi: 144
-#include "~/.config/Xresources.common"
+#include "/home/bentit01/.config/Xresources.common"
