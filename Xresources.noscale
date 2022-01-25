@@ -1,2 +1,3 @@
 *.dpi: 96
+Xft.dpi: 96
 #include "/home/bentit01/.config/Xresources.common"
