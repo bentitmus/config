@@ -1,8 +1,8 @@
 ;; languages
 (use-package corfu
   :ensure t
-  :config
-  (corfu-global-mode))
+  :init
+  (global-corfu-mode))
 
 (use-package flycheck
   :ensure t
