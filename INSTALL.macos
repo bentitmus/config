@@ -28,6 +28,7 @@ brew tap homebrew/cask-drivers
 brew tap rosie-community/rosie https://gitlab.com/rosie-community/packages/homebrew-rosie.git
 brew tap koekeishiya/formulae
 brew tap gmerlino/plan9port
+brew tap riscv-software-src/riscv
 brew update
 brew upgrade
 brew install fish bat procs fd lf tig fzf bottom jq yq basex wget broot ripgrep
@@ -41,6 +42,7 @@ brew install gforth swi-prolog acl2 idris2 rosie octave noweb php j
 brew install ccache doxygen git-delta ninja npm
 brew install angband
 brew install plan9port
+brew install riscv-tools
 brew install --cask nitrokey veracrypt kitty mkvtoolnix
 brew install --cask coqide isabelle ghidra
 brew services start skhd
@@ -58,7 +60,6 @@ if test ! $(which sdk); then
   curl -s http://get.sdkman.io | bash
 fi
 source "$HOME/.sdkman/bin/sdkman-init.sh"
-# need: fisher add reitzig/sdkman-for-fish
 sdk install java
 sdk install maven
 sdk install groovy
@@ -69,6 +70,14 @@ sdk install sbt
 sdk install leiningen
 sdk install kotlin
 echo "Done"
+
+#echo ""
+#echo "~~~~~~~~~~~~~~~~~~"
+#echo "~ fisher modules ~"
+#echo "~~~~~~~~~~~~~~~~~~"
+#curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+#fisher install reitzig/sdkman-for-fish
+#fisher install jorgebucaran/nvm.fish
 
 echo ""
 echo "~~~~~~~~~~~~~~~~~"
