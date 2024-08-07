@@ -8,7 +8,7 @@ plug "andreyorst/powerline.kak" defer powerline %{
 } config %{
   powerline-start
 }
-plug "kak-lsp/kak-lsp" do %{
+plug "kakoune-lsp/kakoune-lsp" do %{
   cargo install --locked --force --path .
 }
 plug "andreyorst/fzf.kak" defer fzf %{
