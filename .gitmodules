@@ -10,3 +10,9 @@
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "talon/user/community"]
+	path = talon/user/community
+	url = https://github.com/talonhub/community
+[submodule "talon/user/cursorless-talon"]
+	path = talon/user/cursorless-talon
+	url = https://github.com/cursorless-dev/cursorless-talon.git
