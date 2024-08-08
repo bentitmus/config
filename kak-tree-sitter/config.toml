@@ -1,0 +1,21 @@
+# jq
+[language.jq.grammar.source.git]
+url = "https://github.com/flurie/tree-sitter-jq"
+pin = "13990f530e8e6709b7978503da9bc8701d366791"
+
+[language.jq.grammar]
+path = "src"
+compile = "cc"
+compile_args = ["-c", "-fpic", "../parser.c", "-I", ".."]
+compile_flags = ["-O3"]
+link = "cc"
+link_args = ["-shared", "-fpic", "parser.o", "-o", "jq.so"]
+link_flags = ["-O3"]
+
+[language.jq.queries.source.git]
+url = "https://github.com/helix-editor/helix"
+pin = "9f83f4f5e27e9ea0eabccfba405d513db196cfb6"
+
+[language.jq.queries]
+path = "runtime/queries/jq"
+

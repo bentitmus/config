@@ -20,6 +20,8 @@ gtk-2.0/**
 jasper/**
 kak/plugins/**
 kak/autoload/autoload
+kak-tree-sitter/grammars/**
+kak-tree-sitter/queries/**
 less/keys
 MusicBrainz/**
 node_modules/**

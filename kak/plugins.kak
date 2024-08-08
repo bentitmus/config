@@ -21,4 +21,13 @@ plug chambln/kakoune-readline config %{
   map global insert <c-n> <down>
   hook global WinCreate .* readline-enable
 }
+plug "https://git.sr.ht/~hadronized/kak-tree-sitter" noload do %{
+  cargo install kak-tree-sitter
+  cargo install ktsctl
+  ktsctl sync awk
+  ktsctl sync jq
+  ktsctl sync julia
+} config %sh{
+  kak-tree-sitter -dks --init $kak_session
+}
 

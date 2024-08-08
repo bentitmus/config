@@ -43,6 +43,7 @@ brew install ccache doxygen git-delta ninja npm
 brew install angband
 brew install plan9port
 brew install riscv-tools
+brew install julia
 brew install --cask nitrokey veracrypt kitty mkvtoolnix
 brew install --cask coqide isabelle ghidra
 brew services start skhd
@@ -109,5 +110,10 @@ open base16-solarized.dark.terminal
 cd ../..
 echo "Done"
 
-# install jq-lsp
+# Language servers
+npm install -g "awk-language-server@>=0.5.2"
 go install github.com/wader/jq-lsp@master
+julia --project=@kak-lsp -e 'import Pkg; Pkg.add("LanguageServer")'
+
+# install tree-sitter
+ln -s ~/.config/kak-tree-sitter ~/Library/Application\ Support/kak-tree-sitter
