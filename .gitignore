@@ -10,6 +10,7 @@ emacs/.cache
 emacs/elpa
 emacs/eshell
 emacs/url
+exercism/user.json
 fish/fish_history
 fish/fishd.*
 fish/fish_variables
