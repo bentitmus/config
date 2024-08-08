@@ -1,6 +1,7 @@
 # Generic file types
 *~
 **/__pycache__
+.DS_Store
 # Particular files
 Trolltech.conf
 .isolated-storage/**
