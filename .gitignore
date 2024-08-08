@@ -23,6 +23,7 @@ less/keys
 MusicBrainz/**
 node_modules/**
 octave/**
+pulse/**
 ssh/known_hosts
 swi-prolog/dir-history
 tmux/plugins/**
