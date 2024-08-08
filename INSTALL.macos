@@ -109,3 +109,5 @@ open base16-solarized.dark.terminal
 cd ../..
 echo "Done"
 
+# install jq-lsp
+go install github.com/wader/jq-lsp@master
