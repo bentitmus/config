@@ -25,6 +25,7 @@ plug "https://git.sr.ht/~hadronized/kak-tree-sitter" noload do %{
   cargo install kak-tree-sitter
   cargo install ktsctl
   ktsctl sync awk
+  ktsctl sync bash
   ktsctl sync jq
   ktsctl sync julia
 } config %sh{

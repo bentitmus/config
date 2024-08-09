@@ -24,7 +24,7 @@ roots = [".git", ".hg"]
 command = "awk-language-server"
 
 [language_server.bash-language-server]
-filetypes = ["sh"]
+filetypes = ["bash", "sh"]
 roots = [".git", ".hg"]
 command = "bash-language-server"
 args = ["start"]

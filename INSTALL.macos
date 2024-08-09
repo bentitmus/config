@@ -112,6 +112,7 @@ echo "Done"
 
 # Language servers
 npm install -g "awk-language-server@>=0.5.2"
+npm install -g bash-language-server
 go install github.com/wader/jq-lsp@master
 julia --project=@kak-lsp -e 'import Pkg; Pkg.add("LanguageServer")'
 
