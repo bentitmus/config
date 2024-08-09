@@ -5,7 +5,8 @@ source "%val{config}/plugins.kak"
 colorscheme selenized-light-modified
 add-highlighter global/ number-lines -separator " "
 add-highlighter global/ show-whitespaces -spc ' '
-set-option -add global autoinfo normal
+# Conflicts with lsp-auto-hover-enable
+#set-option -add global autoinfo normal
 set-option -add global tabstop 2
 set-option -add global indentwidth 2
 set-option -add global ui_options terminal_assistant=none
@@ -25,7 +26,7 @@ hook global BufCreate .*\.bats %{ set buffer filetype bash }
 
 hook global WinSetOption filetype=(awk|bash|jq|julia) %{
   lsp-enable-window
-  lsp-auto-hover-buffer-enable
+  lsp-auto-hover-enable
 }
 
 # LSP
