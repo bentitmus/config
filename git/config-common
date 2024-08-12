@@ -1,8 +1,22 @@
 [user]
-	name = Benjamin Titmus
+	name  = Benjamin Titmus
+
+[core]
+	pager = delta
+
 [push]
 	default = simple
-[diff]
-	ignoreSubmodules = all
-[status]
-	showUntrackedFiles = no
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	features = side-by-side line-numbers decorations
+	whitespace-error-style = 22 reverse
+	light = true
+
+#[delta "decorations"]
+#	commit-decoration-style = bold yellow box ul
+#	file-style = bold yellow ul
+#	file-decoration-style = none
+

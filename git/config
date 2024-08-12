@@ -1,3 +1,4 @@
 [include]
   path = config-common
-  path = config-work
+  path = config-home
+
