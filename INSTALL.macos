@@ -118,3 +118,7 @@ julia --project=@kak-lsp -e 'import Pkg; Pkg.add("LanguageServer")'
 
 # install tree-sitter
 ln -s ~/.config/kak-tree-sitter ~/Library/Application\ Support/kak-tree-sitter
+
+# install talon
+ln -s ~/.config/talon/user/local/settings ~/.config/talon/user/community/settings
+ln -s ~/.config/talon/user ~/.talon/user
