@@ -27,6 +27,7 @@ MusicBrainz/**
 node_modules/**
 octave/**
 plover/.cache
+plover/plover.log
 plover/plugins
 pulse/**
 ssh/known_hosts
