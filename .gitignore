@@ -26,6 +26,8 @@ less/keys
 MusicBrainz/**
 node_modules/**
 octave/**
+plover/.cache
+plover/plugins
 pulse/**
 ssh/known_hosts
 swi-prolog/dir-history

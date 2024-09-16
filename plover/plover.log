@@ -1,0 +1,522 @@
+2019-09-27 19:36:14,380 [MainThread] INFO: setting language to: en-GB
+2019-09-27 19:36:15,377 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2019-09-27 19:36:15,378 [Dummy-1] INFO: loading system: English Stenotype
+2019-09-27 19:36:15,969 [Dummy-1] INFO: setting machine: Keyboard
+2019-09-27 19:36:15,974 [Dummy-1] ERROR: engine start failed
+Traceback (most recent call last):
+  File "./build/plover-4.0.0.dev8+66.g685bd33.app/Contents/Frameworks/Python.framework/Versions/3.6//lib/python3.6/site-packages/plover/engine.py", line 136, in run
+  File "./build/plover-4.0.0.dev8+66.g685bd33.app/Contents/Frameworks/Python.framework/Versions/3.6//lib/python3.6/site-packages/plover/engine.py", line 149, in _start
+  File "./build/plover-4.0.0.dev8+66.g685bd33.app/Contents/Frameworks/Python.framework/Versions/3.6//lib/python3.6/site-packages/plover/engine.py", line 230, in _update
+  File "./build/plover-4.0.0.dev8+66.g685bd33.app/Contents/Frameworks/Python.framework/Versions/3.6//lib/python3.6/site-packages/plover/machine/keyboard.py", line 67, in start_capture
+  File "./build/plover-4.0.0.dev8+66.g685bd33.app/Contents/Frameworks/Python.framework/Versions/3.6//lib/python3.6/site-packages/plover/oslayer/osxkeyboardcontrol.py", line 235, in __init__
+Exception: Enable access for assistive devices.
+2019-09-27 19:36:43,713 [Dummy-1] INFO: setting machine: TX Bolt
+2019-09-27 19:36:43,714 [Dummy-1] WARNING: Serial port is not open: None
+2019-09-27 19:36:43,714 [Dummy-1] INFO: recreating /Users/ben/Library/Application Support/plover/user.json from asset:plover:assets/user.json
+2019-09-27 19:36:43,715 [Dummy-1] INFO: recreating /Users/ben/Library/Application Support/plover/commands.json from asset:plover:assets/commands.json
+2019-09-27 19:36:43,715 [Dummy-1] INFO: recreating /Users/ben/Library/Application Support/plover/main.json from asset:plover:assets/main.json
+2019-09-27 19:36:43,722 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2019-09-27 19:36:43,722 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2019-09-27 19:36:43,723 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2019-09-27 19:36:44,698 [Dummy-1] INFO: loaded 3 dictionaries in 0.976s
+2019-09-27 19:36:48,584 [Dummy-1] INFO: setting machine: TX Bolt
+2019-09-27 19:36:48,585 [Dummy-1] WARNING: Serial port is not open: None
+2019-09-27 19:36:48,585 [Dummy-1] INFO: loaded 3 dictionaries in 0.000s
+2019-09-27 19:41:29,429 [MainThread] INFO: setting language to: en-GB
+2019-09-27 19:41:30,949 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2019-09-27 19:41:30,949 [Dummy-1] INFO: loading system: English Stenotype
+2019-09-27 19:41:31,542 [Dummy-1] INFO: setting machine: TX Bolt
+2019-09-27 19:41:31,542 [Dummy-1] WARNING: Serial port is not open: None
+2019-09-27 19:41:31,545 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2019-09-27 19:41:31,546 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2019-09-27 19:41:31,547 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2019-09-27 19:41:32,527 [Dummy-1] INFO: loaded 3 dictionaries in 0.982s
+2019-09-27 19:41:35,747 [Dummy-1] INFO: setting machine: TX Bolt
+2019-09-27 19:41:35,748 [Dummy-1] WARNING: Serial port is not open: None
+2019-09-27 19:41:35,749 [Dummy-1] INFO: loaded 3 dictionaries in 0.000s
+2019-09-27 19:41:37,517 [Dummy-1] INFO: loaded 3 dictionaries in 0.000s
+2019-09-27 19:42:00,215 [Dummy-1] INFO: setting machine: TX Bolt
+2019-09-27 19:42:00,216 [Dummy-1] WARNING: Serial port is not open: None
+2019-09-27 19:42:00,216 [Dummy-1] INFO: loaded 3 dictionaries in 0.000s
+2019-09-27 19:42:16,675 [Dummy-1] INFO: setting machine: TX Bolt
+2019-09-27 19:42:16,680 [Dummy-1] INFO: loaded 3 dictionaries in 0.000s
+2019-09-27 19:42:18,822 [Dummy-1] INFO: setting machine: TX Bolt
+2019-09-27 19:42:20,812 [Dummy-1] INFO: loaded 3 dictionaries in 0.000s
+2019-09-27 19:42:20,926 [Dummy-1] INFO: setting machine: TX Bolt
+2019-09-27 19:42:22,918 [Dummy-1] INFO: loaded 3 dictionaries in 0.000s
+2019-09-27 19:45:05,338 [Dummy-1] INFO: loaded 3 dictionaries in 0.000s
+2019-09-27 19:45:10,951 [Dummy-1] INFO: loaded 3 dictionaries in 0.000s
+2019-09-27 19:45:17,445 [Dummy-1] INFO: loaded 3 dictionaries in 0.000s
+2019-09-27 19:45:21,896 [MainThread] INFO: setting language to: en-GB
+2019-09-27 19:45:23,377 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2019-09-27 19:45:23,377 [Dummy-1] INFO: loading system: English Stenotype
+2019-09-27 19:45:23,973 [Dummy-1] INFO: setting machine: TX Bolt
+2019-09-27 19:45:23,979 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2019-09-27 19:45:23,979 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2019-09-27 19:45:23,979 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2019-09-27 19:45:25,714 [Dummy-1] INFO: loaded 3 dictionaries in 1.735s
+2019-09-27 19:46:04,596 [Dummy-1] INFO: loaded 3 dictionaries in 0.000s
+2019-09-27 19:46:09,638 [Dummy-1] INFO: loaded 3 dictionaries in 0.000s
+2019-09-27 19:46:15,508 [MainThread] INFO: setting language to: en-GB
+2019-09-27 19:46:16,882 [MainThread] ERROR: invalid value for 'undo_levels' option
+Traceback (most recent call last):
+  File "./build/plover-4.0.0.dev8+66.g685bd33.app/Contents/Frameworks/Python.framework/Versions/3.6//lib/python3.6/site-packages/plover/config.py", line 371, in __getitem__
+  File "./build/plover-4.0.0.dev8+66.g685bd33.app/Contents/Frameworks/Python.framework/Versions/3.6//lib/python3.6/site-packages/plover/config.py", line 115, in validate
+plover.config.InvalidConfigOption: None
+2019-09-27 19:46:16,886 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2019-09-27 19:46:16,887 [Dummy-1] INFO: loading system: English Stenotype
+2019-09-27 19:46:17,493 [Dummy-1] INFO: setting machine: TX Bolt
+2019-09-27 19:46:17,499 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2019-09-27 19:46:17,500 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2019-09-27 19:46:17,500 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2019-09-27 19:46:19,231 [Dummy-1] INFO: loaded 3 dictionaries in 1.732s
+2019-09-27 19:46:36,948 [MainThread] INFO: setting language to: en-GB
+2019-09-27 19:46:38,307 [MainThread] ERROR: invalid value for 'undo_levels' option
+Traceback (most recent call last):
+  File "./build/plover-4.0.0.dev8+66.g685bd33.app/Contents/Frameworks/Python.framework/Versions/3.6//lib/python3.6/site-packages/plover/config.py", line 371, in __getitem__
+  File "./build/plover-4.0.0.dev8+66.g685bd33.app/Contents/Frameworks/Python.framework/Versions/3.6//lib/python3.6/site-packages/plover/config.py", line 115, in validate
+plover.config.InvalidConfigOption: None
+2019-09-27 19:46:38,311 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2019-09-27 19:46:38,311 [Dummy-1] INFO: loading system: English Stenotype
+2019-09-27 19:46:38,910 [Dummy-1] INFO: setting machine: TX Bolt
+2019-09-27 19:46:38,916 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2019-09-27 19:46:38,916 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2019-09-27 19:46:38,917 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2019-09-27 19:46:40,692 [Dummy-1] INFO: loaded 3 dictionaries in 1.776s
+2019-09-27 19:46:58,609 [MainThread] INFO: setting language to: en-GB
+2019-09-27 19:46:59,981 [MainThread] ERROR: invalid value for 'undo_levels' option
+Traceback (most recent call last):
+  File "./build/plover-4.0.0.dev8+66.g685bd33.app/Contents/Frameworks/Python.framework/Versions/3.6//lib/python3.6/site-packages/plover/config.py", line 371, in __getitem__
+  File "./build/plover-4.0.0.dev8+66.g685bd33.app/Contents/Frameworks/Python.framework/Versions/3.6//lib/python3.6/site-packages/plover/config.py", line 115, in validate
+plover.config.InvalidConfigOption: None
+2019-09-27 19:46:59,985 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2019-09-27 19:46:59,985 [Dummy-1] INFO: loading system: English Stenotype
+2019-09-27 19:47:00,594 [Dummy-1] INFO: setting machine: TX Bolt
+2019-09-27 19:47:00,600 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2019-09-27 19:47:00,600 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2019-09-27 19:47:00,600 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2019-09-27 19:47:02,379 [Dummy-1] INFO: loaded 3 dictionaries in 1.779s
+2019-09-27 19:52:50,201 [MainThread] INFO: setting language to: en-GB
+2019-09-27 19:52:51,614 [MainThread] ERROR: invalid value for 'undo_levels' option
+Traceback (most recent call last):
+  File "./build/plover-4.0.0.dev8+66.g685bd33.app/Contents/Frameworks/Python.framework/Versions/3.6//lib/python3.6/site-packages/plover/config.py", line 371, in __getitem__
+  File "./build/plover-4.0.0.dev8+66.g685bd33.app/Contents/Frameworks/Python.framework/Versions/3.6//lib/python3.6/site-packages/plover/config.py", line 115, in validate
+plover.config.InvalidConfigOption: None
+2019-09-27 19:52:51,618 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2019-09-27 19:52:51,618 [Dummy-1] INFO: loading system: English Stenotype
+2019-09-27 19:52:52,225 [Dummy-1] INFO: setting machine: TX Bolt
+2019-09-27 19:52:52,231 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2019-09-27 19:52:52,231 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2019-09-27 19:52:52,232 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2019-09-27 19:52:53,972 [Dummy-1] INFO: loaded 3 dictionaries in 1.741s
+2019-09-27 19:53:38,847 [MainThread] INFO: setting language to: en-GB
+2019-09-27 19:53:40,236 [MainThread] ERROR: invalid value for 'undo_levels' option
+Traceback (most recent call last):
+  File "./build/plover-4.0.0.dev8+66.g685bd33.app/Contents/Frameworks/Python.framework/Versions/3.6//lib/python3.6/site-packages/plover/config.py", line 371, in __getitem__
+  File "./build/plover-4.0.0.dev8+66.g685bd33.app/Contents/Frameworks/Python.framework/Versions/3.6//lib/python3.6/site-packages/plover/config.py", line 115, in validate
+plover.config.InvalidConfigOption: None
+2019-09-27 19:53:40,240 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2019-09-27 19:53:40,241 [Dummy-1] INFO: loading system: English Stenotype
+2019-09-27 19:53:40,817 [Dummy-1] INFO: setting machine: TX Bolt
+2019-09-27 19:53:40,823 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2019-09-27 19:53:40,823 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2019-09-27 19:53:40,824 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2019-09-27 19:53:42,489 [Dummy-1] INFO: loaded 3 dictionaries in 1.666s
+2020-03-03 07:37:31,309 [MainThread] INFO: setting language to: en-GB
+2020-03-03 07:37:31,996 [MainThread] ERROR: invalid value for 'undo_levels' option
+Traceback (most recent call last):
+  File "./build/plover-4.0.0.dev8+66.g685bd33.app/Contents/Frameworks/Python.framework/Versions/3.6//lib/python3.6/site-packages/plover/config.py", line 371, in __getitem__
+  File "./build/plover-4.0.0.dev8+66.g685bd33.app/Contents/Frameworks/Python.framework/Versions/3.6//lib/python3.6/site-packages/plover/config.py", line 115, in validate
+plover.config.InvalidConfigOption: None
+2020-03-03 07:37:32,002 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2020-03-03 07:37:32,003 [Dummy-1] INFO: loading system: English Stenotype
+2020-03-03 07:37:32,953 [Dummy-1] INFO: setting machine: TX Bolt
+2020-03-03 07:37:33,600 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2020-03-03 07:37:33,600 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2020-03-03 07:37:33,601 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2020-03-03 07:37:35,039 [Dummy-1] INFO: loaded 3 dictionaries in 1.439s
+2020-03-05 19:54:25,013 [MainThread] INFO: setting language to: en-GB
+2020-03-05 19:54:25,834 [MainThread] ERROR: invalid value for 'undo_levels' option
+Traceback (most recent call last):
+  File "./build/plover-4.0.0.dev8+66.g685bd33.app/Contents/Frameworks/Python.framework/Versions/3.6//lib/python3.6/site-packages/plover/config.py", line 371, in __getitem__
+  File "./build/plover-4.0.0.dev8+66.g685bd33.app/Contents/Frameworks/Python.framework/Versions/3.6//lib/python3.6/site-packages/plover/config.py", line 115, in validate
+plover.config.InvalidConfigOption: None
+2020-03-05 19:54:25,840 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2020-03-05 19:54:25,841 [Dummy-1] INFO: loading system: English Stenotype
+2020-03-05 19:54:26,508 [Dummy-1] INFO: setting machine: TX Bolt
+2020-03-05 19:54:26,513 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2020-03-05 19:54:26,516 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2020-03-05 19:54:26,517 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2020-03-05 19:54:27,982 [Dummy-1] INFO: loaded 3 dictionaries in 1.469s
+2020-03-06 08:12:55,075 [MainThread] INFO: setting language to: en-GB
+2020-03-06 08:12:55,839 [MainThread] ERROR: invalid value for 'undo_levels' option
+Traceback (most recent call last):
+  File "./build/plover-4.0.0.dev8+66.g685bd33.app/Contents/Frameworks/Python.framework/Versions/3.6//lib/python3.6/site-packages/plover/config.py", line 371, in __getitem__
+  File "./build/plover-4.0.0.dev8+66.g685bd33.app/Contents/Frameworks/Python.framework/Versions/3.6//lib/python3.6/site-packages/plover/config.py", line 115, in validate
+plover.config.InvalidConfigOption: None
+2020-03-06 08:12:55,845 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2020-03-06 08:12:55,845 [Dummy-1] INFO: loading system: English Stenotype
+2020-03-06 08:12:56,602 [Dummy-1] INFO: setting machine: TX Bolt
+2020-03-06 08:12:56,611 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2020-03-06 08:12:56,612 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2020-03-06 08:12:56,613 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2020-03-06 08:12:58,102 [Dummy-1] INFO: loaded 3 dictionaries in 1.490s
+2020-03-06 08:29:16,485 [Dummy-1] INFO: loading dictionary: /Users/ben/Desktop/inverted.json
+2020-03-06 08:29:16,494 [Dummy-1] INFO: loaded 4 dictionaries in 0.009s
+2020-03-06 08:29:19,836 [Dummy-1] INFO: loaded 3 dictionaries in 0.000s
+2020-03-06 08:29:48,240 [Dummy-1] INFO: loading dictionary: /Users/ben/Plover/inverted.json
+2020-03-06 08:29:48,251 [Dummy-1] INFO: loaded 4 dictionaries in 0.010s
+2024-07-29 13:27:33,314 [MainThread] INFO: setting language to: en-GB
+2024-07-29 13:27:33,589 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2024-07-29 13:27:33,590 [Dummy-1] INFO: loading system: English Stenotype
+2024-07-29 13:27:33,805 [Dummy-1] INFO: setting machine: TX Bolt
+2024-07-29 13:27:33,805 [Dummy-1] WARNING: Can't open serial port
+Traceback (most recent call last):
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/serial/serialposix.py", line 322, in open
+FileNotFoundError: [Errno 2] No such file or directory: '/dev/cu.SLAB_USBtoUART'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/machine/base.py", line 233, in start_capture
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/serial/serialutil.py", line 244, in __init__
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/serial/serialposix.py", line 325, in open
+serial.serialutil.SerialException: [Errno 2] could not open port /dev/cu.SLAB_USBtoUART: [Errno 2] No such file or directory: '/dev/cu.SLAB_USBtoUART'
+2024-07-29 13:27:33,808 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2024-07-29 13:27:33,808 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2024-07-29 13:27:33,809 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2024-07-29 13:27:33,811 [Dummy-1] INFO: loading dictionary: /Users/ben/Plover/inverted.json
+2024-07-29 13:27:34,352 [Thread-5] WARNING: dictionary `main.json` loaded with 6 invalid steno errors
+2024-07-29 13:27:34,356 [Dummy-1] INFO: loaded 4 dictionaries in 0.548s
+2024-07-29 13:27:34,972 [MainThread] WARNING: Qt: Populating font family aliases took 610 ms. Replace uses of missing font family "Monospace" with one that exists to avoid this cost. 
+2024-07-29 13:31:01,853 [Dummy-1] INFO: setting machine: TX Bolt
+2024-07-29 13:31:01,854 [Dummy-1] WARNING: Can't open serial port
+Traceback (most recent call last):
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/serial/serialposix.py", line 322, in open
+FileNotFoundError: [Errno 2] No such file or directory: '/dev/cu.SLAB_USBtoUART'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/machine/base.py", line 233, in start_capture
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/serial/serialutil.py", line 244, in __init__
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/serial/serialposix.py", line 325, in open
+serial.serialutil.SerialException: [Errno 2] could not open port /dev/cu.SLAB_USBtoUART: [Errno 2] No such file or directory: '/dev/cu.SLAB_USBtoUART'
+2024-07-29 13:31:01,857 [Dummy-1] INFO: loaded 4 dictionaries in 0.000s
+2024-07-29 13:31:23,341 [Dummy-1] INFO: setting machine: TX Bolt
+2024-07-29 13:31:23,342 [Dummy-1] WARNING: Can't open serial port
+Traceback (most recent call last):
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/serial/serialposix.py", line 322, in open
+FileNotFoundError: [Errno 2] No such file or directory: '/dev/cu.SLAB_USBtoUART'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/machine/base.py", line 233, in start_capture
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/serial/serialutil.py", line 244, in __init__
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/serial/serialposix.py", line 325, in open
+serial.serialutil.SerialException: [Errno 2] could not open port /dev/cu.SLAB_USBtoUART: [Errno 2] No such file or directory: '/dev/cu.SLAB_USBtoUART'
+2024-07-29 13:31:23,343 [Dummy-1] INFO: loaded 4 dictionaries in 0.000s
+2024-07-29 13:31:40,677 [Dummy-1] INFO: setting machine: TX Bolt
+2024-07-29 13:31:40,677 [Dummy-1] WARNING: Can't open serial port
+Traceback (most recent call last):
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/serial/serialposix.py", line 322, in open
+OSError: [Errno 16] Resource busy: '/dev/cu.BLTH'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/machine/base.py", line 233, in start_capture
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/serial/serialutil.py", line 244, in __init__
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/serial/serialposix.py", line 325, in open
+serial.serialutil.SerialException: [Errno 16] could not open port /dev/cu.BLTH: [Errno 16] Resource busy: '/dev/cu.BLTH'
+2024-07-29 13:31:40,678 [Dummy-1] INFO: loaded 4 dictionaries in 0.000s
+2024-07-29 13:39:13,219 [MainThread] INFO: setting language to: en-GB
+2024-07-29 13:39:13,473 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2024-07-29 13:39:13,473 [Dummy-1] INFO: loading system: English Stenotype
+2024-07-29 13:39:13,676 [Dummy-1] INFO: setting machine: TX Bolt
+2024-07-29 13:39:13,676 [Dummy-1] WARNING: Can't open serial port
+Traceback (most recent call last):
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/serial/serialposix.py", line 322, in open
+OSError: [Errno 16] Resource busy: '/dev/cu.BLTH'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/machine/base.py", line 233, in start_capture
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/serial/serialutil.py", line 244, in __init__
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/serial/serialposix.py", line 325, in open
+serial.serialutil.SerialException: [Errno 16] could not open port /dev/cu.BLTH: [Errno 16] Resource busy: '/dev/cu.BLTH'
+2024-07-29 13:39:13,678 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2024-07-29 13:39:13,679 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2024-07-29 13:39:13,680 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2024-07-29 13:39:13,680 [Dummy-1] INFO: loading dictionary: /Users/ben/Plover/inverted.json
+2024-07-29 13:39:14,186 [Thread-5] WARNING: dictionary `main.json` loaded with 6 invalid steno errors
+2024-07-29 13:39:14,189 [Dummy-1] INFO: loaded 4 dictionaries in 0.511s
+2024-07-29 13:39:14,674 [MainThread] WARNING: Qt: Populating font family aliases took 479 ms. Replace uses of missing font family "Monospace" with one that exists to avoid this cost. 
+2024-07-29 14:01:29,283 [MainThread] INFO: setting language to: en-GB
+2024-07-29 14:01:29,653 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2024-07-29 14:01:29,653 [Dummy-1] INFO: loading system: English Stenotype
+2024-07-29 14:01:29,844 [Dummy-1] INFO: setting machine: TX Bolt
+2024-07-29 14:01:29,845 [Dummy-1] WARNING: Can't open serial port
+Traceback (most recent call last):
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/serial/serialposix.py", line 322, in open
+OSError: [Errno 16] Resource busy: '/dev/cu.BLTH'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/machine/base.py", line 233, in start_capture
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/serial/serialutil.py", line 244, in __init__
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/serial/serialposix.py", line 325, in open
+serial.serialutil.SerialException: [Errno 16] could not open port /dev/cu.BLTH: [Errno 16] Resource busy: '/dev/cu.BLTH'
+2024-07-29 14:01:29,846 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2024-07-29 14:01:29,846 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2024-07-29 14:01:29,847 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2024-07-29 14:01:29,847 [Dummy-1] INFO: loading dictionary: /Users/ben/Plover/inverted.json
+2024-07-29 14:01:30,342 [Thread-5] WARNING: dictionary `main.json` loaded with 6 invalid steno errors
+2024-07-29 14:01:30,346 [Dummy-1] INFO: loaded 4 dictionaries in 0.500s
+2024-07-29 14:01:30,948 [MainThread] WARNING: Qt: Populating font family aliases took 597 ms. Replace uses of missing font family "Monospace" with one that exists to avoid this cost. 
+2024-07-29 14:01:49,828 [Dummy-1] INFO: setting machine: Keyboard
+2024-07-29 14:01:49,844 [Dummy-1] ERROR: engine update failed
+Traceback (most recent call last):
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/engine.py", line 147, in run
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/engine.py", line 251, in _update
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/machine/keyboard.py", line 92, in start_capture
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/oslayer/osx/keyboardcontrol.py", line 278, in start
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/oslayer/osx/keyboardcontrol.py", line 196, in start
+Exception: Enable access for assistive devices.
+2024-07-29 14:02:13,081 [Dummy-1] INFO: setting machine: Keyboard
+2024-07-29 14:02:13,083 [Dummy-1] ERROR: engine update failed
+Traceback (most recent call last):
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/engine.py", line 147, in run
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/engine.py", line 251, in _update
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/machine/keyboard.py", line 92, in start_capture
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/oslayer/osx/keyboardcontrol.py", line 278, in start
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/oslayer/osx/keyboardcontrol.py", line 196, in start
+Exception: Enable access for assistive devices.
+2024-07-29 14:02:31,296 [Dummy-1] INFO: setting machine: Keyboard
+2024-07-29 14:02:31,298 [Dummy-1] ERROR: engine update failed
+Traceback (most recent call last):
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/engine.py", line 147, in run
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/engine.py", line 251, in _update
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/machine/keyboard.py", line 92, in start_capture
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/oslayer/osx/keyboardcontrol.py", line 278, in start
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/oslayer/osx/keyboardcontrol.py", line 196, in start
+Exception: Enable access for assistive devices.
+2024-07-29 14:03:29,101 [Dummy-1] INFO: setting machine: Keyboard
+2024-07-29 14:03:29,105 [Dummy-1] ERROR: engine update failed
+Traceback (most recent call last):
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/engine.py", line 147, in run
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/engine.py", line 251, in _update
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/machine/keyboard.py", line 92, in start_capture
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/oslayer/osx/keyboardcontrol.py", line 278, in start
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/oslayer/osx/keyboardcontrol.py", line 196, in start
+Exception: Enable access for assistive devices.
+2024-07-29 14:04:59,706 [Dummy-1] INFO: setting machine: Keyboard
+2024-07-29 14:04:59,711 [Dummy-1] INFO: loaded 4 dictionaries in 0.000s
+2024-07-29 14:09:12,963 [Dummy-1] INFO: loaded 4 dictionaries in 0.000s
+2024-07-29 15:20:45,609 [MainThread] INFO: setting language to: en-GB
+2024-07-29 15:20:45,859 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2024-07-29 15:20:45,860 [Dummy-1] INFO: loading system: English Stenotype
+2024-07-29 15:20:46,040 [Dummy-1] INFO: setting machine: Keyboard
+2024-07-29 15:20:46,055 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2024-07-29 15:20:46,056 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2024-07-29 15:20:46,059 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2024-07-29 15:20:46,067 [Dummy-1] INFO: loading dictionary: /Users/ben/Plover/inverted.json
+2024-07-29 15:20:46,544 [Thread-4] WARNING: dictionary `main.json` loaded with 6 invalid steno errors
+2024-07-29 15:20:46,549 [Dummy-1] INFO: loaded 4 dictionaries in 0.494s
+2024-07-29 15:20:47,116 [MainThread] WARNING: Qt: Populating font family aliases took 562 ms. Replace uses of missing font family "Monospace" with one that exists to avoid this cost. 
+2024-07-29 15:42:21,564 [Dummy-1] INFO: setting machine: Keyboard
+2024-07-29 15:42:21,568 [Dummy-1] INFO: loaded 4 dictionaries in 0.000s
+2024-07-29 21:00:30,082 [Dummy-1] INFO: setting machine: Keyboard
+2024-07-29 21:00:30,089 [Dummy-1] INFO: loaded 4 dictionaries in 0.000s
+2024-07-29 21:06:11,143 [ThreadPoolExecutor-35_1] INFO: error fetching https://i.imgur.com/egW4Ps3.png: Unknown Error
+2024-07-29 21:06:11,143 [ThreadPoolExecutor-35_0] INFO: error fetching https://i.imgur.com/f48fKwv.png: Unknown Error
+2024-07-29 21:06:21,645 [ThreadPoolExecutor-41_0] INFO: error fetching https://github.com/psethwick/plover_fancytext/workflows/Tests/badge.svg: Not Found
+2024-07-29 21:58:40,479 [Dummy-1] INFO: setting machine: Keyboard
+2024-07-29 21:58:40,484 [Dummy-1] INFO: loaded 4 dictionaries in 0.000s
+2024-07-30 00:24:42,617 [MainThread] INFO: setting language to: en-GB
+2024-07-30 00:24:42,946 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2024-07-30 00:24:42,947 [Dummy-1] INFO: loading system: English Stenotype
+2024-07-30 00:24:43,175 [Dummy-1] INFO: setting machine: Keyboard
+2024-07-30 00:24:43,194 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2024-07-30 00:24:43,194 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2024-07-30 00:24:43,195 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2024-07-30 00:24:43,195 [Dummy-1] INFO: loading dictionary: /Users/ben/Plover/inverted.json
+2024-07-30 00:24:43,705 [Thread-4] WARNING: dictionary `main.json` loaded with 6 invalid steno errors
+2024-07-30 00:24:43,710 [Dummy-1] INFO: loaded 4 dictionaries in 0.516s
+2024-07-30 00:24:44,223 [MainThread] WARNING: Qt: Populating font family aliases took 506 ms. Replace uses of missing font family "Monospace" with one that exists to avoid this cost. 
+2024-07-30 09:26:17,069 [MainThread] INFO: setting language to: en-GB
+2024-07-30 09:26:17,373 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2024-07-30 09:26:17,374 [Dummy-1] INFO: loading system: English Stenotype
+2024-07-30 09:26:17,674 [Dummy-1] INFO: setting machine: Keyboard
+2024-07-30 09:26:17,694 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2024-07-30 09:26:17,708 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2024-07-30 09:26:17,709 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2024-07-30 09:26:17,709 [Dummy-1] INFO: loading dictionary: /Users/ben/Plover/inverted.json
+2024-07-30 09:26:18,296 [Thread-4] WARNING: dictionary `main.json` loaded with 6 invalid steno errors
+2024-07-30 09:26:18,301 [Dummy-1] INFO: loaded 4 dictionaries in 0.607s
+2024-07-30 09:26:18,787 [MainThread] WARNING: Qt: Populating font family aliases took 480 ms. Replace uses of missing font family "Monospace" with one that exists to avoid this cost. 
+2024-07-30 15:33:02,473 [MainThread] INFO: setting language to: en-GB
+2024-07-30 15:33:02,761 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2024-07-30 15:33:02,762 [Dummy-1] INFO: loading system: English Stenotype
+2024-07-30 15:33:02,962 [Dummy-1] INFO: setting machine: Keyboard
+2024-07-30 15:33:02,977 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2024-07-30 15:33:02,978 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2024-07-30 15:33:02,978 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2024-07-30 15:33:02,978 [Dummy-1] INFO: loading dictionary: /Users/ben/Plover/inverted.json
+2024-07-30 15:33:03,482 [Thread-4] WARNING: dictionary `main.json` loaded with 6 invalid steno errors
+2024-07-30 15:33:03,486 [Dummy-1] INFO: loaded 4 dictionaries in 0.509s
+2024-07-30 15:33:03,957 [MainThread] WARNING: Qt: Populating font family aliases took 465 ms. Replace uses of missing font family "Monospace" with one that exists to avoid this cost. 
+2024-07-30 21:18:41,301 [MainThread] INFO: setting language to: en-GB
+2024-07-30 21:18:41,605 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2024-07-30 21:18:41,606 [Dummy-1] INFO: loading system: English Stenotype
+2024-07-30 21:18:41,799 [Dummy-1] INFO: setting machine: Keyboard
+2024-07-30 21:18:41,814 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2024-07-30 21:18:41,814 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2024-07-30 21:18:41,815 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2024-07-30 21:18:41,815 [Dummy-1] INFO: loading dictionary: /Users/ben/Plover/inverted.json
+2024-07-30 21:18:42,279 [Thread-4] WARNING: dictionary `main.json` loaded with 6 invalid steno errors
+2024-07-30 21:18:42,283 [Dummy-1] INFO: loaded 4 dictionaries in 0.469s
+2024-07-30 21:18:42,747 [MainThread] WARNING: Qt: Populating font family aliases took 458 ms. Replace uses of missing font family "Monospace" with one that exists to avoid this cost. 
+2024-08-16 12:22:18,192 [MainThread] INFO: setting language to: en-GB
+2024-08-16 12:22:18,661 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2024-08-16 12:22:18,662 [Dummy-1] INFO: loading system: English Stenotype
+2024-08-16 12:22:18,858 [Dummy-1] INFO: setting machine: Keyboard
+2024-08-16 12:22:18,871 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2024-08-16 12:22:18,871 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2024-08-16 12:22:18,871 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2024-08-16 12:22:18,872 [Dummy-1] INFO: loading dictionary: /Users/ben/Plover/inverted.json
+2024-08-16 12:22:19,352 [Thread-4] WARNING: dictionary `main.json` loaded with 6 invalid steno errors
+2024-08-16 12:22:19,358 [Dummy-1] INFO: loaded 4 dictionaries in 0.487s
+2024-08-16 12:22:19,939 [MainThread] WARNING: Qt: Populating font family aliases took 576 ms. Replace uses of missing font family "Monospace" with one that exists to avoid this cost. 
+2024-08-16 16:10:53,144 [MainThread] INFO: setting language to: en-GB
+2024-08-16 16:10:53,484 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2024-08-16 16:10:53,485 [Dummy-1] INFO: loading system: English Stenotype
+2024-08-16 16:10:53,678 [Dummy-1] INFO: setting machine: Keyboard
+2024-08-16 16:10:53,692 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2024-08-16 16:10:53,692 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2024-08-16 16:10:53,692 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2024-08-16 16:10:53,692 [Dummy-1] INFO: loading dictionary: /Users/ben/Plover/inverted.json
+2024-08-16 16:10:54,183 [Thread-4] WARNING: dictionary `main.json` loaded with 6 invalid steno errors
+2024-08-16 16:10:54,188 [Dummy-1] INFO: loaded 4 dictionaries in 0.497s
+2024-08-16 16:10:54,710 [MainThread] WARNING: Qt: Populating font family aliases took 516 ms. Replace uses of missing font family "Monospace" with one that exists to avoid this cost. 
+2024-09-09 11:16:16,254 [MainThread] INFO: setting language to: en-GB
+2024-09-09 11:16:16,726 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2024-09-09 11:16:16,726 [Dummy-1] INFO: loading system: English Stenotype
+2024-09-09 11:16:16,920 [Dummy-1] INFO: setting machine: Keyboard
+2024-09-09 11:16:16,935 [Dummy-1] ERROR: engine start failed
+Traceback (most recent call last):
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/engine.py", line 147, in run
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/engine.py", line 168, in _start
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/engine.py", line 251, in _update
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/machine/keyboard.py", line 92, in start_capture
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/oslayer/osx/keyboardcontrol.py", line 278, in start
+  File "/Users/runner/work/plover/plover/build/osxapp/Plover.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.9/site-packages/plover/oslayer/osx/keyboardcontrol.py", line 196, in start
+Exception: Enable access for assistive devices.
+2024-09-09 11:17:50,345 [MainThread] INFO: setting language to: en-GB
+2024-09-09 11:17:50,583 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2024-09-09 11:17:50,584 [Dummy-1] INFO: loading system: English Stenotype
+2024-09-09 11:17:50,781 [Dummy-1] INFO: setting machine: Keyboard
+2024-09-09 11:17:50,795 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2024-09-09 11:17:50,795 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2024-09-09 11:17:50,796 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2024-09-09 11:17:50,796 [Dummy-1] INFO: loading dictionary: /Users/ben/Plover/inverted.json
+2024-09-09 11:17:51,270 [Thread-4] WARNING: dictionary `main.json` loaded with 6 invalid steno errors
+2024-09-09 11:17:51,274 [Dummy-1] INFO: loaded 4 dictionaries in 0.479s
+2024-09-09 11:17:51,873 [MainThread] WARNING: Qt: Populating font family aliases took 594 ms. Replace uses of missing font family "Monospace" with one that exists to avoid this cost. 
+2024-09-10 09:05:38,678 [MainThread] INFO: setting language to: en-GB
+2024-09-10 09:05:39,147 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2024-09-10 09:05:39,148 [Dummy-1] INFO: loading system: English Stenotype
+2024-09-10 09:05:39,349 [Dummy-1] INFO: setting machine: Keyboard
+2024-09-10 09:05:39,368 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2024-09-10 09:05:39,370 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2024-09-10 09:05:39,373 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2024-09-10 09:05:39,373 [Dummy-1] INFO: loading dictionary: /Users/ben/Plover/inverted.json
+2024-09-10 09:05:39,862 [Thread-4] WARNING: dictionary `main.json` loaded with 6 invalid steno errors
+2024-09-10 09:05:39,867 [Dummy-1] INFO: loaded 4 dictionaries in 0.498s
+2024-09-10 09:05:40,344 [MainThread] WARNING: Qt: Populating font family aliases took 472 ms. Replace uses of missing font family "Monospace" with one that exists to avoid this cost. 
+2024-09-10 11:38:42,277 [MainThread] INFO: setting language to: en-GB
+2024-09-10 11:38:42,553 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2024-09-10 11:38:42,554 [Dummy-1] INFO: loading system: English Stenotype
+2024-09-10 11:38:42,736 [Dummy-1] INFO: setting machine: Keyboard
+2024-09-10 11:38:42,752 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2024-09-10 11:38:42,753 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2024-09-10 11:38:42,753 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2024-09-10 11:38:42,754 [Dummy-1] INFO: loading dictionary: /Users/ben/Plover/inverted.json
+2024-09-10 11:38:43,254 [Thread-4] WARNING: dictionary `main.json` loaded with 6 invalid steno errors
+2024-09-10 11:38:43,258 [Dummy-1] INFO: loaded 4 dictionaries in 0.506s
+2024-09-10 11:38:43,729 [MainThread] WARNING: Qt: Populating font family aliases took 466 ms. Replace uses of missing font family "Monospace" with one that exists to avoid this cost. 
+2024-09-11 09:56:25,590 [MainThread] INFO: setting language to: en-GB
+2024-09-11 09:56:26,041 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2024-09-11 09:56:26,041 [Dummy-1] INFO: loading system: English Stenotype
+2024-09-11 09:56:26,240 [Dummy-1] INFO: setting machine: Keyboard
+2024-09-11 09:56:26,253 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2024-09-11 09:56:26,254 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2024-09-11 09:56:26,255 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2024-09-11 09:56:26,257 [Dummy-1] INFO: loading dictionary: /Users/ben/Plover/inverted.json
+2024-09-11 09:56:26,728 [Thread-4] WARNING: dictionary `main.json` loaded with 6 invalid steno errors
+2024-09-11 09:56:26,733 [Dummy-1] INFO: loaded 4 dictionaries in 0.480s
+2024-09-11 09:56:27,201 [MainThread] WARNING: Qt: Populating font family aliases took 462 ms. Replace uses of missing font family "Monospace" with one that exists to avoid this cost. 
+2024-09-11 12:07:05,824 [MainThread] INFO: setting language to: en-GB
+2024-09-11 12:07:06,336 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2024-09-11 12:07:06,337 [Dummy-1] INFO: loading system: English Stenotype
+2024-09-11 12:07:06,649 [Dummy-1] INFO: setting machine: Keyboard
+2024-09-11 12:07:06,684 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2024-09-11 12:07:06,729 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2024-09-11 12:07:06,779 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2024-09-11 12:07:06,782 [Dummy-1] INFO: loading dictionary: /Users/ben/Plover/inverted.json
+2024-09-11 12:07:07,491 [Thread-4] WARNING: dictionary `main.json` loaded with 6 invalid steno errors
+2024-09-11 12:07:07,497 [Dummy-1] INFO: loaded 4 dictionaries in 0.814s
+2024-09-11 12:07:08,034 [MainThread] WARNING: Qt: Populating font family aliases took 531 ms. Replace uses of missing font family "Monospace" with one that exists to avoid this cost. 
+2024-09-11 14:57:44,079 [MainThread] INFO: setting language to: en-GB
+2024-09-11 14:57:44,339 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2024-09-11 14:57:44,340 [Dummy-1] INFO: loading system: English Stenotype
+2024-09-11 14:57:44,524 [Dummy-1] INFO: setting machine: Keyboard
+2024-09-11 14:57:44,540 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2024-09-11 14:57:44,540 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2024-09-11 14:57:44,540 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2024-09-11 14:57:44,541 [Dummy-1] INFO: loading dictionary: /Users/ben/Plover/inverted.json
+2024-09-11 14:57:45,013 [Thread-4] WARNING: dictionary `main.json` loaded with 6 invalid steno errors
+2024-09-11 14:57:45,017 [Dummy-1] INFO: loaded 4 dictionaries in 0.478s
+2024-09-11 14:57:45,482 [MainThread] WARNING: Qt: Populating font family aliases took 460 ms. Replace uses of missing font family "Monospace" with one that exists to avoid this cost. 
+2024-09-16 09:07:49,436 [MainThread] INFO: setting language to: en-GB
+2024-09-16 09:07:49,961 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2024-09-16 09:07:49,961 [Dummy-1] INFO: loading system: English Stenotype
+2024-09-16 09:07:50,149 [Dummy-1] INFO: setting machine: Keyboard
+2024-09-16 09:07:50,164 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2024-09-16 09:07:50,164 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2024-09-16 09:07:50,164 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2024-09-16 09:07:50,165 [Dummy-1] INFO: loading dictionary: /Users/ben/Plover/inverted.json
+2024-09-16 09:07:50,672 [Thread-4] WARNING: dictionary `main.json` loaded with 6 invalid steno errors
+2024-09-16 09:07:50,679 [Dummy-1] INFO: loaded 4 dictionaries in 0.516s
+2024-09-16 09:07:51,293 [MainThread] WARNING: Qt: Populating font family aliases took 608 ms. Replace uses of missing font family "Monospace" with one that exists to avoid this cost. 
+2024-09-16 14:29:29,379 [MainThread] INFO: setting language to: en-GB
+2024-09-16 14:29:29,861 [Dummy-1] INFO: set_stroke_filename(/Users/ben/Library/Application Support/plover/strokes.log)
+2024-09-16 14:29:29,862 [Dummy-1] INFO: loading system: English Stenotype
+2024-09-16 14:29:30,073 [Dummy-1] INFO: setting machine: Keyboard
+2024-09-16 14:29:30,089 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/user.json
+2024-09-16 14:29:30,089 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/commands.json
+2024-09-16 14:29:30,089 [Dummy-1] INFO: loading dictionary: /Users/ben/Library/Application Support/plover/main.json
+2024-09-16 14:29:30,090 [Dummy-1] INFO: loading dictionary: /Users/ben/Plover/inverted.json
+2024-09-16 14:29:30,615 [Thread-4] WARNING: dictionary `main.json` loaded with 6 invalid steno errors
+2024-09-16 14:29:30,619 [Dummy-1] INFO: loaded 4 dictionaries in 0.531s
+2024-09-16 14:29:31,171 [MainThread] WARNING: Qt: Populating font family aliases took 546 ms. Replace uses of missing font family "Monospace" with one that exists to avoid this cost. 
+2024-09-16 15:02:15,233 [MainThread] INFO: setting language to: en-GB
+2024-09-16 15:02:15,466 [Dummy-1] INFO: set_stroke_filename(/Users/ben/.config/plover/strokes.log)
+2024-09-16 15:02:15,466 [Dummy-1] INFO: loading system: English Stenotype
+2024-09-16 15:02:15,660 [Dummy-1] INFO: setting machine: Keyboard
+2024-09-16 15:02:15,677 [Dummy-1] INFO: loading dictionary: /Users/ben/.config/plover/user.json
+2024-09-16 15:02:15,678 [Dummy-1] INFO: loading dictionary: /Users/ben/.config/plover/commands.json
+2024-09-16 15:02:15,680 [Dummy-1] INFO: loading dictionary: /Users/ben/.config/plover/main.json
+2024-09-16 15:02:15,682 [Dummy-1] INFO: loading dictionary: /Users/ben/Plover/inverted.json
+2024-09-16 15:02:16,166 [Thread-4] WARNING: dictionary `main.json` loaded with 6 invalid steno errors
+2024-09-16 15:02:16,170 [Dummy-1] INFO: loaded 4 dictionaries in 0.493s
+2024-09-16 15:02:16,646 [MainThread] WARNING: Qt: Populating font family aliases took 471 ms. Replace uses of missing font family "Monospace" with one that exists to avoid this cost. 
+2024-09-16 15:03:36,748 [Dummy-1] INFO: loaded 3 dictionaries in 0.000s
+2024-09-16 15:04:15,698 [Dummy-1] INFO: loading dictionary: /Users/ben/.config/plover/inverted.json
+2024-09-16 15:04:15,703 [Dummy-1] INFO: loading dictionary: /Users/ben/.config/plover/thumb_numbers.json
+2024-09-16 15:04:15,705 [Dummy-1] INFO: loaded 5 dictionaries in 0.007s
+2024-09-16 15:04:21,751 [Dummy-1] INFO: loaded 5 dictionaries in 0.000s
+2024-09-16 15:04:22,054 [Dummy-1] INFO: loaded 5 dictionaries in 0.000s
