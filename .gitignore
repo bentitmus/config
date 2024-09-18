@@ -27,6 +27,7 @@ MusicBrainz/**
 node_modules/**
 octave/**
 plover/.cache
+plover/clippy_2.org
 plover/plover.log
 plover/plugins
 pulse/**
