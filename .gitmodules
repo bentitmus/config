@@ -19,3 +19,15 @@
 [submodule "talon/user/rango-talon"]
 	path = talon/user/rango-talon
 	url = https://github.com/david-tejada/rango-talon
+[submodule "plover/didoesdigital-steno-dictionaries"]
+	path = plover/didoesdigital-steno-dictionaries
+	url = https://github.com/didoesdigital/steno-dictionaries.git
+[submodule "plover/emily-modifiers"]
+	path = plover/emily-modifiers
+	url = https://github.com/EPLHREU/emily-modifiers.git
+[submodule "plover/emily-symbols"]
+	path = plover/emily-symbols
+	url = https://github.com/EPLHREU/emily-symbols.git
+[submodule "plover/plover_phrasing"]
+	path = plover/plover_phrasing
+	url = https://github.com/Jade-GG/plover_phrasing.git
