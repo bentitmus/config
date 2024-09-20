@@ -1,6 +1,11 @@
-from talon import Module, actions
+from talon import Module, app, actions
 
 mod = Module()
+
+def disable():
+  actions.speech.disable()
+
+app.register("ready", disable)
 
 @mod.action_class
 class Actions:

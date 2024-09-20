@@ -21,6 +21,11 @@ class Actions:
         for _ in range(n):
             actions.edit.left()
 
+    def right_n(n: int):
+        """Goes right n lines"""
+        for _ in range(n):
+            actions.edit.right()
+
     def delete_left_n(n: int):
         """Goes left n lines"""
         actions.key(f"backspace:{n}")
@@ -29,7 +34,15 @@ class Actions:
         """Goes left n lines"""
         actions.key(f"delete:{n}")
 
-    def right_n(n: int):
-        """Goes right n lines"""
+    def delete_word_left_n(n: int):
+        """Delete left n words"""
         for _ in range(n):
-            actions.edit.right()
+            actions.edit.extend_word_left()
+        actions.edit.delete()
+
+    def delete_word_right_n(n: int):
+        """Delete right n words"""
+        for _ in range(n):
+            actions.edit.extend_word_right()
+        actions.edit.delete()
+
