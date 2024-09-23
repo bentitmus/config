@@ -13,9 +13,9 @@ gpg --homedir=~/gpg-update-keys --quick-set-expire 30C6353302ED4E83BDFDE52FD601A
 gpg --homedir=~/gpg-update-keys --quick-set-expire 30C6353302ED4E83BDFDE52FD601AAE7235761BB 1y '*'
 gpg --homedir=~/gpg-update-keys --armor --export > ~/gpg-update-keys/pubkey.asc
 killall gpg-agent
-sudo cp -rf ~/gpg-update-keys $1
+sudo rm -rf $1
+sudo cp -r ~/gpg-update-keys $1
 gpg --import ~/gpg-update-keys/pubkey.asc
-rm -rf ~/gpg-update-keys
 # keys.openpgp.org only allows identity information in the latest key, so include it for the ed25519 key
 gpg --keyserver keys.openpgp.org --send-key C9693BFD4864CB6D0111E6258091117AD7316142
 gpg --keyserver keys.openpgp.org --send-key 30C6353302ED4E83BDFDE52FD601AAE7235761BB
@@ -24,3 +24,4 @@ gpg --keyserver keys.openpgp.org --send-key 30C6353302ED4E83BDFDE52FD601AAE72357
 # Mailvelope will only take one key, so use the ed25519 key
 gpg --export --armor C9693BFD4864CB6D0111E6258091117AD7316142
 gpg --export --armor 30C6353302ED4E83BDFDE52FD601AAE7235761BB
+echo "Check and then delete the ~/gpg-update-keys directory"
