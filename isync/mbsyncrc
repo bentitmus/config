@@ -8,8 +8,8 @@ Host            imap.gmail.com
 User            ben.titmus@gmail.com
 PassCmd         "pass show gmail-mbsync"
 AuthMechs       LOGIN
-SSLType         IMAPS
-SSLVersions     TLSv1.3
+TLSType         IMAPS
+TLSVersions     +1.3
 
 IMAPStore gmail-remote
 Account   gmail
@@ -57,46 +57,4 @@ Channel gmail-archive
 Channel gmail-bin
 Channel gmail-spam
 Channel gmail-default
-
-# Work
-IMAPAccount     arm
-Host            localhost
-Port            1143
-Timeout         60
-User            Benjamin.Titmus@arm.com
-PassCmd         "pass show arm-mbsync"
-AuthMechs       LOGIN
-SSLType         None
-
-IMAPStore arm-remote
-Account   arm
-
-MaildirStore arm-local
-# Trailing "/" is important
-Path         ~/.local/share/mbsync/arm/
-Inbox        ~/.local/share/mbsync/arm/inbox
-SubFolders   Verbatim
-
-Channel arm-inbox
-Far     :arm-remote:INBOX
-Near    :arm-local:Inbox
-
-Channel arm-bin
-Far     :arm-remote:Trash
-Near    :arm-local:Bin
-
-Channel arm-spam
-Far     :arm-remote:Junk
-Near    :arm-local:Spam
-
-Channel arm-default
-Far     :arm-remote:
-Near    :arm-local:
-Patterns * !INBOX !Conversation\ History !Junk !Trash !Social\ Activity\ Notifications !Sync\ Issues* !Unsent\ Messages !Bin !Spam
-
-Group   arm
-Channel arm-inbox
-Channel arm-bin
-Channel arm-spam
-Channel arm-default
 
