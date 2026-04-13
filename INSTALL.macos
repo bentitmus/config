@@ -30,6 +30,7 @@ brew tap rosie-community/rosie https://gitlab.com/rosie-community/packages/homeb
 brew tap koekeishiya/formulae
 brew tap gmerlino/plan9port
 brew tap riscv-software-src/riscv
+brew tap macos-fuse-t/homebrew-cask
 brew update
 brew upgrade
 brew install fish bat procs fd lf tig fzf bottom jq yq basex wget broot ripgrep
@@ -45,11 +46,13 @@ brew install angband
 brew install plan9port
 brew install riscv-tools
 brew install julia
-brew install --cask nitrokey veracrypt kitty mkvtoolnix
+brew install fuse-t fuse-t-sshfs
+brew install --cask nitrokey kitty mkvtoolnix
 brew install --cask coqide isabelle ghidra
 brew services start skhd
 sudo yabai --install-sa
 brew services start yabai
+echo "Install Veracrypt with FUSE-T support"
 echo "Done"
 
 echo ""

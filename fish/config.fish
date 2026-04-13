@@ -27,7 +27,11 @@ fish_add_path $HOME/.dotnet/tools
 fish_add_path $HOME/Applications/uxn
 fish_add_path /opt/homebrew/opt/postgresql@16/bin
 
-set -xg TEXINPUTS /opt/homebrew/Cellar/noweb/2.13/tex/generic/noweb:
+if test -d /opt/homebrew
+  set -xg TEXINPUTS /opt/homebrew/Cellar/noweb/2.13/tex/generic/noweb:
+else
+  set -xg TEXINPUTS /usr/local/Cellar/noweb/2.13/tex/generic/noweb/:
+end
 
 set -g fisher_path $XDG_CONFIG_HOME/fish/fisher
 
