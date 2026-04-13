@@ -26,6 +26,8 @@ fish_add_path /Users/ben/.nuget/packages/runtime.osx-arm64.microsoft.netcore.ild
 fish_add_path $HOME/.dotnet/tools
 fish_add_path $HOME/Applications/uxn
 fish_add_path /opt/homebrew/opt/postgresql@16/bin
+fish_add_path /opt/harbour/bin
+fish_add_path /Applications/Obsidian.app/Contents/MacOS
 
 if test -d /opt/homebrew
   set -xg TEXINPUTS /opt/homebrew/Cellar/noweb/2.13/tex/generic/noweb:
@@ -86,9 +88,6 @@ function set_vars
   set -xg TEXMFCONFIG $XDG_CONFIG_HOME/texlive/texmf-config
   set -xg GOPATH $XDG_DATA_HOME/go
 
-  set -xg DOTNET_ROOT /opt/homebrew/Cellar/dotnet/7.0.100/libexec
-  #set -xg DOTNET_ROOT /usr/local/share/dotnet/x64/sdk/5.0.408
-
   # Homebrew set-up
   if [ (uname) = "Linux" ]
     set -xg HOMEBREW_CACHE $HOMEBREW_BASE/cache
@@ -111,4 +110,11 @@ else
 end
 
 fish_add_path $(go env GOPATH)/bin
+
+
+# Created by `pipx` on 2024-12-13 12:22:40
+set PATH $PATH /Users/ben/Library/Python/3.9/bin
+
+# starship init fish | source
+jj util completion fish | source
 

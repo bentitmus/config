@@ -20,6 +20,7 @@ fish/functions/br.fish
 fisher/**
 gtk-2.0/**
 jasper/**
+jj/repos/**
 kak/autoload/autoload
 kak/colors/kakoune-selenized
 kak/plugins/**
@@ -36,7 +37,7 @@ plover/plugins
 pulse/**
 ssh/id_*
 ssh/known_hosts
-swi-prolog/dir-history
+swi-prolog/**
 tmux/plugins/**
 vim/pack/minpac/start/**
 vim/.netrwhist

@@ -1,0 +1,21 @@
+#:schema https://docs.jj-vcs.dev/latest/config-schema.json
+
+[user]
+name = "Benjamin Titmus"
+email = "ben.titmus@cantab.net"
+
+[ui]
+editor = "kak"
+default-command = "log"
+
+[gg.ui]
+recent-workspaces = ["/Users/ben/Desktop/tmp"]
+
+[aliases]
+pr = ["util", "exec", "--", "bash", "-c", """
+set -euo pipefail
+jj bookmark set $1
+jj git push -b $1
+jj-stack submit $1
+""", ""]
+

@@ -6,7 +6,6 @@ source ~/.config/vim/xdg.vim
 
 " Packages set-up
 set packpath=$XDG_CONFIG_HOME/vim
-packadd minpac
 source $XDG_CONFIG_HOME/vim/packages.vim
 
 " Basic configuration

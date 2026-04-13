@@ -29,3 +29,5 @@
 Host *
   Port 22
   VisualHostKey yes
+
+PubkeyAuthentication unbound

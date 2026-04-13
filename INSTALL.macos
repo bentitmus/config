@@ -15,6 +15,7 @@ ln -s ~/.config/kak-tree-sitter ~/Library/Application\ Support/kak-tree-sitter
 ln -s ~/.config/talon/user/local/settings ~/.config/talon/user/community/settings
 ln -s ~/.config/talon/user ~/.talon/user
 ln -s ~/.config/plover ~/Library/Application\ Support/plover
+ln -s ~/.config/lagrange ~/Library/Application\ Support/fi.skyjake.Lagrange
 
 echo ""
 echo "~~~~~~~~~~~~~~~~"
@@ -31,6 +32,7 @@ brew tap koekeishiya/formulae
 brew tap gmerlino/plan9port
 brew tap riscv-software-src/riscv
 brew tap macos-fuse-t/homebrew-cask
+brew tap isen-ng/dotnet-sdk-versions
 brew update
 brew upgrade
 brew install fish bat procs fd lf tig fzf bottom jq yq basex wget broot ripgrep
@@ -47,8 +49,11 @@ brew install plan9port
 brew install riscv-tools
 brew install julia
 brew install fuse-t fuse-t-sshfs
-brew install --cask nitrokey kitty mkvtoolnix
-brew install --cask coqide isabelle ghidra
+brew install dotnet-sdk10 dotnet-sdk9
+brew install starship
+brew install dmmulroy/tap/jj-starship
+brew install --cask nitrokey veracrypt kitty mkvtoolnix
+brew install --cask coqide isabelle ghidra mactex
 brew services start skhd
 sudo yabai --install-sa
 brew services start yabai
