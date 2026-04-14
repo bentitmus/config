@@ -6,6 +6,8 @@
 Trolltech.conf
 .isolated-storage/**
 broot/launcher
+cagent/**
+coq/**
 emacs/.cache
 emacs/elpa
 emacs/eshell
@@ -13,6 +15,7 @@ emacs/org-roam.db
 emacs/recentf
 emacs/transient/**
 emacs/url
+enchant/**
 exercism/user.json
 fish/fish_variables
 fish/fisher/**
@@ -49,5 +52,6 @@ ssh/known_hosts
 swi-prolog/**
 tmux/plugins/**
 vim/pack/minpac/start/**
+vim/pack/minpac/opt/netrw
 vim/.netrwhist
 wireshark/**

@@ -16,6 +16,8 @@ ln -s ~/.config/talon/user/local/settings ~/.config/talon/user/community/setting
 ln -s ~/.config/talon/user ~/.talon/user
 ln -s ~/.config/plover ~/Library/Application\ Support/plover
 ln -s ~/.config/lagrange ~/Library/Application\ Support/fi.skyjake.Lagrange
+chmod 600 ~/.config/gnupg/*
+chmod 700 ~/.config/gnupg
 
 echo ""
 echo "~~~~~~~~~~~~~~~~"
@@ -26,38 +28,64 @@ if test ! $(which brew); then
   echo "Installing homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
-brew tap homebrew/cask-drivers
+#brew tap homebrew/cask-drivers
 brew tap rosie-community/rosie https://gitlab.com/rosie-community/packages/homebrew-rosie.git
-brew tap koekeishiya/formulae
+#brew tap koekeishiya/formulae
 brew tap gmerlino/plan9port
-brew tap riscv-software-src/riscv
+#brew tap riscv-software-src/riscv
 brew tap macos-fuse-t/homebrew-cask
 brew tap isen-ng/dotnet-sdk-versions
 brew update
 brew upgrade
-brew install fish bat procs fd lf tig fzf bottom jq yq basex wget broot ripgrep
-brew install qutebrowser buku
+brew install coreutils fish bat procs fd lf tig fzf bottom jq yq basex wget broot ripgrep pinentry-mac
+#brew install qutebrowser
+brew install buku
 brew install fdupes exiftool media-info
 brew install gnupg paperkey dmtx-utils pass
 brew install kakoune tmux sc-im gnuplot newsboat mpv
-brew install isync mu mutt davmail
-brew install skhd yabai
-brew install gforth swi-prolog acl2 idris2 rosie octave noweb php j
-brew install ccache doxygen git-delta ninja npm
-brew install angband
-brew install plan9port
-brew install riscv-tools
+brew install isync mu mutt
+#brew install davmail
+#brew install skhd yabai
+brew install gforth swi-prolog idris2 rosie noweb j
+#brew install acl2 php octave
+#brew install ccache doxygen ninja
+brew install git-delta node
+#brew install angband
+brew install --HEAD plan9port
+#brew install riscv-tools
 brew install julia
 brew install fuse-t fuse-t-sshfs
-brew install dotnet-sdk10 dotnet-sdk9
+brew install dotnet-sdk10
+brew install jj bash
 brew install starship
 brew install dmmulroy/tap/jj-starship
-brew install --cask nitrokey veracrypt kitty mkvtoolnix
-brew install --cask coqide isabelle ghidra mactex
-brew services start skhd
-sudo yabai --install-sa
-brew services start yabai
-echo "Install Veracrypt with FUSE-T support"
+#brew install --cask nitrokey
+brew install mkvtoolnix
+brew install kitty veracrypt-fuse-t
+brew install coq-platform isabelle ghidra mactex
+brew install --cask racket
+brew install awscli changie csvlens duckdb exercism gh gleam go hashicorp/tap/terraform mise rustup
+brew install clips-ide r jjui eza zoxide lagrange halloy element zellij yazi emacs-app jnv docker-desktop visual-studio-code
+brew install swinsian plover logos microsoft-teams dyalog dropbox zoom discord gramps tla+-toolbox
+brew install obsidian steam google-chrome gram wacom-tablet talon vlc musicbrainz-picard glyphs anki macloggerdx gg skim
+brew install battle-net xquartz
+#brew services start skhd
+#sudo yabai --install-sa
+#brew services start yabai
+
+echo "Install Pharo"
+echo "Done"
+
+echo "Install OM Workspace"
+echo "Done"
+
+echo "Install jtdx"
+echo "Done"
+
+echo "Install js8call"
+echo "Done"
+
+echo "Install wsjtx"
 echo "Done"
 
 echo ""
@@ -124,4 +152,11 @@ npm install -g "awk-language-server@>=0.5.2"
 npm install -g bash-language-server
 go install github.com/wader/jq-lsp@master
 julia --project=@kak-lsp -e 'import Pkg; Pkg.add("LanguageServer")'
+
+echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
+chsh -s /opt/homebrew/bin/fish
+
+gpg --recv-keys 30c6353302ed4e83bdfde52fd601aae7235761bb
+gpg --recv-keys c9693bfd4864cb6d0111e6258091117ad7316142
+gpg --import-ownertrust ~/.config/gnupg/ownertrust
 
