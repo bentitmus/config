@@ -74,6 +74,7 @@ function set_vars
   set -xg TMUXP_CONFIGDIR ~/.config-internal/tmuxp
   set -xg FZF_DEFAULT_OPTS "--color=light"
 
+  set -xg GNUPGHOME $XDG_CONFIG_HOME/gnupg
   set -xg SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket 2>/dev/null)
 
   set -xg VIMINIT "source $XDG_CONFIG_HOME/vim/vimrc"

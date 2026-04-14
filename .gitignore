@@ -18,6 +18,15 @@ fish/fish_variables
 fish/fisher/**
 fish/functions/br.fish
 fisher/**
+gnupg/.#*
+gnupg/.gpg-card_history
+gnupg/*.d/**
+gnupg/pubring.kbx*
+gnupg/random_seed
+gnupg/*.status
+gnupg/S.*
+gnupg/*.db
+gnupg/trustdb.gpg
 gtk-2.0/**
 jasper/**
 jj/repos/**
