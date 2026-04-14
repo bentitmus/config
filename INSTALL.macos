@@ -160,3 +160,5 @@ gpg --recv-keys 30c6353302ed4e83bdfde52fd601aae7235761bb
 gpg --recv-keys c9693bfd4864cb6d0111e6258091117ad7316142
 gpg --import-ownertrust ~/.config/gnupg/ownertrust
 
+git remote set-url origin git@github.com:bentitmus/config.git
+
