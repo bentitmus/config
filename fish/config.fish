@@ -111,6 +111,11 @@ else
   eval (dircolors -c ~/.config/dircolors)
 end
 
-# starship init fish | source
+set -g fish_greeting
+fish_config theme choose selenized
+
+broot --print-shell-function fish | source
+fzf --fish | source
 jj util completion fish | source
+# starship init fish | source
 
