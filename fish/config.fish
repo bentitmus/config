@@ -1,33 +1,34 @@
-if test -d /opt/homebrew
-  set -xg LOCAL_PATH /opt/homebrew/bin
-else
-  set -xg LOCAL_PATH /usr/local/sbin
-end
-set -xg LOCAL_PATH $LOCAL_PATH /usr/local/bin /sbin
-if test -d /Applications/Racket\ v7.9.0.17/bin
-  set -xg LOCAL_PATH $LOCAL_PATH /Applications/Racket\ v7.9.0.17/bin
-end
-if test -d ~/.local/bin
-  set -xg LOCAL_PATH $LOCAL_PATH ~/.local/bin
-end
-
 # XDG directories
 set -xg XDG_DATA_HOME $HOME/.local/share
 set -xg XDG_CONFIG_HOME $HOME/.config
 set -xg XDG_CACHE_HOME $HOME/.cache
 
-fish_add_path /bin
-fish_add_path $LOCAL_PATH
-fish_add_path /usr/bin
-fish_add_path ~/bin
-fish_add_path $HOME/.cargo/bin
-fish_add_path /Users/ben/.nuget/packages/runtime.osx-arm64.microsoft.netcore.ilasm/7.0.0/runtimes/osx-arm64/native
-fish_add_path /Users/ben/.nuget/packages/runtime.osx-arm64.microsoft.netcore.ildasm/7.0.0/runtimes/osx-arm64/native
-fish_add_path $HOME/.dotnet/tools
-fish_add_path $HOME/Applications/uxn
-fish_add_path /opt/homebrew/opt/postgresql@16/bin
-fish_add_path /opt/harbour/bin
-fish_add_path /Applications/Obsidian.app/Contents/MacOS
+fish_add_path -m /bin
+fish_add_path -m /usr/bin
+fish_add_path -m /usr/local/bin
+fish_add_path -m /sbin
+
+if test -d /opt/homebrew
+  fish_add_path -m /opt/homebrew/bin
+  fish_add_path -m /opt/homebrew/sbin
+else
+  fish_add_path -m /usr/local/sbin
+end
+fish_add_path -m /opt/homebrew/opt/postgresql@16/bin
+fish_add_path -m /opt/harbour/bin
+
+fish_add_path -m $HOME/bin
+if test -d $HOME/.local/bin
+  fish_add_path -m $HOME/.local/bin
+end
+fish_add_path -m $HOME/.cargo/bin
+fish_add_path -m $(go env GOPATH)/bin
+fish_add_path -m $HOME/.nuget/packages/runtime.osx-arm64.microsoft.netcore.ilasm/7.0.0/runtimes/osx-arm64/native
+fish_add_path -m $HOME/.nuget/packages/runtime.osx-arm64.microsoft.netcore.ildasm/7.0.0/runtimes/osx-arm64/native
+fish_add_path -m $HOME/.dotnet/tools
+fish_add_path -m /Users/ben/Library/Python/3.9/bin
+fish_add_path -m $HOME/Applications/uxn
+fish_add_path -m /Applications/Obsidian.app/Contents/MacOS
 
 if test -d /opt/homebrew
   set -xg TEXINPUTS /opt/homebrew/Cellar/noweb/2.13/tex/generic/noweb:
@@ -109,12 +110,6 @@ if type -q gdircolors
 else
   eval (dircolors -c ~/.config/dircolors)
 end
-
-fish_add_path $(go env GOPATH)/bin
-
-
-# Created by `pipx` on 2024-12-13 12:22:40
-set PATH $PATH /Users/ben/Library/Python/3.9/bin
 
 # starship init fish | source
 jj util completion fish | source
