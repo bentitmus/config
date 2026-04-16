@@ -1,7 +1,21 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+format = """
+$directory\
+$custom\
+$character"""
+
 [custom.jj]
 when = "jj-starship detect"
-shell = ["jj-starship"]
-format = "$output "
+shell = ["jj-starship", "--no-jj-prefix", "--no-jj-name", "--no-jj-status", "--no-git-prefix", "--no-git-id", "--no-git-status"]
+format = "[|](white)$output"
+
+[directory]
+fish_style_pwd_dir_length = 1
+format = '[$path]($style)'
+style = 'fg:#8762c6'
 
 [git_branch]
 disabled = true
