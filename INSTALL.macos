@@ -28,13 +28,14 @@ if test ! $(which brew); then
   echo "Installing homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
-brew tap rosie-community/rosie https://gitlab.com/rosie-community/packages/homebrew-rosie.git
-brew tap gmerlino/plan9port
-brew tap hashicorp/tap
-brew tap riscv-software-src/riscv
-brew tap macos-fuse-t/homebrew-cask
-brew tap isen-ng/dotnet-sdk-versions
 brew tap dmmulroy/tap
+brew tap hashicorp/tap
+brew tap isen-ng/dotnet-sdk-versions
+brew tap macos-fuse-t/cask
+brew tap riscv-software-src/riscv
+brew tap rosie-community/rosie https://gitlab.com/rosie-community/packages/homebrew-rosie.git
+brew tap sqitchers/sqitch
+brew tap tizee/plan9port-rb
 
 brew update
 brew upgrade
@@ -45,7 +46,7 @@ brew install fdupes exiftool media-info
 brew install gnupg paperkey dmtx-utils pass
 brew install kakoune tmux sc-im gnuplot newsboat mpv
 brew install isync mu mutt
-brew install --HEAD plan9port
+brew install plan9port
 brew install riscv-tools
 brew install bash opensc
 brew install starship
@@ -54,6 +55,7 @@ brew install basex mkvtoolnix
 brew install ghidra
 brew install awscli changie csvlens duckdb exercism terraform mise
 brew install eza zoxide zellij yazi jnv
+brew install sqitch
 
 brew install gh git-delta jj jj-starship jjui tig
 
@@ -64,7 +66,7 @@ brew install --cask clips-ide coq-platform docker-desktop dotnet-sdk10 dyalog \
   emacs-app gg gram isabelle j kitty mactex racket tla+-toolbox \
   visual-studio-code xquartz
 
-brew install --cask anki battle-net discord dropbox element fuse-t \
+brew install --cask anki battle-net blender discord dropbox element fuse-t \
   fuse-t-sshfs glyphs google-chrome gramps halloy lagrange logos macloggerdx \
   microsoft-teams musicbrainz-picard obsidian plover skim steam swinsian talon \
   veracrypt-fuse-t vlc wacom-tablet zoom
