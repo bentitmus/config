@@ -59,6 +59,9 @@ end
 
 alias R "R --no-save -q"
 alias hc herbstclient
+alias el "eza -lF --git --time-style=long-iso --no-filesize"
+alias ela "el -a"
+alias et "eza -T"
 
 # Some local set-up might mess with these variables, so make them easily 're-loadable'
 function set_vars
