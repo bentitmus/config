@@ -35,7 +35,7 @@ brew tap macos-fuse-t/cask
 brew tap riscv-software-src/riscv
 brew tap rosie-community/rosie https://gitlab.com/rosie-community/packages/homebrew-rosie.git
 brew tap sqitchers/sqitch
-brew tap tizee/plan9port-rb
+brew tap tizee/plan9port-rb https://github.com/tizee/plan9port-rb/
 
 brew update
 brew upgrade
