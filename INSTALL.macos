@@ -41,7 +41,7 @@ brew update
 brew upgrade
 
 brew install coreutils fish bat procs fd lf fzf bottom jq yq wget broot ripgrep pinentry-mac
-brew install buku
+brew install buku nushell
 brew install fdupes exiftool media-info
 brew install gnupg paperkey dmtx-utils pass
 brew install kakoune tmux sc-im gnuplot newsboat mpv

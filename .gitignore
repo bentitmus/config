@@ -41,6 +41,7 @@ kak-tree-sitter/queries/**
 less/keys
 MusicBrainz/**
 node_modules/**
+nushell/history.txt
 octave/**
 plover/.cache
 plover/clippy_2.org

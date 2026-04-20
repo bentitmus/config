@@ -6,5 +6,10 @@ local({r <- getOption("repos")
   options(repos=r)
 })
 
+options(stringsAsFactors=FALSE)
+
 .Last <- function()
-  if(interactive()) try(savehistory("~/.local/share/R/Rhistory"))
+  if (interactive()) try(savehistory(Sys.getenv("R_HISTFILE")))
+
+source("~/.config/R/packages.r")
+

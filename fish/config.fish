@@ -85,8 +85,9 @@ function set_vars
   set -xg TASKRC $XDG_CONFIG_HOME/task/taskrc
   set -xg TIMEWARRIORDB $XDG_CONFIG_HOME/timew
   set -xg LESSKEY $XDG_CONFIG_HOME/less/keys
-  set -xg R_ENVIRON_USER $XDG_CONFIG_HOME/R/Renviron
-  set -xg R_PROFILE_USER $XDG_CONFIG_HOME/R/Rprofile
+  set -xg R_HOME_USER $XDG_CONFIG_HOME/R
+  set -xg R_PROFILE_USER $R_HOME_USER/profile.r
+  set -xg R_ENVIRON_USER $R_HOME_USER/environ
   set -xg PASSWORD_STORE_DIR $XDG_DATA_HOME/password-store
   set -xg TEXMFHOME $XDG_DATA_HOME/texmf
   set -xg TEXMFVAR $XDG_CACHE_HOME/texlive/texmf-var
