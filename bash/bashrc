@@ -1,0 +1,18 @@
+# XDG directories
+export XDG_DATA_HOME="~/.local/share"
+export XDG_CONFIG_HOME="~/.config"
+export XDG_CACHE_HOME="~/.cache"
+
+alias R="R --no-save -q"
+alias hc="herbstclient"
+alias el="eza -lF --git --time-style=long-iso --no-filesize"
+alias ela="el -a"
+alias et="eza -T"
+
+eval "$(broot --print-shell-function bash)"
+eval "$(fzf --bash)"
+eval "$(jj util completion bash)"
+eval "$(mise activate bash)"
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+eval "$(starship init bash)"
+
