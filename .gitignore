@@ -38,6 +38,11 @@ kak/colors/kakoune-selenized
 kak/plugins/**
 kak-tree-sitter/grammars/**
 kak-tree-sitter/queries/**
+lagrange/*.lgr
+lagrange/*.2.txt
+lagrange/fonts/*
+lagrange/idents/*
+lagrange/sitespec.ini
 less/keys
 MusicBrainz/**
 node_modules/**
