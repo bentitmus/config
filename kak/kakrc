@@ -21,8 +21,9 @@ map global tig s ':tmux-terminal-vertical tig status<ret>:nop %sh{tmux resizep -
 map global tig m ':tmux-terminal-vertical tig<ret>:nop %sh{tmux resizep -Z}<ret>' -docstring 'show git status (with tig)'
 map global user t ': enter-user-mode tig<ret>' -docstring 'tig commands'
 
-hook global BufCreate .*\.jq %{ set buffer filetype jq }
 hook global BufCreate .*\.bats %{ set buffer filetype bash }
+hook global BufCreate .*\.jq %{ set buffer filetype jq }
+hook global BufCreate .*\.nu %{ set buffer filetype nu }
 
 hook global WinSetOption filetype=(awk|bash|jq|julia) %{
   lsp-enable-window
