@@ -118,6 +118,7 @@ end
 set -g fish_greeting
 fish_config theme choose selenized
 
+set -xg MISE_EXPERIMENTAL 1
 broot --print-shell-function fish | source
 fzf --fish | source
 jj util completion fish | source
