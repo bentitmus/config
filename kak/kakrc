@@ -25,7 +25,7 @@ hook global BufCreate .*\.bats %{ set buffer filetype bash }
 hook global BufCreate .*\.jq %{ set buffer filetype jq }
 hook global BufCreate .*\.nu %{ set buffer filetype nu }
 
-hook global WinSetOption filetype=(awk|bash|jq|julia) %{
+hook global WinSetOption filetype=(awk|bash|jq|julia|toml) %{
   lsp-enable-window
   lsp-auto-hover-enable
 }

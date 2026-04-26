@@ -133,6 +133,7 @@ npm install -g "awk-language-server@>=0.5.2"
 npm install -g bash-language-server
 go install github.com/wader/jq-lsp@master
 julia --project=@kak-lsp -e 'import Pkg; Pkg.add("LanguageServer")'
+brew install tombi
 
 echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
 chsh -s /opt/homebrew/bin/fish

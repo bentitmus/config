@@ -390,11 +390,11 @@ roots = ["package.json", "tsconfig.json", "jsconfig.json", ".git", ".hg"]
 command = "svelteserver"
 args = ["--stdio"]
 
-[language_server.taplo]
+[language_server.tombi]
 filetypes = ["toml"]
 roots = [".git", ".hg"]
-command = "taplo"
-args = ["lsp", "stdio"]
+command = "tombi"
+args = ["lsp"]
 
 [language_server.terraform-ls]
 filetypes = ["terraform"]

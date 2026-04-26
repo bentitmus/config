@@ -24,7 +24,7 @@ plug chambln/kakoune-readline config %{
 plug "https://git.sr.ht/~hadronized/kak-tree-sitter" noload do %{
   cargo install kak-tree-sitter
   cargo install ktsctl
-  ktsctl sync awk bash fish jq julia nu
+  ktsctl sync awk bash css fish javascript jq julia nu toml typescript
 } config %sh{
   kak-tree-sitter -dks --init $kak_session
 }
