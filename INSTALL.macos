@@ -127,6 +127,7 @@ stack install idris --resolver lts-12.26
 echo "Done"
 
 cargo install cargo-update
+juliaup add release
 
 # Language servers
 npm install -g "awk-language-server@>=0.5.2"
