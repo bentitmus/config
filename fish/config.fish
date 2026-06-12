@@ -66,6 +66,7 @@ alias et "eza -T"
 # Some local set-up might mess with these variables, so make them easily 're-loadable'
 function set_vars
   set -xg EDITOR kak
+  set -xg PAGER bat
   if [ (uname) = "Darwin" ]
     set -xg LANG en_GB.UTF-8
     set -xg LC_ALL en_GB.UTF-8
@@ -107,6 +108,10 @@ function set_vars
   end
 end
 
+if test -e ~/.config/fnox/age.txt
+  set -xg FNOX_AGE_KEY (cat ~/.config/fnox/age.txt | grep "AGE-SECRET-KEY")
+end
+
 set_vars
 
 if type -q gdircolors
@@ -120,7 +125,9 @@ fish_config theme choose selenized
 
 set -xg MISE_EXPERIMENTAL 1
 broot --print-shell-function fish | source
+fnox activate fish | source
 fzf --fish | source
+zoxide init fish | source
 jj util completion fish | source
 starship init fish | source
 

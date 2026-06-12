@@ -1,0 +1,14 @@
+{
+  "trustedtaps": [
+    "dmmulroy/tap",
+    "hashicorp/tap",
+    "https://github.com/tizee/plan9port-rb/",
+    "https://gitlab.com/rosie-community/packages/homebrew-rosie.git",
+    "isen-ng/dotnet-sdk-versions",
+    "macos-fuse-t/cask",
+    "riscv-software-src/riscv",
+    "rosie-community/rosie",
+    "sqitchers/sqitch",
+    "tizee/plan9port-rb"
+  ]
+}

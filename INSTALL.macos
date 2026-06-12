@@ -52,12 +52,12 @@ brew install plan9port
 brew install opensc
 brew inastll noweb
 brew install ghidra
-brew install awscli changie exercism terraform mise
+brew install awscli changie exercism terraform mise fnox
 brew install eza zoxide zellij
 
 brew install bash fish jj-starship nushell starship
 
-brew install dmtx-utils gnupg paperkey pass pinentry-mac
+brew install dmtx-utils gnupg paperkey pass pinentry-mac age
 
 brew install gh git-delta jj jjui tig
 
@@ -70,10 +70,10 @@ brew install --cask clips-ide coq-platform docker-desktop dotnet-sdk10 dyalog \
   emacs-app gg gram isabelle j kitty mactex racket tla+-toolbox \
   visual-studio-code xquartz
 
-brew install --cask anki battle-net blender discord dropbox element fuse-t \
-  fuse-t-sshfs glyphs google-chrome gramps halloy lagrange logos macloggerdx \
-  microsoft-teams musicbrainz-picard obsidian plover skim steam swinsian talon \
-  veracrypt-fuse-t vlc wacom-tablet zoom
+brew install --cask anki battle-net blender calibre discord dropbox element \
+  fuse-t fuse-t-sshfs glyphs google-chrome gramps halloy lagrange logos \
+  macloggerdx microsoft-teams musicbrainz-picard obsidian plover skim steam \
+  swinsian talon veracrypt-fuse-t vlc wacom-tablet zoom
 
 brew cleanup
 

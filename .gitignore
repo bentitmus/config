@@ -21,6 +21,7 @@ fish/fish_variables
 fish/fisher/**
 fish/functions/br.fish
 fisher/**
+fnox/age.txt
 gnupg/.#*
 gnupg/.gpg-card_history
 gnupg/*.d/**
