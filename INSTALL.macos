@@ -44,7 +44,7 @@ brew upgrade
 
 brew install coreutils
 brew install bat procs fd fdupes lf yazi fzf bottom wget broot ripgrep
-brew install buku
+brew install buku hexyl
 brew install exiftool media-info mkvtoolnix
 brew install kakoune tmux sc-im gnuplot newsboat mpv
 brew install isync mu mutt
@@ -53,7 +53,7 @@ brew install opensc
 brew inastll noweb
 brew install ghidra
 brew install awscli changie exercism terraform mise fnox
-brew install eza zoxide zellij
+brew install eza zoxide zellij dust tlrc
 
 brew install bash fish jj-starship nushell starship
 

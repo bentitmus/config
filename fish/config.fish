@@ -65,8 +65,6 @@ alias et "eza -T"
 
 # Some local set-up might mess with these variables, so make them easily 're-loadable'
 function set_vars
-  set -xg EDITOR kak
-  set -xg PAGER bat
   if [ (uname) = "Darwin" ]
     set -xg LANG en_GB.UTF-8
     set -xg LC_ALL en_GB.UTF-8
@@ -77,18 +75,13 @@ function set_vars
   set -xg TZ Europe/London
   set -xg LD_LIBRARY_PATH $GCC_PATH:$LD_LIBRARY_PATH
   set -xg TMUXP_CONFIGDIR ~/.config-internal/tmuxp
-  set -xg FZF_DEFAULT_OPTS "--color=light"
 
   set -xg GNUPGHOME $XDG_CONFIG_HOME/gnupg
   set -xg SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket 2>/dev/null)
 
-  set -xg VIMINIT "source $XDG_CONFIG_HOME/vim/vimrc"
   set -xg TASKRC $XDG_CONFIG_HOME/task/taskrc
   set -xg TIMEWARRIORDB $XDG_CONFIG_HOME/timew
   set -xg LESSKEY $XDG_CONFIG_HOME/less/keys
-  set -xg R_HOME_USER $XDG_CONFIG_HOME/R
-  set -xg R_PROFILE_USER $R_HOME_USER/profile.r
-  set -xg R_ENVIRON_USER $R_HOME_USER/environ
   set -xg PASSWORD_STORE_DIR $XDG_DATA_HOME/password-store
   set -xg TEXMFHOME $XDG_DATA_HOME/texmf
   set -xg TEXMFVAR $XDG_CACHE_HOME/texlive/texmf-var
@@ -107,6 +100,15 @@ function set_vars
     set -q INFOPATH; or set INFOPATH ''; set -gx INFOPATH "$HOMEBREW_BASE/install/share/info" $INFOPATH;
   end
 end
+
+set -xg EDITOR kak
+set -xg PAGER bat
+set -xg FZF_DEFAULT_OPTS "--color=light"
+set -xg R_HOME_USER $XDG_CONFIG_HOME/R
+set -xg R_PROFILE_USER $R_HOME_USER/profile.r
+set -xg R_ENVIRON_USER $R_HOME_USER/environ
+set -xg TLRC_CONFIG $XDG_CONFIG_HOME/tlrc/config.toml
+set -xg VIMINIT "source $XDG_CONFIG_HOME/vim/vimrc"
 
 if test -e ~/.config/fnox/age.txt
   set -xg FNOX_AGE_KEY (cat ~/.config/fnox/age.txt | grep "AGE-SECRET-KEY")
