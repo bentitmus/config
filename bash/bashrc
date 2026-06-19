@@ -15,4 +15,5 @@ eval "$(jj util completion bash)"
 eval "$(mise activate bash)"
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 eval "$(starship init bash)"
+eval "$(atuin init bash)"
 

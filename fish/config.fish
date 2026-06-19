@@ -104,6 +104,7 @@ end
 set -xg EDITOR kak
 set -xg PAGER bat
 set -xg FZF_DEFAULT_OPTS "--color=light"
+set -xg MISE_EXPERIMENTAL 1
 set -xg R_HOME_USER $XDG_CONFIG_HOME/R
 set -xg R_PROFILE_USER $R_HOME_USER/profile.r
 set -xg R_ENVIRON_USER $R_HOME_USER/environ
@@ -123,13 +124,15 @@ else
 end
 
 set -g fish_greeting
-fish_config theme choose selenized
 
-set -xg MISE_EXPERIMENTAL 1
-broot --print-shell-function fish | source
-fnox activate fish | source
-fzf --fish | source
-zoxide init fish | source
-jj util completion fish | source
-starship init fish | source
+if status is-interactive
+  fish_config theme choose selenized
+  broot --print-shell-function fish | source
+  fnox activate fish | source
+  fzf --fish | source
+  jj util completion fish | source
+  starship init fish | source
+  zoxide init fish | source
+  atuin init fish | source
+end
 

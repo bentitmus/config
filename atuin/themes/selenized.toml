@@ -1,0 +1,12 @@
+[theme]
+name = "selenized"
+
+[colors]
+AlertInfo = "@blue"
+AlertWarn = "@yellow"
+AlertError = "@red"
+Annotation = "@cyan"
+Base = "@white"
+Guidance = "@green"
+Important = "@magenta"
+Title = "@green"
