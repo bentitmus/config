@@ -103,13 +103,13 @@ end
 
 set -xg EDITOR kak
 set -xg PAGER bat
-set -xg FZF_DEFAULT_OPTS "--color=light"
 set -xg MISE_EXPERIMENTAL 1
 set -xg R_HOME_USER $XDG_CONFIG_HOME/R
 set -xg R_PROFILE_USER $R_HOME_USER/profile.r
 set -xg R_ENVIRON_USER $R_HOME_USER/environ
 set -xg TLRC_CONFIG $XDG_CONFIG_HOME/tlrc/config.toml
 set -xg VIMINIT "source $XDG_CONFIG_HOME/vim/vimrc"
+gen_fzf_default_opts
 
 if test -e ~/.config/fnox/age.txt
   set -xg FNOX_AGE_KEY (cat ~/.config/fnox/age.txt | grep "AGE-SECRET-KEY")
