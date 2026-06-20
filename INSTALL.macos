@@ -64,7 +64,7 @@ brew install gh git-delta jj jjui tig
 brew install gforth gleam go idris2 juliaup node r riscv-tools rosie rustup \
   swi-prolog
 
-brew install basex csvlens duckdb jnv jq postgresql@18 sqitch yq
+brew install basex csvlens duckdb jnv jq postgresql@18 rainfrog sqitch yq
 
 brew install --cask clips-ide coq-platform docker-desktop dotnet-sdk10 dyalog \
   emacs-app gg gram isabelle j kitty mactex racket tla+-toolbox \
