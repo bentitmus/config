@@ -15,6 +15,7 @@ else
   fish_add_path -m /usr/local/sbin
 end
 fish_add_path -m /opt/homebrew/opt/postgresql@16/bin
+fish_add_path -m /opt/homebrew/opt/rustup/bin
 fish_add_path -m /opt/harbour/bin
 
 fish_add_path -m $HOME/bin

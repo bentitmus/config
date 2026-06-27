@@ -34,6 +34,7 @@ brew tap dmmulroy/tap
 brew tap hashicorp/tap
 brew tap isen-ng/dotnet-sdk-versions
 brew tap macos-fuse-t/cask
+brew tap nikitabobko/tap
 brew tap riscv-software-src/riscv
 brew tap rosie-community/rosie https://gitlab.com/rosie-community/packages/homebrew-rosie.git
 brew tap sqitchers/sqitch
@@ -43,8 +44,8 @@ brew update
 brew upgrade
 
 brew install coreutils
-brew install bat procs fd fdupes lf yazi fzf bottom wget broot ripgrep
-brew install buku hexyl
+brew install bat procs fd fdupes yazi fzf bottom wget broot ripgrep
+brew install buku hexyl doge trippy
 brew install exiftool media-info mkvtoolnix
 brew install kakoune tmux sc-im gnuplot newsboat mpv
 brew install isync mu mutt
@@ -53,9 +54,8 @@ brew install opensc
 brew inastll noweb
 brew install ghidra
 brew install awscli changie exercism terraform mise fnox
-brew install eza zoxide zellij dust tlrc
-
-brew install bash fish jj-starship nushell starship atuin
+brew install eza zoxide zellij dua-cli tlrc magic-wormhole.rs
+brew install bash fish jj-starship nushell starship atuin ouch
 
 brew install dmtx-utils gnupg paperkey pass pinentry-mac age
 
@@ -70,10 +70,10 @@ brew install --cask clips-ide coq-platform docker-desktop dotnet-sdk10 dyalog \
   emacs-app gg gram isabelle j kitty mactex racket tla+-toolbox \
   visual-studio-code xquartz
 
-brew install --cask anki battle-net blender calibre discord dropbox element \
-  fuse-t fuse-t-sshfs glyphs google-chrome gramps halloy lagrange logos \
-  macloggerdx microsoft-teams musicbrainz-picard obsidian plover skim steam \
-  swinsian talon veracrypt-fuse-t vlc wacom-tablet zoom
+brew install --cask aerospace anki battle-net blender calibre discord dropbox \
+  element fuse-t fuse-t-sshfs glyphs google-chrome gramps halloy lagrange \
+  logos macloggerdx microsoft-teams musicbrainz-picard obsidian plover skim \
+  steam swinsian talon veracrypt-fuse-t vlc wacom-tablet zoom
 
 brew cleanup
 

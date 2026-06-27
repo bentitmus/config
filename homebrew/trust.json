@@ -10,5 +10,8 @@
     "rosie-community/rosie",
     "sqitchers/sqitch",
     "tizee/plan9port-rb"
+  ],
+  "trustedcasks": [
+    "nikitabobko/tap/aerospace"
   ]
 }
