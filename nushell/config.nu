@@ -7,9 +7,9 @@
 # (or import) custom commands, or run any other startup tasks.
 # See https://www.nushell.sh/book/configuration.html
 
-$env.XDG_DATA_HOME = "~/.local/share"
-$env.XDG_CONFIG_HOME = "~/.config"
-$env.XDG_CACHE_HOME = "~/.cache"
+$env.XDG_DATA_HOME = $"($env.HOME)/.local/share"
+$env.XDG_CONFIG_HOME = $"($env.HOME)/.config"
+$env.XDG_CACHE_HOME = $"($env.HOME)/.cache"
 
 let selenized_theme = {
 }
