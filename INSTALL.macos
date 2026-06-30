@@ -31,6 +31,7 @@ if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 brew tap dmmulroy/tap
+brew tap FelixKratz/formulae
 brew tap hashicorp/tap
 brew tap isen-ng/dotnet-sdk-versions
 brew tap macos-fuse-t/cask
@@ -56,6 +57,7 @@ brew install ghidra
 brew install awscli changie exercism terraform mise fnox
 brew install eza zoxide zellij dua-cli tlrc magic-wormhole.rs
 brew install bash fish jj-starship nushell starship atuin ouch
+brew install sketchybar
 
 brew install dmtx-utils gnupg paperkey pass pinentry-mac age
 
@@ -74,6 +76,8 @@ brew install --cask aerospace anki battle-net blender calibre discord dropbox \
   element fuse-t fuse-t-sshfs glyphs google-chrome gramps halloy lagrange \
   logos macloggerdx microsoft-teams musicbrainz-picard obsidian plover skim \
   steam swinsian talon veracrypt-fuse-t vlc wacom-tablet zoom
+
+brew install --cask font-hack-nerd-font
 
 brew cleanup
 
@@ -148,4 +152,6 @@ git remote set-url origin git@github.com:bentitmus/config.git
 broot --set-install-state installed
 
 atuin login -u bentitmus
+
+brew services start felixkratz/formulae/sketchybar
 

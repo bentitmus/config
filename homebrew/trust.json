@@ -1,6 +1,7 @@
 {
   "trustedtaps": [
     "dmmulroy/tap",
+    "felixkratz/formulae",
     "hashicorp/tap",
     "https://github.com/tizee/plan9port-rb/",
     "https://gitlab.com/rosie-community/packages/homebrew-rosie.git",
