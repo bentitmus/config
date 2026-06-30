@@ -153,5 +153,6 @@ broot --set-install-state installed
 
 atuin login -u bentitmus
 
+brew services start atuin
 brew services start felixkratz/formulae/sketchybar
 
