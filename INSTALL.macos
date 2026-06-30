@@ -57,7 +57,7 @@ brew install ghidra
 brew install awscli changie exercism terraform mise fnox
 brew install eza zoxide zellij dua-cli tlrc magic-wormhole.rs
 brew install bash fish jj-starship nushell starship atuin ouch
-brew install sketchybar
+brew install sketchybar borders
 
 brew install dmtx-utils gnupg paperkey pass pinentry-mac age
 
@@ -154,5 +154,6 @@ broot --set-install-state installed
 atuin login -u bentitmus
 
 brew services start atuin
+brew services start felixkratz/formulae/borders
 brew services start felixkratz/formulae/sketchybar
 
