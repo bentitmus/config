@@ -1,5 +1,7 @@
 #!/usr/bin/env fish
 
+mas upgrade
+
 brew update
 brew upgrade
 brew cleanup

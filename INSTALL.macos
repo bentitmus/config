@@ -44,7 +44,7 @@ brew tap tizee/plan9port-rb https://github.com/tizee/plan9port-rb/
 brew update
 brew upgrade
 
-brew install coreutils
+brew install coreutils mas
 brew install bat procs fd fdupes yazi fzf bottom wget broot ripgrep
 brew install buku hexyl doge trippy
 brew install exiftool media-info mkvtoolnix
@@ -80,6 +80,43 @@ brew install --cask aerospace anki battle-net blender calibre discord dropbox \
 brew install --cask font-hack-nerd-font
 
 brew cleanup
+
+echo ""
+echo "~~~~~~~~~~~~~~~~~~"
+echo "~ App store apps ~"
+echo "~~~~~~~~~~~~~~~~~~"
+echo "Installing Mac App Store apps..."
+
+mas install  497799835 # Xcode
+mas install  823766827 # OneDrive
+mas install 6446933691 # Postico
+mas install  409907375 # Remote Desktop
+mas install 1481853033 # Strongbox
+mas install 1451685025 # WireGuard
+
+mas install 1622835804 # Kagi for Safari
+mas install 6461166435 # Rango for Safari
+
+mas install 1593408455 # Anybox
+mas install 1055511498 # Day One
+mas install 1474335294 # GoodLinks
+mas install  302584613 # Kindle
+mas install 6444531544 # MoneyWell
+mas install 1542143627 # OmniFocus
+mas install  562211012 # Yomu
+
+mas install  409183694 # Keynote
+mas install  409203825 # Numbers
+mas install  409201541 # Pages
+
+mas install  803453959 # Slack
+mas install  747648890 # Telegram
+mas install  310633997 # WhatsApp
+
+mas install  592191340 # French Tarot
+mas install 1561230039 # Piccolo
+mas install  403198590 # Skat
+mas install 1465746992 # SmartGo
 
 echo "Install Pharo"
 echo "Install OM Workspace"
