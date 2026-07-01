@@ -59,6 +59,37 @@ exec-on-workspace-change = [
   'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE PREV_WORKSPACE=$AEROSPACE_PREV_WORKSPACE',
 ]
 
+on-window-detected = [
+  {
+    if = 'test %{app-bundle-id} = com.omnigroup.OmniFocus4',
+    run = 'move-node-to-workspace 1',
+  },
+  {
+    if = 'test %{app-bundle-id} = com.apple.iCal',
+    run = 'move-node-to-workspace 1',
+  },
+  {
+    if = 'test %{app-bundle-id} = md.obsidian',
+    run = 'move-node-to-workspace 2',
+  },
+  {
+    if = 'test %{app-bundle-id} = com.apple.mail',
+    run = 'move-node-to-workspace 3',
+  },
+  {
+    if = 'test %{app-bundle-id} = ru.keepcoder.Telegram',
+    run = 'move-node-to-workspace 3',
+  },
+  {
+    if = 'test %{app-bundle-id} = net.whatsapp.WhatsApp',
+    run = 'move-node-to-workspace 3',
+  },
+  {
+    if = 'test %{app-bundle-id} = com.tinyspeck.slackmacgap',
+    run = 'move-node-to-workspace 9',
+  }
+]
+
 # Possible values: (qwerty|dvorak|colemak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
 [key-mapping]

@@ -39,8 +39,8 @@ sketchybar --default "${default[@]}"
 sketchybar --add event aerospace_workspace_change
 
 declare -A as_names=(
-  ["1"]="p-gtd"
-  ["2"]="p-pkm"
+  ["1"]="gtd"
+  ["2"]="pkm"
   ["3"]="p-msg"
   ["4"]="p-code"
   ["9"]="w-msg"
