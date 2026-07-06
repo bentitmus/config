@@ -3,6 +3,7 @@
     "dmmulroy/tap",
     "felixkratz/formulae",
     "hashicorp/tap",
+    "homebrew-zathura/zathura",
     "https://github.com/tizee/plan9port-rb/",
     "https://gitlab.com/rosie-community/packages/homebrew-rosie.git",
     "isen-ng/dotnet-sdk-versions",

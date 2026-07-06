@@ -33,6 +33,7 @@ fi
 brew tap dmmulroy/tap
 brew tap FelixKratz/formulae
 brew tap hashicorp/tap
+brew tap homebrew-zathura/zathura
 brew tap isen-ng/dotnet-sdk-versions
 brew tap macos-fuse-t/cask
 brew tap nikitabobko/tap
@@ -58,6 +59,10 @@ brew install awscli changie exercism terraform mise fnox
 brew install eza zoxide zellij dua-cli tlrc magic-wormhole.rs
 brew install bash fish jj-starship nushell starship atuin ouch
 brew install sketchybar borders
+brew install zathura --with-synctex
+mkdir -p $(brew --prefix zathura)/lib/zathura
+brew install zathura-pdf-mupdf
+ln -s $(brew --prefix zathura-pdf-mupdf)/libpdf-mupdf.dylib $(brew --prefix zathura)/lib/zathura/libpdf-mupdf.dylib
 
 brew install dmtx-utils gnupg paperkey pass pinentry-mac age
 

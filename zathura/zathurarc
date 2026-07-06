@@ -5,4 +5,4 @@ set recolor-darkcolor \#000000
 set default-bg \#fbf3db
 set statusbar-bg \#ece3cc
 set statusbar-fg \#53676d
-set font "Triplicate T4c normal 12"
+set font "Triplicate T4c normal 14"
