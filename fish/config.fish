@@ -37,15 +37,6 @@ else
   set -xg TEXINPUTS /usr/local/Cellar/noweb/2.13/tex/generic/noweb/:
 end
 
-set -g fisher_path $XDG_CONFIG_HOME/fish/fisher
-
-set -p fish_function_path fish_function_path[1] $fisher_path/functions
-set -p fish_complete_path fish_complete_path[1] $fisher_path/completions
-
-for file in $fisher_path/conf.d/*.fish
-  builtin source $file 2>/dev/null
-end
-
 function kak
   if set -q KAK_SESSION
     set -l private_kak_test (command kak -l | grep $KAK_SESSION)
@@ -126,11 +117,21 @@ end
 
 set -g fish_greeting
 
+set -g fisher_path $XDG_CONFIG_HOME/fish/fisher
+
+set -p fish_function_path fish_function_path[1] $fisher_path/functions
+set -p fish_complete_path fish_complete_path[1] $fisher_path/completions
+
+for file in $fisher_path/conf.d/*.fish
+  builtin source $file 2>/dev/null
+end
+
 if status is-interactive
   fish_config theme choose selenized
   broot --print-shell-function fish | source
   fnox activate fish | source
   fzf --fish | source
+  source $XDG_CONFIG_HOME/fish/fzf-git/fzf-git.fish
   jj util completion fish | source
   starship init fish | source
   zoxide init fish | source

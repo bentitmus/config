@@ -19,5 +19,12 @@ function gen_fzf_default_opts
   set -xg FZF_DEFAULT_OPTS "
     --color fg:-1,bg:-1,hl:$blue,fg+:-1,bg+:$bg_1,hl+:$blue
     --color info:$yellow,prompt:$yellow,pointer:-1,marker:-1,spinner:$yellow
+    --cycle --layout=reverse --border --height=90% --preview-window=wrap
+    --style=minimal --info=inline
   "
+
+  set -xg FZF_DEFAULT_COMMAND "fd --hidden --strip-cwd-prefix --exclude .git"
+  set -xg FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
+  set -xg FZF_ALT_C_COMMAND "fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+  set -xg FZF_ALT_C_OPTS "--preview 'eza --tree --color=always {} | head -200'"
 end
