@@ -16,6 +16,6 @@ juliaup update
 rustup update
 cargo install-update -a
 
-ktsctl sync awk bash css fish javascript jq julia nu toml typescript
+ktsctl sync awk bash css fish javascript jq julia nu python toml typescript
 
 Rscript -e "update()"
