@@ -90,5 +90,15 @@ sketchybar --add item hostname right \
            --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
            --subscribe battery system_woke power_source_change
 
+sketchybar --add event talon_change
+
+sketchybar --add item talon right \
+  --subscribe talon talon_change \
+  --set talon \
+  icon="" \
+  label.font="Heliotrope 4:Italic:14.0" \
+  label.drawing="off" \
+  script="$CONFIG_DIR/plugins/talon.sh"
+
 ##### Force all scripts to run the first time (never do this in a script) #####
 sketchybar --update
