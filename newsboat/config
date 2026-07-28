@@ -1,0 +1,2 @@
+macro w set browser "mpv %u" ; one
+player "mpv"

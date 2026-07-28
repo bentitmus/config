@@ -45,6 +45,7 @@ lagrange/fonts/*
 lagrange/idents/*
 lagrange/sitespec.ini
 less/keys
+mpv/watch_later
 MusicBrainz/**
 node_modules/**
 nushell/history.txt
