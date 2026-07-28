@@ -56,9 +56,10 @@ brew install opensc
 brew inastll noweb
 brew install ghidra
 brew install awscli changie exercism terraform mise fnox
-brew install eza zoxide zellij dua-cli tlrc magic-wormhole.rs
+brew install eza zoxide zellij dysk dua-cli tlrc magic-wormhole.rs
 brew install bash fish jj-starship nushell starship atuin ouch
 brew install sketchybar borders
+brew install mpd mpc rmpc
 brew install zathura --with-synctex
 mkdir -p $(brew --prefix zathura)/lib/zathura
 brew install zathura-pdf-mupdf
