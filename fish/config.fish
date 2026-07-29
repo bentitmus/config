@@ -11,11 +11,11 @@ fish_add_path -m /sbin
 if test -d /opt/homebrew
   fish_add_path -m /opt/homebrew/bin
   fish_add_path -m /opt/homebrew/sbin
+  fish_add_path -m /opt/homebrew/opt/rustup/bin
 else
   fish_add_path -m /usr/local/sbin
+  fish_add_path -m /usr/local/opt/rustup/bin
 end
-fish_add_path -m /opt/homebrew/opt/postgresql@16/bin
-fish_add_path -m /opt/homebrew/opt/rustup/bin
 fish_add_path -m /opt/harbour/bin
 
 fish_add_path -m $HOME/bin
