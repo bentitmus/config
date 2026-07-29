@@ -16,7 +16,6 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
-(load-file "~/.config/emacs/ui-basic.el")
 (load-file "~/.config/emacs/ui.el")
 
 ;; Use /bin/sh instead of fish for the shell because it will work better with most packages
