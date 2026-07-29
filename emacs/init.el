@@ -12,31 +12,11 @@
  '(package-selected-packages
    '(ace-window consult-flycheck org-roam-ui org-roam-timestamps avy embark-consult consult flycheck org-capture org-agenda valign dashboard marginalia embark minions visual-fill-column org-bullets meow orderless corfu verilog-mode vertico magit yaml-mode which-key lsp-ui lsp-mode org-roam org-super-agenda org-gtd use-package)))
 
-;; set-up the simple UI elements that don't require the package system to get
-;; the majority of the UI looking correct from as early in load as possible
-(setq bt-work-p (file-directory-p "/arm"))
-(load-file "~/.config/emacs/ui-basic.el")
-
 ;; set-up the package system
 (require 'package)
-(setq package-archives
-  '(
-    ("gnu" . "https://elpa.gnu.org/packages/")
-    ("melpa" . "https://melpa.org/packages/")
-  ))
-(package-initialize)
-;; update packages list if we are on a new install
-(unless package-archive-contents
-  (package-refresh-contents))
-;; a list of pkgs to programmatically install
-;; ensure installed via package.el
-(setq my-package-list '(use-package))
-;; programmatically install/ensure installed
-;; pkgs in your personal list
-(dolist (package my-package-list)
-  (unless (package-installed-p package)
-          (package-install package)))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
+(load-file "~/.config/emacs/ui-basic.el")
 (load-file "~/.config/emacs/ui.el")
 
 ;; Use /bin/sh instead of fish for the shell because it will work better with most packages
@@ -44,7 +24,8 @@
 
 (load-file "~/.config/emacs/lang.el")
 (setq-default indent-tabs-mode nil)
-(use-package magit)
+(use-package magit
+  :ensure t)
 
 (load-file "~/.config/emacs/org.el")
 
@@ -78,6 +59,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(dashboard-banner-logo-title ((t (:font "Valkyrie T4-20"))))
- '(dashboard-heading ((t (:font "Valkyrie T4-16" :foreground "#8762c6")))))
+ '(dashboard-banner-logo-title ((t (:font "Heliotrope 4-20"))))
+ '(dashboard-heading ((t (:font "Heliotrope 4-16" :foreground "#8762c6")))))
 

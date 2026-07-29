@@ -8,8 +8,6 @@ Trolltech.conf
 broot/launcher
 cagent/**
 coq/**
-emacs/.cache
-emacs/elpa
 emacs/eshell
 emacs/org-roam.db
 emacs/recentf

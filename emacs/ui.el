@@ -1,3 +1,13 @@
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+
+(progn
+  (set-face-attribute 'default nil :font "Triplicate T4c-14")
+  (set-face-attribute 'fixed-pitch nil :font "Triplicate T4c-14")
+  (set-face-attribute 'variable-pitch nil :font "Heliotrope 4-14")
+  (setq bt-org-base "~/OrgMode"))
+
 ;; gui
 (use-package emacs
   :init
@@ -280,8 +290,8 @@
   (dashboard-startup-banner 'logo)
   (dashboard-banner-logo-title "Emacs")
   :custom-face
-  (dashboard-banner-logo-title ((t (:font "Valkyrie T4-20"))))
-  (dashboard-heading ((t (:font "Valkyrie T4-16" :foreground "#8762c6"))))
+  (dashboard-banner-logo-title ((t (:font "Heliotrope 4-20"))))
+  (dashboard-heading ((t (:font "Heliotrope 4-16" :foreground "#8762c6"))))
   :config
   (dashboard-setup-startup-hook))
 
