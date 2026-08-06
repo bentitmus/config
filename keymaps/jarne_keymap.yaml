@@ -1,0 +1,87 @@
+layout:
+  qmk_keyboard: corne_rotated
+  layout_name: LAYOUT_split_3x6_3
+layers:
+  Dvorak:
+    - [Gold, "'", ",", ".", P, Y, F, G, C, R, L, QWERTY]
+    - [null, {h: ⌘, t: A}, {h: ⎇, t: O}, {h: ⇧, t: E}, {h: ⎈, t: U}, I, D, {h: ⎈, t: H}, {h: ⇧, t: T}, {h: ⎇, t: N}, {h: ⌘, t: S}, "/"]
+    - [Steno, ;, Q, J, K, X, B, M, W, V, Z, null]
+    - ⎋
+    - {h: FUN, t: ⌫}
+    - {h: NUM, t: ␣}
+    - {h: SYM, t: ␣}
+    - {h: NAV, t: ⇥}
+    - ↵
+  Gold:
+    - [Dvorak, J, G, M, P, V, ;, ., /, '"', "'", QWERTY]
+    - [null, {h: ⌘, t: R}, {h: ⎇, t: S}, {h: ⇧, t: N}, {h: ⎈, t: D}, B, ",", {h: ⎈, t: A}, {h: ⇧, t: E}, {h: ⎇, t: I}, {h: ⌘, t: H}, null]
+    - [Steno, X, F, L, C, W, "-", U, O, Y, K, null]
+    - ⎋
+    - {h: FUN, t: ⌫}
+    - {h: NUM, t: ␣}
+    - {h: SYM, t: ␣}
+    - {h: NAV, t: ⇥}
+    - ↵
+  QWERTY:
+    - [Gold, Q, W, E, R, T, Y, U, I, O, P, Dvorak]
+    - [null, {h: ⌘, t: A}, {h: ⎇, t: S}, {h: ⇧, t: D}, {h: ⎈, t: F}, G, H, {h: ⎈, t: J}, {h: ⇧, t: K}, {h: ⎇, t: L}, {h: ⌘, t: ;}, null]
+    - [Steno, Z, X, C, V, B, N, M, ",", ., /, null]
+    - ⎋
+    - {h: FUN, t: ⌫}
+    - {h: NUM, t: ␣}
+    - {h: SYM, t: ␣}
+    - {h: NAV, t: ⇥}
+    - ↵
+  Steno:
+    - [null, "#", T, P, H, "*", "*", F, P, L, T, D]
+    - [null, S, K, W, R, "*", "*", R, B, G, S, Z]
+    - [{type: held}, null, null, null, null, null, null, null, null, null, null, null]
+    - null
+    - A
+    - O
+    - E
+    - U
+    - null
+  FUN:
+    - [null, null, null, null, null, null, F12, F7, F8, F9, ⎙, null]
+    - [null, {h: ⌘}, {h: ⎇,}, {h: ⇧,}, {h: ⎈,}, null, F11, F4, F5, F6, ⇪, null]
+    - [null, null, null, null, null, null, F10, F1, F2, F3, ⎊, null]
+    - null
+    - {type: held}
+    - null
+    - null
+    - null
+    - null
+  NUM:
+    - [null, null, null, null, null, null, "=", 7, 8, 9, $, null]
+    - [null, {h: ⌘}, {h: ⎇,}, {h: ⇧,}, {h: ⎈,}, null, "*", 4, 5, 6, /, null]
+    - [null, null, null, null, null, null, +, 1, 2, 3, "-", null]
+    - null
+    - null
+    - {type: held}
+    - ↵
+    - 0
+    - .
+  SYM:
+    - [null, "<", ">", "{", "}", "`", null, null, null, null, null, null]
+    - [null, "[", "]", "(", ")", "|", null, {h: ⎈}, {h: ⇧}, {h: ⎇,}, {h: ⌘,}, null]
+    - [null, "%", "^", "&", "_", "#", null, null, null, null, null, null]
+    - "@"
+    - "!"
+    - "?"
+    - {type: held}
+    - null
+    - null
+  NAV:
+    - [null, null, ⇱, ↑, ⇞, "~", null, null, null, null, null, null]
+    - [null, null, ←, ↓, →, /, null, {h: ⎈}, {h: ⇧}, {h: ⎇,}, {h: ⌘,}, null]
+    - [null, null, ⇲, null, ⇟, \, null, null, null, null, null, null]
+    - ⎀
+    - ⌫
+    - ⌦
+    - null
+    - {type: held}
+    - null
+combos:
+  - {p: [1, 2], k: Z, l: [Gold]}
+  - {p: [2, 4], k: Q, l: [Gold], a: top}
