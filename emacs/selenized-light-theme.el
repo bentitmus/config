@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 ;;; selenized-light-theme.el --- Theme 
 
 ;; Copyright (C) 2020 , Jan Warchoł

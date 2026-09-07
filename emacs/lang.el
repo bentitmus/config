@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 ;; languages
 (use-package corfu
   :ensure t

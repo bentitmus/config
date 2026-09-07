@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 ;; early-init.el is loaded earlier than init.el and used to setup the cache
 
 ; use XDG cache path for the emacs cache

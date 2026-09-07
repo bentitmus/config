@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 ;; init.el is the top level main emacs configuration
 
 ;; load the theme first to get the colours correct
@@ -8,9 +10,18 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes '(selenized-light))
  '(custom-safe-themes
-   '("cf36206431f80f0435bb7461e8be8429d949ba641abaf790b7730423e2e88638" "9bb86bf42ce13b9fce1690024d52238133988555009ac59a2f63ae2df7790c55" "59263e76fcbf0b0f278c27a78e01ad40d1191edf9c55cfcbe1a47e89e25a1893" default))
+   '("bce0aec74ba26cb98834493267495f39452261a2e27c8ff7fb227f2fb5213762"
+     "cf36206431f80f0435bb7461e8be8429d949ba641abaf790b7730423e2e88638"
+     "9bb86bf42ce13b9fce1690024d52238133988555009ac59a2f63ae2df7790c55"
+     "59263e76fcbf0b0f278c27a78e01ad40d1191edf9c55cfcbe1a47e89e25a1893"
+     default))
  '(package-selected-packages
-   '(ace-window consult-flycheck org-roam-ui org-roam-timestamps avy embark-consult consult flycheck org-capture org-agenda valign dashboard marginalia embark minions visual-fill-column org-bullets meow orderless corfu verilog-mode vertico magit yaml-mode which-key lsp-ui lsp-mode org-roam org-super-agenda org-gtd use-package)))
+   '(ace-window consult-flycheck org-roam-ui org-roam-timestamps avy
+                embark-consult consult flycheck org-capture org-agenda
+                valign dashboard marginalia embark minions
+                visual-fill-column org-bullets meow orderless corfu
+                verilog-mode vertico magit yaml-mode which-key lsp-ui
+                lsp-mode org-roam org-super-agenda org-gtd use-package)))
 
 ;; set-up the package system
 (require 'package)

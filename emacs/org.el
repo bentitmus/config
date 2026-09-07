@@ -1,4 +1,7 @@
+;; -*- lexical-binding: t; -*-
+
 ;; org-mode
+
 (defun bt/org-mode-setup ()
   (org-indent-mode)
   (variable-pitch-mode 1)
