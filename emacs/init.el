@@ -16,12 +16,14 @@
      "59263e76fcbf0b0f278c27a78e01ad40d1191edf9c55cfcbe1a47e89e25a1893"
      default))
  '(package-selected-packages
-   '(ace-window consult-flycheck org-roam-ui org-roam-timestamps avy
-                embark-consult consult flycheck org-capture org-agenda
-                valign dashboard marginalia embark minions
-                visual-fill-column org-bullets meow orderless corfu
-                verilog-mode vertico magit yaml-mode which-key lsp-ui
-                lsp-mode org-roam org-super-agenda org-gtd use-package)))
+   '(ace-window avy consult consult-flycheck corfu dashboard embark
+                embark-consult flycheck lsp-mode lsp-ui magit majutsu
+                marginalia meow minions orderless org-agenda
+                org-bullets org-capture org-gtd org-roam
+                org-roam-timestamps org-roam-ui org-super-agenda
+                use-package valign verilog-mode vertico
+                visual-fill-column which-key yaml-mode))
+ '(package-vc-selected-packages '((majutsu :url "https://github.com/0WD0/majutsu"))))
 
 ;; set-up the package system
 (require 'package)
@@ -36,6 +38,9 @@
 (setq-default indent-tabs-mode nil)
 (use-package magit
   :ensure t)
+(use-package majutsu
+  :vc (:url "https://github.com/0WD0/majutsu"
+       :rev :newest))
 
 (load-file "~/.config/emacs/org.el")
 

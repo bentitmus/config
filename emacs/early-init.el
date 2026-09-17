@@ -2,6 +2,8 @@
 
 ;; early-init.el is loaded earlier than init.el and used to setup the cache
 
+(setenv "MACOSX_DEPLOYMENT_TARGET" "27.0")
+
 ; use XDG cache path for the emacs cache
 (require 'xdg)
 (startup-redirect-eln-cache (expand-file-name "emacs/eln-cache" (xdg-cache-home)))
