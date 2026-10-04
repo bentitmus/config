@@ -79,9 +79,10 @@ brew install --cask clips-ide coq-platform docker-desktop dotnet-sdk10 dyalog \
   visual-studio-code xquartz
 
 brew install --cask aerospace anki artisan battle-net blender calibre discord \
-  dropbox element fuse-t fuse-t-sshfs glyphs google-chrome gramps halloy \
-  lagrange logos macloggerdx microsoft-teams musicbrainz-picard obsidian \
-  plover skim steam swinsian talon veracrypt-fuse-t vlc wacom-tablet zoom
+  dropbox element focusrite-control-2 fuse-t fuse-t-sshfs glyphs google-chrome \
+  gramps halloy lagrange logos macloggerdx microsoft-teams musicbrainz-picard \
+  obsidian plover skim steam swinsian talon veracrypt-fuse-t vlc wacom-tablet \
+  zoom
 
 brew install --cask font-hack-nerd-font
 
