@@ -34,3 +34,6 @@
 [submodule "fish/fzf-git"]
 	path = fish/fzf-git
 	url = https://github.com/junegunn/fzf-git.sh.git
+[submodule "yay"]
+	path = yay
+	url = https://aur.archlinux.org/yay.git

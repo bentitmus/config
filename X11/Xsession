@@ -1,0 +1,18 @@
+#!/bin/sh
+
+#. ~/.config/profile
+#gpg-agent --daemon
+
+xsetroot -solid "#ece3cc"
+
+#if xrandr -q | grep -q "3840 x 2160"; then
+xrdb -load ~/.config/X11/Xresources.scale
+#else
+#  xrdb -cpp default ~/.config/Xresources.noscale
+#fi
+
+#xmodmap -e "remove control = Control_R"
+#xmodmap -e "add mod4 = Control_R"
+
+herbstluftwm --locked --no-tag-import
+

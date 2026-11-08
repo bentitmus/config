@@ -1,0 +1,3 @@
+*.dpi: 96
+Xft.dpi: 96
+#include "/home/ben/.config/X11/Xresources.common"

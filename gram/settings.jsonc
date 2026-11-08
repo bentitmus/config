@@ -7,18 +7,18 @@
 // custom settings, run `gram: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "helix_mode": true,
   "ui_font_family": "Heliotrope 3",
   "buffer_font_family": "Triplicate T3c",
-  "helix_mode": true,
   "icon_theme": {
-    "mode": "system",
+    "mode": "light",
     "light": "Gram (Default)",
     "dark": "Gram (Default)"
   },
   "ui_font_size": 16,
   "buffer_font_size": 15,
   "theme": {
-    "mode": "system",
+    "mode": "light",
     "light": "Rosé Pine Dawn",
     "dark": "Rosé Pine",
   },

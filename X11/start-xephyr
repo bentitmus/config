@@ -1,0 +1,3 @@
+#!/bin/sh
+
+xinit ~/.config/X11/Xsession -- /usr/bin/Xephyr :12 -fullscreen

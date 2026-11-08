@@ -37,6 +37,11 @@ else
   set -xg TEXINPUTS /usr/local/Cellar/noweb/2.13/tex/generic/noweb/:
 end
 
+if test -d /usr/share/java/basex
+  set -xg BASEX_HOME /usr/share/java/basex
+  fish_add_path -m $BASEX_HOME/bin
+end
+
 function kak
   if set -q KAK_SESSION
     set -l private_kak_test (command kak -l | grep $KAK_SESSION)
@@ -61,8 +66,8 @@ function set_vars
     set -xg LANG en_GB.UTF-8
     set -xg LC_ALL en_GB.UTF-8
   else
-    set -xg LANG en_US.UTF-8
-    set -xg LC_ALL en_US.UTF-8
+    set -xg LANG C.utf-8
+    set -xg LC_ALL C.utf-8
   end
   set -xg TZ Europe/London
   set -xg LD_LIBRARY_PATH $GCC_PATH:$LD_LIBRARY_PATH
@@ -129,6 +134,7 @@ end
 if status is-interactive
   fish_config theme choose selenized
   broot --print-shell-function fish | source
+  mise activate fish | source
   fnox activate fish | source
   fzf --fish | source
   source $XDG_CONFIG_HOME/fish/fzf-git/fzf-git.fish

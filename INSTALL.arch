@@ -1,0 +1,88 @@
+#!/bin/sh
+
+# Copy fonts to ~/.local/share/fonts
+
+# Set-up X11 for allowing Xephyr in WSL
+sudo cp X11/wslg-fix.service /etc/systemd/system/wslg-fix.service
+sudo systemctl start wslg-fix
+sudo systemctl enable wslg-fix
+
+sudo pacman -Syu
+# set-up AUR
+sudo pacman -S --needed git base-devel
+cd yay
+makepkg -si
+cd ..
+# `hostname`
+yay -S inetutils
+# Support tools
+yay -S openssh pkgconfig
+# Shells
+yay -S bash fish nushell
+# Shell accessories
+yay -S fzf atuin starship jj-starship
+# Basic commands
+yay -S bat bc procs fd wget ripgrep ouch eza zoxide
+# System tools
+yay -S bottom dua-cli dysk
+# Encryption
+yay -S age gnupg pass
+# Network tools
+yay -S trippy
+# Manuals
+yay -S man-db tlrc-bin
+# Sessions
+yay -S tmux zellij
+# File managers
+yay -S ttf-hack-nerd yazi broot
+# Editors
+# `plan9port` is mostly for `acme` and `sam`
+yay -S kakoune emacs obsidian plan9port
+# Viewers
+yay -S zathura zathura-pdf-mupdf
+# Version control
+yay -S jjui jujutsu git-delta tig
+# Code support tools
+yay -S changie ghidra hexyl mise
+mise use -g fnox
+# Languages
+yay -S clips dotnet-sdk elan-lean factor gcc-ada ghc go jq python r racket rustup swi-prolog typescript uiua
+elan toolchain install leanprover/lean4:stable
+elan default stable
+yay -S cabal-install stack
+yay -S uv
+rustup default stable
+cargo install cargo-update
+# IDEs
+# Unfortunately we need to use the MS branded VS Code to get the good C# extensions
+yay -S gram visual-studio-code-bin
+# TeX Live and typesetting
+# libxcrypt-compat needed for biber
+yay -S lilypond texlive-installer libxcrypt-compat
+/opt/texlive-installer/install-tl
+# Installing Icon didn't work for me as I needed to edit the `PKGBUILD` file to remove `-j$(nproc)` parallel build
+# Then you can run `makepkg -si` again
+# Icon is a dependency of `noweb`
+yay -S icon
+yay -S noweb
+# Database
+yay -S basex duckdb gnuplot postgresql rainfrog sc-im
+sudo -u postgres initdb -D /var/lib/postgres/data
+sudo systemctl start postgresql.service
+sudo systemctl enable postgresql.service
+sudo -u postgres createuser -s ben
+# Inform7
+yay -S inform inform7 glulxe-term
+# Web
+yay -S lagrange
+# Calibre
+yay -S calibre
+# Window environment
+yay -S xorg-server-xephyr xorg-xinit xorg-xrdb xorg-xsetroot herbstluftwm polybar kitty
+
+# Change shell
+chsh -s /usr/bin/fish
+
+broot --set-install-state installed
+# Rebuild bat cache so it detects the theme
+bat cache --build
