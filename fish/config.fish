@@ -133,6 +133,7 @@ end
 
 if status is-interactive
   fish_config theme choose selenized
+  atuin init fish | source
   broot --print-shell-function fish | source
   mise activate fish | source
   fnox activate fish | source
@@ -141,6 +142,5 @@ if status is-interactive
   jj util completion fish | source
   starship init fish | source
   zoxide init fish | source
-  atuin init fish | source
 end
 

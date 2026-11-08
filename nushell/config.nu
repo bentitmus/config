@@ -26,6 +26,11 @@ $env.config = {
 }
 
 mkdir ($nu.data-dir | path join "vendor/autoload")
-starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 atuin init nu | save -f ($nu.data-dir | path join "vendor/autoload/atuin.nu")
+broot --print-shell-function nushell | save -f ($nu.data-dir | path join "vendor/autoload/broot.nu")
+fnox activate nu | save -f ($nu.data-dir | path join "vendor/autoload/fnox.nu")
+fzf --nushell | save -f ($nu.data-dir | path join "vendor/autoload/fzf.nu")
+jj util completion nushell | save -f ($nu.data-dir | path join "vendor/autoload/jj.nu")
+starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+zoxide init nushell | save -f ($nu.data-dir | path join "vendor/autoload/zoxide.nu")
 
